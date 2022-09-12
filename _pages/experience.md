@@ -4,10 +4,10 @@ permalink: /internships/
 author_profile: true
 ---
 
-1. Visiting Researcher, Alan Turing Institute, London UK
-    * Period: November 2021 - March 2022
-    * Project: Time-sensitive sensing of language and user-generated content
-    * Collaborators: [Maria Liakata](https://www.turing.ac.uk/people/researchers/maria-liakata), [Adam Tsakalidis](https://www.turing.ac.uk/people/researchers/adam-tsakalidis)
+1. (__Remote__)Reseacher, University of Maryland, Baltimore US
+    * Period: September 2022 - Current
+    * Project: Personalized AI Assistant, funded under Samsung AI
+    * Collaborators: [Manas Gaur](https://manasgaur.github.io/)
 
 2. Research Science Intern, Samsung Research America, Mountain View, California
     * Period: May 2021 - September 2021
