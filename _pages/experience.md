@@ -24,19 +24,11 @@ author_profile: true
 4. Research Intern, Visual Learning and Intelligence Lab, Indian Institute of Technology, Hyderabad
     * Period: November 2021 - March 2022
     * Project: Developed a Novel Architecture for better Image Classification of low-quality images and unbalanced datasets. Worked on Building a U-Net based architecture for Semantic Segmentation on Dental X-Ray (Paper under review).
-    * Mentor: 
-    [R Sai Chandra Teja](https://scholar.google.com/citations?user=gVSXe1IAAAAJ&hl=en)
-    * Collaborators: 
-    [Dhruv Makhwana](https://scholar.google.com/citations?user=enWWINgAAAAJ&hl=en), 
-    [Rohit Pawar](https://www.linkedin.com/in/rohit-pawar-a9992a1b4/)
+    * Mentor: [R Sai Chandra Teja](https://scholar.google.com/citations?user=gVSXe1IAAAAJ&hl=en)
+    * Collaborators: [Dhruv Makhwana](https://scholar.google.com/citations?user=enWWINgAAAAJ&hl=en), [Rohit Pawar](https://www.linkedin.com/in/rohit-pawar-a9992a1b4/)
 4. Computer Vision Engineer, AI Mage (WETHEKOO)
     * Period: March 2021 - April 2021
     * Project: Building a Fashion Tagging Engine using Deep Learning (Siamese Network, Instance Segmentation).
-    <!-- * Mentor: 
-    [R Sai Chandra Teja](https://scholar.google.com/citations?user=gVSXe1IAAAAJ&hl=en)
-    * Collaborators: 
-    [Dhruv Makhwana](https://scholar.google.com/citations?user=enWWINgAAAAJ&hl=en), 
-    [Rohit Pawar](https://www.linkedin.com/in/rohit-pawar-a9992a1b4/)  -->
 5. Software Engineer, Rhizicube Technologies
     * Period: June 2021 - September 2021
     * Project: Oversaw Server & REST API development and Database for Consumer Data Platform Using Golang(Gin). Build a real-time streaming data pipeline using Apache Kafka.
