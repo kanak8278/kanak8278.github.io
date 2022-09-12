@@ -93,29 +93,32 @@ analytics:
 
 # Site Author
 author:
-  name             : "Manas Gaur"
-  avatar           : "/images/manas.jpg"
-  bio              : "Assistant Professor, Department of CSEE, University of Maryland Baltimore County"
-  location         : "Maryland, US"
+  name             : "Kanak Raj"
+  avatar           : "/images/kanak.jpeg"
+  bio              : "M.Sc., Mathematics and Computing, Birla Institute of Technology, Mesra"
+  location         : "Ranchi, India"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:manas@umbc.edu
+      url: mailto:kanak8278@gmail.educom
     - label: "LinkedIn"
       icon: "fas fa-fw fa-linkedin-square"
-      url: "https://www.linkedin.com/in/manasgaur/"
+      url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/manasgaur90"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/kiml2020/"
+      url: "https://twitter.com/kanak8278"
+    
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://www.facebook.com/kiml2020/"
+    
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/manasgaur"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      url: "https://github.com/kanak8278"
+    
+    # - label: "Instagram"
+      # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer

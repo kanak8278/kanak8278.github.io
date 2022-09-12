@@ -1,21 +1,27 @@
 # main links
 main:
-  - title: "Team"
-    url: /mentorship/
-  - title: "Awards"
-    url: /awards/
-  - title: "Internships"
+  # - title: "Team"
+  #   url: /mentorship/
+  # - title: "Awards"
+  #   url: /awards/
+  
+  - title: "Experience"
     url: /internships/
   - title: "Publications"
     url: /publications/
+  
   - title: "Resources"
     url: /resources/
-  - title: "Talks"
-    url: /talks/
-  - title: "Services"
-    url: /services/
-  - title: "Courses"
-    url: /Courses/
+  
+  # - title: "Talks"
+  #   url: /talks/
+  
+  # - title: "Services"
+  #   url: /services/
+  
+  # - title: "Courses"
+  #   url: /Courses/
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
