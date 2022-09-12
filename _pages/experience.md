@@ -16,7 +16,7 @@ author_profile: true
     * Collaborators: [Sarvesh Devi](https://www.linkedin.com/in/sarveshdevi/), [Chidhambararajan](https://www.linkedin.com/in/chidha1434/), 
     [Dhanraj](https://www.linkedin.com/in/dhanraj-katkar-24357b14b/)
 
-3. Research Intern, Video Analytics Lab, Indian Institute of Science, Bangalore
+3. Research Intern, Video Analytics Lab, IISc, Bangalore
     * Period: May 2022 - August 2022
     * Project: Worked on Generative Adversarial Networks for Image and Video Generation. There has been exhaustive work on Face Images and videos but other domains are left pristine. We were looking to employ StyleGAN based architectures for disentangled video interpretation in multiple domains.
     * Mentor: [Rishubh Parihar](https://www.linkedin.com/in/rishubh-parihar/)
