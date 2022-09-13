@@ -3,7 +3,7 @@ title: "Resources"
 permalink: /resources/
 author_profile: true
 ---
-I am attending <a href= "https://dlsyscourse.org/">Deep Learning Systems</a> course, by Zico Kolter, Associate Professor and Tianqi Chen, Associate Professor, also co-founder OctoML. This is a public and free course, orginally taught at Carneige Mellon University. The aim is to understand and potenitally contribute the existing frameworks (open-source). Let me know if you are also attending, we can collaborate! &#128519
+I am attending <a href= "https://dlsyscourse.org/">Deep Learning Systems</a> course, by <a href="https://zicokolter.com/">Zico Kolter</a>, Associate Professor and <a href="https://tqchen.com/">Tianqi Chen</a>, Associate Professor, also co-founder <a href="https://octoml.ai/">OctoML</a>. This is a public and free course, orginally taught at Carneige Mellon University. The aim is to understand and potenitally contribute the existing frameworks (open-source). Let me know if you are also attending, we can collaborate! &#128519;
 
 <!-- * <a href= "https://zenodo.org/record/2667859#.YbalDcZOkd4">Reddit C-SSRS Dataset v1.0 (Web Conference)</a> <a href="https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1002&context=aii_fac_pub">(Paper)</a>
 
