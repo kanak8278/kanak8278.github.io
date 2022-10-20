@@ -7,7 +7,7 @@ I am attending <a href= "https://dlsyscourse.org/">Deep Learning Systems</a> cou
 
 <code> 26 Aug 2022 </code>
 Attended <b>Smart India Hackathon Finals</b> under Indian Space Research Organisation (ISRO), India.
-Our team build realtime <i>Cyclone Intensity Estimator</i> using Deep Learning.
+Our team build realtime <b><i>Cyclone Intensity Estimator</i></b> using Deep Learning.
 
 <!-- * <a href= "https://zenodo.org/record/2667859#.YbalDcZOkd4">Reddit C-SSRS Dataset v1.0 (Web Conference)</a> <a href="https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1002&context=aii_fac_pub">(Paper)</a>
 
