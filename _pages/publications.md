@@ -6,8 +6,12 @@ author_profile: true
 
 ## Conferences
 ---
-<!-- * Nirmal Sivaraman, **Manas Gaur**, Shivansh Baijal, Radha Sai Rupesh Ch V, Sakthi Muthiah and Amit Sheth. "Exo-SIR: An Epidemiological Model to Analyze the Impact of Exogenous Spread of Infection" To appear in Springer Nature Journal of Data Science and Analytics. [Preprint](https://arxiv.org/abs/2205.01325)
-* Shrey Gupta, Anmol Agarwal, **Manas Gaur**, Kaushik Roy, Vignesh Narayanan, Ponnurangam Kumaraguru, Amit Sheth. "Learning to Automate Follow-up Question Generation using Process Knowledge for Depression Triage on Reddit Posts" [CLPsych NAACL 2022](https://www.researchgate.net/publication/360779529_Learning_to_Automate_Follow-up_Question_Generation_using_Process_Knowledge_for_Depression_Triage_on_Reddit_Posts)
+* Revathy Venkataramanan, Kaushik Roy, **Kanak Raj**, Renjith Prasad, Yuxin Zi, Vignesh Narayanan, Amit Sheth. "Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes"
+[IEEE SMC 2023](https://arxiv.org/abs/2205.01325)
+
+* Ananya Mantravadi, **Kanak Raj**, Rohit Pawar Sai Chandra Teja R, Nagesh Kumar S. "Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation"[IEEE APSCON 2023](https://ieeexplore.ieee.org/abstract/document/10101175)
+
+<!-- * Shrey Gupta, Anmol Agarwal, **Manas Gaur**, Kaushik Roy, Vignesh Narayanan, Ponnurangam Kumaraguru, Amit Sheth. "Learning to Automate Follow-up Question Generation using Process Knowledge for Depression Triage on Reddit Posts" [CLPsych NAACL 2022](https://www.researchgate.net/publication/360779529_Learning_to_Automate_Follow-up_Question_Generation_using_Process_Knowledge_for_Depression_Triage_on_Reddit_Posts)
 * Ramit Sawhney, Atula_Tejaswi_Neerkaje, **Manas Gaur**.  "A Risk-Averse Mechanism for Suicidality Assessment on Social Media" [ACL 2022](https://drive.google.com/file/d/1wr0KwxmSujt2zo-wjDFRAdKe6cPKQTIl/view?usp=sharing)
 * **Manas Gaur**, Kalpa Gunaratna, Vijay Srinivasan, and Hongxia Jin. "ISEEQ: Information Seeking Question Generation using Dynamic Meta-Information Retrieval and Knowledge Graphs."  [AAAI 2022 Preprint](https://arxiv.org/abs/2112.07622) (**Acceptance Rate 14%).
 * Roy Kaushik, Qi Zhang, **Manas Gaur**, Amit Sheth, "Knowledge Infused Policy Gradients with Upper Confidence Bound for Relational Bandits", [ECML PKDD](https://ala2021.vub.ac.be/papers/ALA2021_paper_36.pdf) (**Acceptance Rate 19%)
@@ -27,7 +31,7 @@ Conference on Web Intelligence, Santiago, Chile, 2018 (**Acceptance Rate 28%) [W
 * Qiwei Han, Inigo Martinez, Mengxin Ji, **Manas Gaur**; Leid Zejnilovic, "Matchmaking between Patients and Doctors in Primary Care: Toward a Trusting Relationship." 5th IEEE Data Science and Advanced Analytics Conference, Turin, Italy, 2018 (**Acceptance Rate 18%). [IEEE-DSAA](http://bit.ly/ieeedsaa)[Media Coverage](http://bit.ly/DSSG-venture-beat)
 * **Manas Gaur**, Shruti Goel, and Eshaan Jain. "Comparison between Nearest Neighbours and Bayesian Network for demand forecasting in supply chain management." 2nd IEEE International Conference on Computing for Sustainable Global Development, Delhi, India, 2015. [IEEE-Indiacom](http://bit.ly/ieee indiacom) -->
 
-## Journals and Book Chapters
+<!-- ## Journals and Book Chapters -->
 ---
 <!-- * **Manas Gaur**, Keyur Faldu, and Amit Sheth. "Semantics of the Black-Box: Can knowledge graphs help make deep learning systems more interpretable and explainable?." IEEE Internet Computing, 2021. [IEEE Internet Computing](https://ieeexplore.ieee.org/abstract/document/9357868)
 * **Manas Gaur**, Vamsi Aribandi, Ugur Kursuncu, Amanuel Alambo, Valerie L. Shalin, Krishnaprasad Thirunarayan, Jonathan Beich, Meera Narasimhan, and Amit Sheth. "Knowledge-Infused Abstractive Summarization of Clinical Diagnostic Interviews: Framework Development Study." JMIR Mental Health, 2021. [JMIR](https://mental.jmir.org/2021/5/e20865/)
@@ -38,7 +42,7 @@ Conference on Web Intelligence, Santiago, Chile, 2018 (**Acceptance Rate 28%) [W
 * Shruti Goel, **Manas Gaur**, and Eshaan Jain. "Nature inspired algorithms in remote sensing image classication." Procedia Computer Science, 2015. [Elsevier](http://bit.ly/pelsevier)
  -->
 
-## Workshops
+<!-- ## Workshops -->
 ***
 
 <!-- * Gyrard, Amelie, **Manas Gaur**, Saeedeh Shekarpour, Krishnaprasad Thirunarayan, and Amit Sheth. "Personal-
@@ -46,7 +50,7 @@ ized Health Knowledge Graph". In 1st Workshop on Contextualized Knowledge Graph 
 International Semantic Web Conference 2018. [ISWC-18](http://bit.ly/iswc_conf)
 
  -->
-## Symposiums and Poster
+<!-- ## Symposiums and Poster -->
 ---
 
 <!-- * Kursuncu Ugur*, **Manas Gaur** *, Amit Sheth. "Knowledge infused learning (K-IL): Towards deep incorporation of knowledge in deep learning." In Proc. AAAI Spring Symposium, Combining Machine Learning and Knowledge Engineering in Practice, Stanford University, California, 2020, (*Equal Contribution).[AAAI-20-MAKE](http://bit.ly/AAAI-MAKE)
@@ -57,7 +61,7 @@ System in Primary Care: Towards a Trusting Patient-Doctor Relationship." In 6th 
 Pathak, Amit Sheth, "Personalized Prediction of Suicidal Risk for Web-based Intervention." 24th Mental Health
 Services Research Conference, NIMH, Bethesda, Maryland, 2018. [NIMH-2018](https://corescholar.libraries.wright.edu/knoesis/1156/) -->
 
-## Challenge
+<!-- ## Challenge -->
 ---
 
 <!-- * Organizing KE4IoT (Healthcare and Internet of Things) Challenge at WWW-2018. Organizing Committee: Amelie Gyrard, Mihaela Juganaru-Mathieu, Dr.Amit Sheth, Swati Padhee. [WWW-2018-Challenge](http://bit.ly/WWW2018) -->

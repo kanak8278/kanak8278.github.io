@@ -103,19 +103,20 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:kanak8278@gmail.educom
     - label: "LinkedIn"
-      icon: "fa fa-linkedin-square"
+      icon: "fab fa-fw-linkedin-square"
       url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/kanak8278"
     
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-    #   url: "https://www.facebook.com/kiml2020/"
+    - label: "G-Scholar"
+      icon: ""
+      url: "https://www.facebook.com/kiml2020/"
     
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kanak8278"
+    
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kanak8278"
     
     # - label: "Instagram"
       # icon: "fab fa-fw fa-instagram"
@@ -142,6 +143,8 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "LinkedIn"
+      icon: "fa fa-linkedin-square"
 
 
 # Reading Files
