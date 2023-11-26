@@ -102,8 +102,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:kanak8278@gmail.com
-    - label: "LinkedIn"
-      icon: "fab fa-fw-linkedin-square"
+    - 
+    label: "LinkedIn"
+      icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
     
     - label: "G-Scholar"
@@ -147,7 +148,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
     - label: "LinkedIn"
-      icon: "fa fa-linkedin-square"
+      icon: "fa-brands fa-linkedin"
 
 
 # Reading Files
