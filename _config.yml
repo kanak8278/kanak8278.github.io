@@ -95,20 +95,20 @@ analytics:
 author:
   name             : "Kanak Raj"
   avatar           : "/images/kanak.jpeg"
-  bio              : "M.Sc., Mathematics and Computing, Birla Institute of Technology, Mesra"
+  bio              : "Integrated M.Sc., Mathematics and Computing, Birla Institute of Technology, Mesra"
   location         : "Ranchi, India"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:kanak8278@gmail.educom
+      url: mailto:kanak8278@gmail.com
     - label: "LinkedIn"
       icon: "fab fa-fw-linkedin-square"
       url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
     
     - label: "G-Scholar"
-      icon: ""
-      url: "https://www.facebook.com/kiml2020/"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=bTpi4UIAAAAJ&hl=en"
     
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -125,6 +125,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "G-Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      #url:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
