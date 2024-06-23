@@ -3,6 +3,12 @@ title: "Updates"
 permalink: /updates/
 author_profile: true
 ---
+<code>May 2024</code> 
+Defended my Master thesis, titled <a href = "https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view"> Knowledge Enabled Multimodal Ingredient Substitution </a>. Joint work at AI Institute, University of South Carolina and Birla Institute of Technology, Mesra;
+
+<code> Jan 2024 </code>
+Joined Microsoft Research as Research Intern, would be working at AI4Code group. &#128640;
+
 <code> 1 June 2023 </code>
 Our work <a href="https://arxiv.org/abs/2306.01805">Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes</a> got accepted at IEEE SMC 2023. &#127881;
 

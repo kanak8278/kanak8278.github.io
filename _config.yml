@@ -95,15 +95,15 @@ analytics:
 author:
   name             : "Kanak Raj"
   avatar           : "/images/kanak.jpeg"
-  bio              : "Integrated M.Sc., Mathematics and Computing, Birla Institute of Technology, Mesra"
-  location         : "Ranchi, India"
-  email            :
+  bio              : "Researcher, Developer, and a Learner"
+  location         : "Bangalore, India"
+  email            : kanak8278@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:kanak8278@gmail.com
-    - 
-    label: "LinkedIn"
+    
+    - label: "LinkedIn"
       icon: "fa-brands fa-linkedin"
       url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
     

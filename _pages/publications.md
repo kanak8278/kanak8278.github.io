@@ -11,6 +11,9 @@ author_profile: true
 
 * Ananya Mantravadi, **Kanak Raj**, Rohit Pawar Sai Chandra Teja R, Nagesh Kumar S. "Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation"[IEEE APSCON 2023](https://ieeexplore.ieee.org/abstract/document/10101175)
 
+* K-PERM: Knowledge and Persona Enhanced Response Model for Personalized AI Assistants. **Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami,
+Manas Gaur, "K-PERM: Knowledge and Persona Enhanced Response Model for Personalized AI Assistants" [AAAI Symposium 2024](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203) 
+
 <!-- * Shrey Gupta, Anmol Agarwal, **Manas Gaur**, Kaushik Roy, Vignesh Narayanan, Ponnurangam Kumaraguru, Amit Sheth. "Learning to Automate Follow-up Question Generation using Process Knowledge for Depression Triage on Reddit Posts" [CLPsych NAACL 2022](https://www.researchgate.net/publication/360779529_Learning_to_Automate_Follow-up_Question_Generation_using_Process_Knowledge_for_Depression_Triage_on_Reddit_Posts)
 * Ramit Sawhney, Atula_Tejaswi_Neerkaje, **Manas Gaur**.  "A Risk-Averse Mechanism for Suicidality Assessment on Social Media" [ACL 2022](https://drive.google.com/file/d/1wr0KwxmSujt2zo-wjDFRAdKe6cPKQTIl/view?usp=sharing)
 * **Manas Gaur**, Kalpa Gunaratna, Vijay Srinivasan, and Hongxia Jin. "ISEEQ: Information Seeking Question Generation using Dynamic Meta-Information Retrieval and Knowledge Graphs."  [AAAI 2022 Preprint](https://arxiv.org/abs/2112.07622) (**Acceptance Rate 14%).
