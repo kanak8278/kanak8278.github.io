@@ -4,15 +4,20 @@ permalink: /publications/
 author_profile: true
 ---
 
+## Thesis & Papers
+---
+* **Kanak Raj**. "[Knowledge Enabled Multimodal Ingredient Substitution](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view)" - Master's Thesis, 2024.
+  * Code: [GitHub Repository](https://github.com/kanak8278/MISKG/)
+  * Dataset: [Multimodal Ingredient Substitution Knowledge Graph](https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/)
+  * Used in [UC Irvine + Stanford Health Hackathon 2024](https://www.healthunity.org/2024hackathon)
+
 ## Conferences
 ---
-* Revathy Venkataramanan, Kaushik Roy, **Kanak Raj**, Renjith Prasad, Yuxin Zi, Vignesh Narayanan, Amit Sheth. "Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes"
-[IEEE SMC 2023](https://arxiv.org/abs/2205.01325)
+* Revathy Venkataramanan, Kaushik Roy, **Kanak Raj**, Renjith Prasad, Yuxin Zi, Vignesh Narayanan, Amit Sheth. "[Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes](https://arxiv.org/abs/2306.01805)" in IEEE SMC 2023.
 
-* Ananya Mantravadi, **Kanak Raj**, Rohit Pawar Sai Chandra Teja R, Nagesh Kumar S. "Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation"[IEEE APSCON 2023](https://ieeexplore.ieee.org/abstract/document/10101175)
+* Ananya Mantravadi, **Kanak Raj**, Rohit Pawar, Sai Chandra Teja R, Nagesh Kumar S. "[Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation](https://ieeexplore.ieee.org/abstract/document/10101175)" in IEEE APSCON 2023.
 
-* K-PERM: Knowledge and Persona Enhanced Response Model for Personalized AI Assistants. **Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami,
-Manas Gaur, "K-PERM: Knowledge and Persona Enhanced Response Model for Personalized AI Assistants" [AAAI Symposium 2024](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203) 
+* **Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami, Manas Gaur. "[K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203)" in AAAI Spring Symposium 2024.
 
 <!-- * Shrey Gupta, Anmol Agarwal, **Manas Gaur**, Kaushik Roy, Vignesh Narayanan, Ponnurangam Kumaraguru, Amit Sheth. "Learning to Automate Follow-up Question Generation using Process Knowledge for Depression Triage on Reddit Posts" [CLPsych NAACL 2022](https://www.researchgate.net/publication/360779529_Learning_to_Automate_Follow-up_Question_Generation_using_Process_Knowledge_for_Depression_Triage_on_Reddit_Posts)
 * Ramit Sawhney, Atula_Tejaswi_Neerkaje, **Manas Gaur**.  "A Risk-Averse Mechanism for Suicidality Assessment on Social Media" [ACL 2022](https://drive.google.com/file/d/1wr0KwxmSujt2zo-wjDFRAdKe6cPKQTIl/view?usp=sharing)

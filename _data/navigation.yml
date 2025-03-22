@@ -1,24 +1,24 @@
 # main links
 main:
-  # - title: "Team"
-  #   url: /mentorship/
-  # - title: "Awards"
-  #   url: /awards/
-  
   - title: "Experience"
-    url: /internships/
+    url: /experience/
   - title: "Publications"
     url: /publications/
-  
+  - title: "Projects"
+    url: /projects/
+  - title: "Skills"
+    url: /skills/
+  - title: "Awards"
+    url: /awards/
   - title: "Updates"
     url: /updates/
   
+  # - title: "Team"
+  #   url: /mentorship/
   # - title: "Talks"
   #   url: /talks/
-  
   # - title: "Services"
   #   url: /services/
-  
   # - title: "Courses"
   #   url: /Courses/
 
