@@ -2,6 +2,7 @@
 title: "Awards"
 permalink: /awards/
 author_profile: true
+published: false
 ---
 
 * Nominated for University of South Carolina Breakthrough Award from Department of Computer Science and Engineering

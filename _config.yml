@@ -95,11 +95,11 @@ analytics:
 author:
   name             : "Kanak Raj"
   avatar           : "/images/kanak.jpeg"
-  bio              : "Applied Research Scientist at Thomson Reuters Lab | Researcher, Developer, and a Learner"
+  bio              : "Researcher, Developer, and a Learner"
   location         : "Bangalore, India"
   email            : kanak8278@gmail.com
   links:
-    - label: "Email"
+    - label: "Email (kanak8278@gmail.com)"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:kanak8278@gmail.com
     
