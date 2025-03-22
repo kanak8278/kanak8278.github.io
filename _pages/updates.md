@@ -18,7 +18,7 @@ Joined Microsoft Research as Research Intern, working with the AI4Code group on 
 <code> 1 June 2023 </code>
 Our work <a href="https://arxiv.org/abs/2306.01805">Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes</a> got accepted at IEEE SMC 2023. &#127881;
 
-I am attending <a href= "https://dlsyscourse.org/">Deep Learning Systems</a> course, by <a href="https://zicokolter.com/">Zico Kolter</a>, Associate Professor and <a href="https://tqchen.com/">Tianqi Chen</a>, Associate Professor, also co-founder <a href="https://octoml.ai/">OctoML</a>. This is a public and free course, orginally taught at Carneige Mellon University. The aim is to understand and potenitally contribute the existing frameworks (open-source). Let me know if you are also attending, we can collaborate! &#128519;
+I attended <a href= "https://dlsyscourse.org/">Deep Learning Systems</a> course, by <a href="https://zicokolter.com/">Zico Kolter</a>, Associate Professor and <a href="https://tqchen.com/">Tianqi Chen</a>, Associate Professor, also co-founder <a href="https://octoml.ai/">OctoML</a>. This is a public and free course, orginally taught at Carneige Mellon University. The aim was to understand and potentially contribute to existing frameworks (open-source).
 
 <code> 26 Aug 2022 </code>
 Attended <b>Smart India Hackathon Finals</b> under Indian Space Research Organisation (ISRO), India.

@@ -15,18 +15,22 @@ Developed at Microsoft Research, this project created an intermediate representa
 
 **Technologies**: Large Language Models, Natural Language Processing, Conversational AI
 
-## [Machine Learning Algorithm Selector](https://wiki.anuket.io/display/HOME/Algo-Selector) (Linux Foundation)
-Contributed to Anuket Project, developed a command-line tool for [ML algorithm selection](https://wiki.anuket.io/display/HOME/Algo-Selector) based on the use case and data. Utilized Natural Language Processing for enhanced user response extraction.
+## [Machine Learning Algorithm Selector](https://wiki.anuket.io/display/HOME/Algo-Selector) (Linux Foundation Networking Project)
+**Period:** August 2021 - October 2021
 
-## Cyclone Intensity Detection (Smart India Hackathon, MHRD, India)
-Built Cyclone Intensity Detection Application using Deep Learning (Image Processing) under the Indian Space Research Organisation (ISRO), utilizing INSAT-3DR satellite data.
+Contributed to Anuket Project at Linux Foundation Networking, developing a command-line tool for ML algorithm selection based on the use case and data type. Utilized Natural Language Processing for enhanced user response extraction.
 
-**Technologies**: Remote Sensing, Contrastive Learning, Python, Object Detection, Classification, PyTorch
+**Technologies:** Python, Command Line, NLP, Transformers, Git/GitHub, Linux
+
+## Cyclone Intensity Detection (Smart India Hackathon, AICTE, MHRD, India)
+Selected for the India Finals in Smart India Hackathon, organized by AICTE & Ministry of Education, India. Built a Cyclone Intensity Detection Application using Deep Learning (Image Processing) under the guidance of ISRO and utilizing INSAT-3DR satellite data. Our goal was to provide error-free real-time updates to avert damage and loss.
+
+**Technologies:** Remote Sensing, Contrastive Learning, Python, Object Detection, Classification, PyTorch
 
 ## [Heart Rate Estimator](https://github.com/cheersanimesh/Vitals/tree/master) (IEEE Mega Project)
-Remotely detected an individual's heart rate per minute from a still video of their face. Implemented Eulerian Video Magnification Algorithm initially developed by MIT-CSAIL Lab.
+Developed a system to remotely detect an individual's heart rate per minute from a still video of their face. Implemented Eulerian Video Magnification Algorithm initially developed by MIT CSAIL Lab to magnify subtle color changes in the face that correspond to blood flow.
 
-**Technologies**: Python, OpenCV, Tensorflow/Keras, SciPy, Numpy
+**Technologies:** Python, OpenCV, Tensorflow/Keras, SciPy, Numpy
 
 ## [Multimodal Ingredient Substitution Knowledge Graph](https://github.com/kanak8278/MISKG/)
 Created as part of my Master's thesis work, this project:
