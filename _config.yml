@@ -104,7 +104,7 @@ author:
       url: mailto:kanak8278@gmail.com
     
     - label: "LinkedIn"
-      icon: "fa-brands fa-linkedin"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/kanak-raj-a8278i/"
     
     - label: "G-Scholar"
@@ -148,7 +148,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
     - label: "LinkedIn"
-      icon: "fa-brands fa-linkedin"
+      icon: "fab fa-fw fa-linkedin"
 
 
 # Reading Files
@@ -283,8 +283,8 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
+      layout: blog-post
+      author_profile: false
       read_time: true
       comments: # true
       share: true

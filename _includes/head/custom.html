@@ -5,6 +5,14 @@
 <!-- Custom CSS for Dark Mode -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+<!-- Font Awesome Icons - Loaded Globally -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Enhanced Blog Post Styles - only for blog posts -->
+{% if page.layout == 'blog-post' %}
+<link rel="stylesheet" href="{{ '/assets/css/blog-post-custom.css' | relative_url }}">
+{% endif %}
+
 <!-- Dark Mode Toggle Script -->
 <script>
   // Function to toggle dark mode
@@ -58,5 +66,10 @@
     }
   });
 </script>
+
+<!-- Enhanced Blog Post JavaScript - only for blog posts -->
+{% if page.layout == 'blog-post' %}
+<script defer src="{{ '/assets/js/blog-post-custom.js' | relative_url }}"></script>
+{% endif %}
 
 <!-- end custom head snippets -->
