@@ -37,6 +37,7 @@ The visual encoder processes the input image and extracts visual features. This 
 $$f_\text{visual}(I) = V \in \mathbb{R}^{n \times d_v}$$
 
 Where:
+
 - $I$ is the input image
 - $V$ represents the extracted visual features
 - $n$ is the number of visual tokens
@@ -55,6 +56,7 @@ The language component processes textual inputs and generates textual outputs. I
 $$f_\text{language}(T, V) = L \in \mathbb{R}^{m \times d_l}$$
 
 Where:
+
 - $T$ is the textual input
 - $L$ represents the language features
 - $m$ is the number of language tokens
@@ -67,6 +69,7 @@ The cross-modal fusion component aligns visual and language features:
 $$f_\text{fusion}(V, L) = F \in \mathbb{R}^{k \times d_f}$$
 
 Where:
+
 - $F$ represents the fused multimodal features
 - $k$ is the number of fused tokens
 - $d_f$ is the dimensionality of the fused features
@@ -84,6 +87,7 @@ For cross-attention between vision and language:
 $$\text{CrossAttention}(Q_l, K_v, V_v) = \text{softmax}\left(\frac{Q_l K_v^T}{\sqrt{d_k}}\right)V_v$$
 
 Where:
+
 - $Q_l$ is the query from the language features
 - $K_v, V_v$ are the key and value from the visual features
 
@@ -94,6 +98,7 @@ Many visual language models employ contrastive learning to align visual and text
 $$\mathcal{L}_\text{contrastive} = -\log \frac{\exp(s(v, t) / \tau)}{\sum_{j=1}^{N} \exp(s(v, t_j) / \tau)}$$
 
 Where:
+
 - $s(v, t)$ is the similarity score between image $v$ and text $t$
 - $\tau$ is a temperature parameter
 - $N$ is the number of negative samples
