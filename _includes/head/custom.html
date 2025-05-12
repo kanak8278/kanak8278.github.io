@@ -2,6 +2,50 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<!-- Custom CSS for Dark Mode -->
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+<!-- Dark Mode Toggle Script -->
+<script>
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    const htmlElement = document.documentElement;
+    htmlElement.classList.toggle('dark-theme');
+    
+    // Save preference to localStorage
+    const isDarkMode = htmlElement.classList.contains('dark-theme');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+  }
+
+  // Function to initialize dark mode based on saved preference or system preference
+  function initDarkMode() {
+    // Check localStorage first
+    const savedMode = localStorage.getItem('darkMode');
+    
+    if (savedMode === 'enabled') {
+      document.documentElement.classList.add('dark-theme');
+    } else if (savedMode === 'disabled') {
+      document.documentElement.classList.remove('dark-theme');
+    } else {
+      // If no saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark-theme');
+      }
+    }
+  }
+
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    initDarkMode();
+    
+    // Add event listener to toggle button if it exists
+    const darkToggle = document.getElementById('dark-mode-toggle');
+    if (darkToggle) {
+      darkToggle.addEventListener('click', toggleDarkMode);
+    }
+  });
+</script>
+
 <!-- Mathjax Support -->
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML">
