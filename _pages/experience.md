@@ -5,29 +5,48 @@ author_profile: true
 ---
 1. Applied Research Scientist, [Thomson Reuters Lab](https://www.thomsonreuters.com/en/careers/our-jobs/join-thomson-reuters-labs), India
    * Period: August 2024 - Current
-   * Project: 
-     * **Document Update Pipeline**: Architected an end-to-end automation pipeline for processing **legal** documents based on Alert. Engineered **XML parsing** for MS Word files while preserving document integrity. Implemented **Section-Matching algorithm** to identify update requirements with detailed reasoning chains and alert-point mapping for **Explainability**. Developed **Human-In-Loop** validation interfaces enabling auditable update processes. Integrated LLM for content analysis with **Multi-Threaded** processing, resulting in **80% reduction** in manual processing time while maintaining high accuracy through human verification.
-     * **Search-and-Replace Agent**: Developed an automated MS Word updating tool achieving **>96% accuracy** while preserving the original formatting and styles. Implemented a versatile solution that seamlessly processes multiple document types, resulting in **widespread adoption between teams** and **90%** reduction in manual content updates.
+   * **Legal AI Reasoning and Model Enhancement**:
+     * Pioneered a **legal synthetic data generation pipeline** for Process Reward Models (PRMs), creating domain-specific training datasets that improved legal reasoning capabilities on **LegalBench benchmark** tasks.
+     * Evaluated different **Test-Time Scaling paradigms** for legal reasoning and optimizing inference-time computation.
+     * Architected an **IRAC (Issue-Rule-Application-Conclusion) Knowledge Graph** framework using Thomson Reuters' **Westlaw corpus** and court case data, generating high-quality preference datasets that improved legal reasoning alignment in fine-tuned LLMs.
+   * **AI-Powered Legal Document Update System**:
+     * Built a comprehensive **end-to-end LLM Workflow pipeline** to update Word Document with **XML parsing** and intelligent contextual mapping for paragraph identification and edit, achieving **70%+ success rate** while preserving complete document formatting integrity.
+     * Engineered **human-in-the-loop validation interface** with reasoning chains and alert-point mapping, resulting in **60% reduction** in manual processing time while maintaining legal accuracy through strategic human oversight and audit trails.
+   * **DocEvolver**: Created an MVP for "**Cursor for Word**" as an Extension for updating and understanding MS Word Files for Lawyer-Editors
+   * **Search-and-Replace Agentic System**:
+     * Architected a **multi-agent AI system** for automated Word editing with comprehensive validation pipeline (schema enforcement, content integrity, audit logging), achieving **98% accuracy**, resulting **65% reduction** in manual content revision.
+     * Constructed **error-resolving agents** with function calling and multi-turn reasoning to fix XML issues, implementing few-shot learning and self-healing mechanisms, resulting in **widespread adoption across teams**, processing hundreds of documents monthly with **sub-8 second processing time** per section.
+   * **Additional Tools**:
+     * **Truth Social Monitor**: Created a monitoring system for Trump's Truth Social posts with **sub-3 second latency**, generating automated alerts for Reuters journalists
+     * **Page Flipper**: Revived version of the Page Monitor extension for website tracking, eliminating Visual Ping subscriptions for the team.
+     * These tools provided Reuters with a **critical competitive advantage** over competitors.
 
 2. Research Intern, Microsoft Research India
    * Period: January 2024 - July 2024
-   * Project: Worked under [Programming with Representations (PwR)](https://www.microsoft.com/en-us/research/project/pwr/overview/): Developed an intermediate representation layer to bridge the gap between users and Large Language Models, addressing issues like hallucination and enhancing non-technical user interactions, thereby transforming chatbot building workflows. Worked on automating the chatbot building process using Conversational Programming paradigm. 
-   * Built [Jugalbandi(JB) Manager](https://jugalbandi.studio/), open-source chatbot management platform supporting multiple channels, including WhatsApp, Telegram. It handled multilingual text and voice conversations using Bhashini & Azure Speech models.
-   * Open-sourced work on GitHub:
+   * **Programming with Representations (PwR)**:
+     * Led backend development for Microsoft's **PwR Studio platform**, focusing on the **Natural Language to Domain Specific Language (NL2DSL)** translation system using **GPT 3.5 & 4**, and developed a **symbolic translation pipeline** that generates finite state machines structured as custom DSL, achieving **85% reduction in hallucinations**.
+     * Formulated **Rubrics and Evaluations** with error correction over DSL which resulted in **valid DSL generation increasing from 65% to 95%**.
+   * **Jugalbandi-Studio-Engine**:
+     * Architected **Python-based platform** that converts DSL into scalable finite-state-machine-based chatbot applications. This framework reduced **development time by 80%** and increased accessibility for government agencies and NGOs.
+     * The platform was **featured in Satya Nadella's keynote talks**, and I represented Microsoft Research in the pilot project, enabling **15+ nontech organizations** to develop AI-powered conversational bots.
+   * **Jugalbandi(JB) Manager**: 
+     * Established a **chatbot management platform** supporting multiple channels (**WhatsApp, Telegram, Web**) with **multilingual text and voice capabilities**; integrated **Bhashini Speech models** with **Azure service failover mechanisms**, ensuring **70% faster deployment** of new chatbots.
+   * **Open-sourced work** on GitHub:
      * [PwR-NL2DSL](https://github.com/microsoft/PwR-NL2DSL), a tool to convert Natural Language to Domain Specific Language.
      * [PwR-Studio](https://github.com/microsoft/PwR-Studio/) - Studio environment for Programming with Representations
      * [Jugalbandi Studio](https://github.com/OpenNyAI/Jugalbandi-Studio-Engine) - Open-source chatbot framework
      * [Jugalbandi Manager](https://github.com/OpenNyAI/Jugalbandi-Manager) - Chatbot management platform
+     * Our complete system has been **picked up by Bhashini** to build Chatbots across government initiatives.
    * Mentors: [Sriram Rajamani](https://www.microsoft.com/en-us/research/people/sriram/), [B. Ashok](https://www.microsoft.com/en-us/research/people/bash/), [Akash Lal](https://www.microsoft.com/en-us/research/people/akashl/), [Sameer Segal](https://www.microsoft.com/en-us/research/people/sameersegal/)
 
 3. Research Intern, [AI Institute, University of South Carolina](https://aiisc.ai/)
     * Period: December 2022 - April 2024
-    
-    * [Master thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on Knowledge Enabled Multimodal Ingredient Substitution, built knowledge graph incorporating 27K ingredients and 40K substitution pairs. Enabled precise ingredient recommendations using multimodal and constraint-based searches. Developed an LLM-based query module for the ingredient substitution knowledge graph. Also submitted this work at AAAI-25. 
+
+    * [Master thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on Knowledge Enabled Multimodal Ingredient Substitution, built knowledge graph incorporating 27K ingredients and 40K substitution pairs. Enabled precise ingredient recommendations using multimodal and constraint-based searches. Developed an LLM-based query module for the ingredient substitution knowledge graph. Also submitted this work at AAAI-25.
     * Resources: [GitHub Repository](https://github.com/kanak8278/MISKG/) | [Dataset on Kaggle](https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/) | Dataset used in [UC Irvine + Stanford Health Hackathon 2024](https://www.healthunity.org/2024hackathon)
     * Formulated cross-modal Recipe Retrieval and developed cooking action recognition for recipe analysis, achieving 95% Recall score leading to paper [Cook-Gen](https://ieeexplore.ieee.org/abstract/document/10394432/) at IEEE SMC’23.
     * Mentors: [Revathy Venkataramanan](https://scholar.google.com/citations?user=nwri7HkAAAAJ&hl=en) [Dr. Amit Sheth](https://amit.aiisc.ai/)
-   
+
 4. Visiting Researcher at Societal Computing, Saarland University [(SIC)](https://saarland-informatics-campus.de/)
     * Period: May 2023 - August 2023
     * Project: Time and Multispectral Domain Satellite Image Super-Resolution
@@ -40,13 +59,13 @@ author_profile: true
     * Project: Personalized AI Assistant, funded under HealthCareNLP grant.
     * Worked on developing Personalized Response Generation models using reward scaling over BART & T5, paper [K-PERM](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203) accepted at AAAI Symposium'24 and improved NUBIA score by 10%. The work has been focused on using Knowledge and Persona for loss scaling resulting better response generation.
     * **Technologies**: NLP, Information Retrieval, Large Language Models, Conversational Models, Question Answering, Generative AI
-    * Mentors: [Manas Gaur](https://manasgaur.github.io/) 
+    * Mentors: [Manas Gaur](https://manasgaur.github.io/)
 
 6. AI Intern, [EdgeNeural.ai](https://edgeneural.ai/), Pune, India
     * Period: June 2022 - August 2022
     * Project: Accelerated inference, optimized models through quantization, CPU/GPU customization. Developed training and optimization pipelines for automatic model training and hosting.
     * **Technologies**: Optical Character Recognition (OCR), Object Detection (YOLO, SSD), TensorRT, GPU Optimization, OpenVINO, Docker, AWS, PyTorch, TensorFlow
-    * Collaborators: [Sarvesh Devi](https://www.linkedin.com/in/sarveshdevi/), [Chidhambararajan](https://www.linkedin.com/in/chidha1434/), 
+    * Collaborators: [Sarvesh Devi](https://www.linkedin.com/in/sarveshdevi/), [Chidhambararajan](https://www.linkedin.com/in/chidha1434/),
     [Dhanraj](https://www.linkedin.com/in/dhanraj-katkar-24357b14b/)
 
 7. Research Intern, Video Analytics Lab, IISc, Bangalore
