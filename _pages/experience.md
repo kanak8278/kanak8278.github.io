@@ -1,13 +1,10 @@
 ---
 title: "Experience"
 permalink: /experience/
-author_profile: false
+author_profile: true
 classes:
-  - wide
   - experience-page
 ---
-This page keeps the detailed, full version of my professional and research experience.
-
 ## Applied Research Scientist, [Thomson Reuters Lab](https://www.thomsonreuters.com/en/careers/our-jobs/join-thomson-reuters-labs), India
 **Period:** August 2024 - Current
 

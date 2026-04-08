@@ -6,14 +6,14 @@ main:
     url: /publications/
   - title: "Projects"
     url: /projects/
-  - title: "Skills"
-    url: /skills/
   # - title: "Awards"
   #   url: /awards/
   - title: "Blog"
     url: /blog/
   - title: "Updates"
     url: /updates/
+  - title: "Personal"
+    url: /personal/
   
   # - title: "Team"
   #   url: /mentorship/
