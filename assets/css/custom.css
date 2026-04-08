@@ -511,8 +511,22 @@ html.dark-theme .home-hero {
   flex-wrap: wrap;
 }
 
+.home-actions .btn {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 .home-actions .btn--primary {
   box-shadow: 0 10px 16px rgba(15, 23, 42, 0.16);
+}
+
+.home-actions .home-btn-secondary {
+  background-color: #0ea5a8 !important;
+  color: #ffffff !important;
+}
+
+.home-actions .home-btn-secondary:hover {
+  background-color: #0c8f92 !important;
 }
 
 .home-actions .btn--info {
@@ -561,4 +575,37 @@ html.dark-theme .home-hero {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Experience page readability/wider layout */
+.experience-page #main {
+  max-width: 1320px;
+}
+
+.experience-page .page {
+  max-width: 1080px;
+  width: 100%;
+}
+
+.experience-page .page__content {
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+.experience-page .page__content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.45rem;
+}
+
+.experience-page .page__content > p {
+  max-width: 90ch;
+}
+
+.experience-page .page__content ul,
+.experience-page .page__content ol {
+  margin-bottom: 1rem;
+}
+
+.experience-page .page__content li {
+  margin: 0.28rem 0;
 }
