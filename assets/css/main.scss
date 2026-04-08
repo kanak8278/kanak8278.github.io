@@ -3,9 +3,9 @@
 ---
 
 @charset "utf-8";
-$link-color: rgb(50, 110, 50);
-$serif: "PT Serif";
-$sans-serif-narrow: "PT Sans Narrow";
+$link-color: #1f7a4f;
+$serif: "PT Serif", Georgia, "Times New Roman", serif;
+$sans-serif-narrow: "PT Sans Narrow", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 
 $global-font-family : $serif;
 $header-font-family : $sans-serif-narrow;
@@ -14,18 +14,18 @@ $header-font-family : $sans-serif-narrow;
 @import "minimal-mistakes"; // main partials
 
 html {
-    font-size: 10px; // change to whatever
+    font-size: 15px;
   
     @include breakpoint($medium) {
-      font-size: 14px; // change to whatever
+      font-size: 16px;
         
     }
   
     @include breakpoint($large) {
-      font-size: 16px; // change to whatever
+      font-size: 17px;
     }
   
     @include breakpoint($x-large) {
-      font-size: 18px; // change to whatever
+      font-size: 18px;
     }
   }

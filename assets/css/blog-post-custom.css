@@ -1,278 +1,203 @@
-/* Enhanced Blog Post Layout Styles */
+/* Improved blog post reading experience */
+.layout--blog-post #main,
+.layout--single #main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
 
-/* Remove sidebar space and improve layout */
-/* Create a balanced layout with better readability */
+.layout--blog-post .page,
 .layout--single .page {
-  float: none !important;
-  width: 100% !important;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-  margin: 0 auto !important;
-  max-width: 65% !important; /* More balanced width for readability */
+  float: none;
+  width: 100%;
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0;
 }
 
-/* Ensure proper spacing and centering */
-#main {
-  max-width: 100% !important;
-  padding-left: 2em !important;
-  padding-right: 2em !important;
+.layout--blog-post .page__inner-wrap,
+.layout--single .page__inner-wrap {
+  margin-top: 0.6rem;
 }
 
-/* Improve line length for better readability */
-.page__content {
-  font-size: 1.1em;
-  line-height: 1.7;
-  padding: 0 !important;
+.layout--blog-post #main::before,
+.layout--single #main::before {
+  display: none;
 }
 
-/* Hide the vertical line */
-#main::before {
-  display: none !important;
+.layout--blog-post .page__content,
+.layout--single .page__content {
+  font-size: 1.06rem;
+  line-height: 1.75;
 }
 
-/* Improve content width and readability */
-.page__content {
-  font-size: 1.1em;
-  line-height: 1.7;
-  padding: 0 1em !important;
+.layout--blog-post .page__content p,
+.layout--single .page__content p {
+  margin-bottom: 1.1rem;
 }
 
-/* Remove top margin */
-.page__inner-wrap {
-  margin-top: 0 !important;
+.layout--blog-post .page__content h2,
+.layout--single .page__content h2 {
+  margin-top: 2.1rem;
+  margin-bottom: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
 }
 
-/* Typography improvements */
-.page__content p {
-  margin-bottom: 1.5em;
+.layout--blog-post .page__content h3,
+.layout--single .page__content h3 {
+  margin-top: 1.7rem;
 }
 
-.page__content h2 {
-  margin-top: 2em;
-  font-size: 1.75em;
-  color: var(--heading-color);
+.layout--blog-post .page__title,
+.layout--single .page__title {
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
 }
 
-.page__content h3 {
-  margin-top: 1.75em;
-  font-size: 1.4em;
-  color: var(--heading-color);
+.layout--blog-post .page__meta,
+.layout--single .page__meta {
+  margin-bottom: 1.4rem;
 }
 
-/* Code blocks */
-.page__content pre.highlight {
-  padding: 1.5em;
-  margin: 1.5em 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.layout--blog-post .page__content pre,
+.layout--single .page__content pre {
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-color);
 }
 
-/* Math formulas */
-.page__content .MathJax {
-  margin: 1em 0;
-  overflow-x: auto;
+.layout--blog-post .page__content code,
+.layout--single .page__content code {
+  border-radius: 4px;
+  padding: 0.12em 0.36em;
 }
 
-/* Table of Contents enhancements */
-.toc {
-  border-radius: 10px !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-  border: none !important;
-  position: sticky !important;
-  top: 2em !important;
-  margin-left: 2em !important;
-  width: 250px !important;
+.layout--blog-post .page__content img,
+.layout--single .page__content img {
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.14);
 }
 
-/* Position the TOC properly */
-.sidebar__right {
-  margin-top: 0 !important;
+.layout--blog-post .page__content blockquote,
+.layout--single .page__content blockquote {
+  border-left-width: 4px;
+  border-left-color: var(--link-color);
+  border-radius: 0 10px 10px 0;
+  background-color: var(--notice-background);
+  margin: 1.6rem 0;
+  padding: 1rem 1.1rem;
 }
 
-@media (min-width: 1024px) {
-  .sidebar__right {
-    position: absolute !important;
-    right: 0 !important;
-    top: 0 !important;
-  }
-  
-  .page__content {
-    position: relative !important;
-  }
+.layout--blog-post .page__content table,
+.layout--single .page__content table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
-.toc .nav__title {
-  font-size: 0.9em !important;
-  padding: 0.75em 1em !important;
-  text-align: center !important;
+.layout--blog-post .sidebar__right,
+.layout--single .sidebar__right {
+  margin-top: 0;
 }
 
-.toc__menu {
-  padding: 0.5em 0 !important;
+.layout--blog-post .toc,
+.layout--single .toc {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
-.toc__menu a {
-  border-bottom: none !important;
-  padding: 0.5em 1em !important;
-  transition: all 0.2s ease !important;
+.layout--blog-post .toc .nav__title,
+.layout--single .toc .nav__title {
+  background: var(--link-color);
+  border-radius: 10px 10px 0 0;
 }
 
-.toc__menu a:hover {
-  background-color: rgba(0,0,0,0.05) !important;
-  transform: translateX(3px) !important;
+.layout--blog-post .toc__menu a,
+.layout--single .toc__menu a {
+  padding: 0.45rem 0.85rem;
+  border-bottom: none;
+  transition: background-color 0.18s ease, transform 0.18s ease;
 }
 
-html.dark-theme .toc__menu a:hover {
-  background-color: rgba(255,255,255,0.05) !important;
+.layout--blog-post .toc__menu a:hover,
+.layout--single .toc__menu a:hover {
+  background-color: var(--table-hover-background);
+  transform: translateX(2px);
 }
 
-/* Active TOC item */
-.toc__menu .active a {
-  border-left: 3px solid var(--link-color) !important;
-  font-weight: bold !important;
+.layout--blog-post .toc .active a,
+.layout--single .toc .active a {
+  color: var(--link-color-hover);
+  font-weight: 700;
+  border-left: 3px solid var(--link-color);
 }
 
-/* Pull quotes */
-.page__content blockquote {
-  margin: 2em 0;
-  padding: 1em 1.5em;
-  border-left: 5px solid var(--link-color);
-  background-color: rgba(0,0,0,0.03);
-  font-size: 1.1em;
-  font-style: italic;
-  border-radius: 0 8px 8px 0;
-}
-
-html.dark-theme .page__content blockquote {
-  background-color: rgba(255,255,255,0.05);
-}
-
-/* Highlighted sections */
-.page__content .notice {
-  margin: 2em 0;
-  padding: 1.5em;
-  border-radius: 8px;
-  background-color: rgba(0,0,0,0.03);
-}
-
-html.dark-theme .page__content .notice {
-  background-color: rgba(255,255,255,0.05);
-}
-
-/* Image styling */
-.page__content img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin: 1.5em 0;
-}
-
-/* Back to top button */
 .back-to-top {
   position: fixed;
-  bottom: 2em;
-  right: 2em;
-  background-color: var(--link-color);
-  color: white;
+  right: 1.4rem;
+  bottom: 1.4rem;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 999px;
+  background-color: var(--link-color);
+  color: #fff;
   text-decoration: none;
+  box-shadow: 0 8px 16px rgba(2, 6, 23, 0.25);
   opacity: 0;
-  transition: opacity 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 1000;
 }
 
 .back-to-top.visible {
-  opacity: 0.8;
+  opacity: 0.9;
+  transform: translateY(0);
 }
 
 .back-to-top:hover {
   opacity: 1;
-  color: white;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-.back-to-top i {
-  font-size: 1.2em;
+.layout--blog-post .page__content > h2,
+.layout--single .page__content > h2 {
+  scroll-margin-top: 5.5rem;
 }
 
-/* Responsive improvements */
+.layout--blog-post .page__content hr,
+.layout--single .page__content hr {
+  margin: 1.6rem 0;
+  border-color: var(--border-color);
+}
+
 @media (max-width: 1023px) {
-  .page__content {
-    padding: 0 1em !important;
+  .layout--blog-post #main,
+  .layout--single #main {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
   }
-  
-  .toc {
-    position: relative !important;
-    top: 0 !important;
-    margin: 0 auto 2em auto !important;
-    width: 100% !important;
-    max-width: 600px !important;
+
+  .layout--blog-post .page__content,
+  .layout--single .page__content {
+    font-size: 1rem;
   }
-  
-  .sidebar__right {
-    width: 100% !important;
-    margin-left: 0 !important;
+
+  .layout--blog-post .toc,
+  .layout--single .toc {
+    margin: 0 0 1rem;
+    width: 100%;
+  }
+
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 }
-
-/* Fix for title spacing */
-.page__title {
-  margin-top: 1em !important;
-  margin-bottom: 0.5em !important;
-}
-
-/* Fix for read time */
-.page__meta {
-  margin-bottom: 2em !important;
-}
-
-/* Add a subtle divider between sections */
-.page__content h2:not(:first-child) {
-  border-top: 1px solid rgba(0,0,0,0.1);
-  padding-top: 1.5em;
-}
-
-html.dark-theme .page__content h2:not(:first-child) {
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Improve code syntax highlighting */
-.page__content .highlight {
-  margin: 1.5em 0;
-}
-
-.page__content code {
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
-/* Improve table styling */
-.page__content table {
-  margin: 2em 0;
-  border-collapse: collapse;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.page__content table th {
-  background-color: var(--table-header-background);
-  padding: 0.75em 1em;
-  text-align: left;
-}
-
-.page__content table td {
-  padding: 0.75em 1em;
-  border-top: 1px solid var(--border-color);
-}
-
-.page__content table tr:hover {
-  background-color: var(--table-hover-background);
-}
-
-/* Add JavaScript for back to top button */
