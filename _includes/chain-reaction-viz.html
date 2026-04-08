@@ -1,0 +1,440 @@
+<div class="chain-reaction-viz" style="margin: 1.5rem 0; font-family: monospace;">
+  <div id="cr-wrap" style="background:#060c1a; border:1px solid #1c3a6e; border-radius:8px 8px 0 0; overflow:hidden; line-height:0; position:relative;"></div>
+  <div style="display:flex; gap:10px; align-items:center; padding:10px 14px; background:#0a1529; border:1px solid #1c3a6e; border-top:none; border-radius:0 0 8px 8px; flex-wrap:wrap;">
+    <button id="cr-fire-btn" style="background:#1a4a9e;color:#aef;border:1px solid #2a6ad0;padding:7px 18px;border-radius:5px;cursor:pointer;font-size:13px;font-family:monospace;">⚡ Fire Neutron</button>
+    <button id="cr-reset-btn" style="background:#0e1e3e;color:#7ab;border:1px solid #1e3a6e;padding:7px 18px;border-radius:5px;cursor:pointer;font-size:13px;font-family:monospace;">↺ Reset</button>
+    <span id="cr-status" style="margin-left:auto;color:#6a9fd8;font-size:12px;">Ready — fire to start</span>
+  </div>
+</div>
+
+<script>
+(function () {
+  var fireBtn = document.getElementById('cr-fire-btn');
+  var resetBtn = document.getElementById('cr-reset-btn');
+  var statusEl = document.getElementById('cr-status');
+  var sketch = null;
+
+  function setStatus(msg, color) {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    if (color) statusEl.style.color = color;
+  }
+
+  // ── deterministic jitter so layout is stable on reset ──────────────────────
+  function prand(s) { var x = Math.sin(s + 1) * 43758.5453; return x - Math.floor(x); }
+
+  function loadP5(cb) {
+    if (window.p5) { cb(); return; }
+    var urls = [
+      'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js',
+      'https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js',
+      'https://unpkg.com/p5@1.9.0/lib/p5.min.js'
+    ];
+    var i = 0;
+    function tryNext() {
+      if (window.p5) { cb(); return; }
+      if (i >= urls.length) {
+        setStatus('Interactive failed to load (p5 blocked). Refresh or disable script blocker.', '#f88');
+        return;
+      }
+      var s = document.createElement('script');
+      s.src = urls[i++];
+      s.onload = function () { cb(); };
+      s.onerror = tryNext;
+      document.head.appendChild(s);
+    }
+    tryNext();
+  }
+
+  if (fireBtn) {
+    fireBtn.addEventListener('click', function () {
+      if (!sketch || typeof sketch.fireNeutron !== 'function') {
+        setStatus('Loading simulation engine... try again in a second', '#9cf');
+        return;
+      }
+      sketch.fireNeutron();
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      if (!sketch || typeof sketch.resetSim !== 'function') return;
+      sketch.resetSim();
+    });
+  }
+
+  loadP5(function () {
+    var sk = new p5(function (p) {
+
+      // ── tunables ────────────────────────────────────────────────────────────
+      var COLS = 9, ROWS = 5;
+      var AR   = 17;          // atom radius
+      var NR   = 4;           // neutron radius
+      var NS   = 2.6;         // neutron base speed
+      var FISSION_PROB = 0.88; // chance a neutron actually causes fission on contact
+      var W, H;
+
+      // ── state ───────────────────────────────────────────────────────────────
+      var atoms, neutrons, debris, generation, stats;
+
+      p.setup = function () {
+        var wrap = document.getElementById('cr-wrap');
+        W = Math.min(720, wrap.offsetWidth || 680); H = 390;
+        p.createCanvas(W, H).parent('cr-wrap');
+        p.textFont('monospace');
+        initSim();
+      };
+
+      function initSim() {
+        atoms = []; neutrons = []; debris = [];
+        generation = 0;
+        stats = { fissions: 0, escaped: 0, captured: 0 };
+
+        var padX = 60, padY = 55;
+        var sX = (W - padX * 2) / (COLS - 1);
+        var sY = (H - padY * 2) / (ROWS - 1);
+
+        for (var r = 0; r < ROWS; r++) {
+          for (var c = 0; c < COLS; c++) {
+            var idx = r * COLS + c;
+            // Build nucleon positions inside each atom (8 small dots)
+            var nucleons = [];
+            for (var n = 0; n < 8; n++) {
+              var ang = prand(idx * 10 + n) * Math.PI * 2;
+              var rad = prand(idx * 10 + n + 1) * (AR * 0.55);
+              nucleons.push({ dx: Math.cos(ang) * rad, dy: Math.sin(ang) * rad,
+                              isProton: n < 4 });   // 4 protons (red), 4 neutrons (gray)
+            }
+            atoms.push({
+              x:  padX + c * sX + (prand(idx * 2)     - 0.5) * 20,
+              y:  padY + r * sY + (prand(idx * 2 + 1) - 0.5) * 20,
+              state: 'intact',   // intact | shudder | fissioning | fissioned
+              shudderT: 0,
+              nucleons: nucleons,
+              gp: prand(idx * 3 + 7) * Math.PI * 2,
+              // fission products – filled on fission
+              frags: null, ringR: AR, ringA: 0,
+              gen: -1           // which generation caused this fission
+            });
+          }
+        }
+      }
+
+      // ── draw loop ───────────────────────────────────────────────────────────
+      p.draw = function () {
+        p.background(6, 12, 26);
+        tickDebris();
+        drawAtoms();
+        tickNeutrons();
+        drawHUD();
+      };
+
+      // ── atoms ───────────────────────────────────────────────────────────────
+      function drawAtoms() {
+        for (var i = 0; i < atoms.length; i++) {
+          var a = atoms[i];
+
+          if (a.state === 'fissioned') {
+            // Shockwave ring fading out
+            if (a.ringA > 0) {
+              a.ringR += 2.2; a.ringA = Math.max(0, a.ringA - 6);
+              p.noFill(); p.stroke(255, 200, 60, a.ringA);
+              p.strokeWeight(2); p.circle(a.x, a.y, a.ringR * 2);
+            }
+            // Two named fission fragments drifting apart
+            if (a.frags) {
+              for (var f = 0; f < 2; f++) {
+                var fr = a.frags[f];
+                fr.x += fr.vx; fr.y += fr.vy;
+                fr.vx *= 0.96; fr.vy *= 0.96;
+                p.noStroke();
+                p.fill(fr.col[0], fr.col[1], fr.col[2]);
+                p.circle(fr.x, fr.y, fr.r * 2);
+                // Inner core
+                p.fill(fr.col[0] * 0.5, fr.col[1] * 0.5, fr.col[2] * 0.5);
+                p.circle(fr.x, fr.y, fr.r * 0.9);
+                // Label
+                p.fill(200, 200, 200); p.noStroke(); p.textSize(7);
+                p.textAlign(p.CENTER, p.CENTER);
+                p.text(fr.label, fr.x, fr.y);
+              }
+            }
+            continue;
+          }
+
+          if (a.state === 'shudder') {
+            a.shudderT += 0.4;
+            if (a.shudderT > 2.5) { a.state = 'intact'; a.shudderT = 0; }
+          }
+
+          var jx = a.state === 'shudder' ? Math.sin(a.shudderT * 18) * 2.5 : 0;
+          var jy = a.state === 'shudder' ? Math.cos(a.shudderT * 22) * 2  : 0;
+          var g  = 0.5 + 0.5 * Math.sin(p.frameCount * 0.04 + a.gp);
+
+          // Outer glow
+          p.noStroke();
+          p.fill(18, 95, 210, 20 + g * 16); p.circle(a.x + jx, a.y + jy, AR * 4.2);
+          p.fill(30, 130, 250, 34 + g * 20); p.circle(a.x + jx, a.y + jy, AR * 2.9);
+
+          // Nucleus body
+          p.fill(16, 68, 148); p.stroke(54, 136, 246); p.strokeWeight(1.4);
+          p.circle(a.x + jx, a.y + jy, AR * 2);
+
+          // Nucleons (protons red, neutrons gray)
+          p.noStroke();
+          for (var n = 0; n < a.nucleons.length; n++) {
+            var nu = a.nucleons[n];
+            if (nu.isProton) p.fill(210, 80, 50);
+            else             p.fill(140, 160, 180);
+            p.circle(a.x + jx + nu.dx, a.y + jy + nu.dy, 4);
+          }
+
+          // Electron orbit rings
+          p.noFill(); p.stroke(68, 145, 255, 48); p.strokeWeight(0.7);
+          p.push(); p.translate(a.x + jx, a.y + jy);
+          p.rotate(0.35);
+          p.ellipse(0, 0, AR * 2.75, AR * 0.95);
+          p.rotate(p.PI / 2.4);
+          p.ellipse(0, 0, AR * 2.75, AR * 0.95);
+          p.pop();
+
+          // Label
+          p.fill(165, 212, 255); p.noStroke(); p.textSize(7);
+          p.textAlign(p.CENTER, p.CENTER);
+          p.text('U-235', a.x + jx, a.y + jy);
+        }
+        p.textAlign(p.LEFT);
+      }
+
+      // ── neutrons ─────────────────────────────────────────────────────────────
+      function tickNeutrons() {
+        var spawn = [];
+        for (var i = 0; i < neutrons.length; i++) {
+          var n = neutrons[i];
+          if (!n.active) continue;
+
+          n.trail.push({ x: n.x, y: n.y });
+          if (n.trail.length > 10) n.trail.shift();
+          n.x += n.vx; n.y += n.vy;
+
+          // Off-screen → escaped
+          if (n.x < -20 || n.x > W + 20 || n.y < -20 || n.y > H + 20) {
+            n.active = false; stats.escaped++;
+            spawnEscapeFlash(n.x, n.y); continue;
+          }
+
+          // Collision check
+          var hit = false;
+          for (var j = 0; j < atoms.length; j++) {
+            var a = atoms[j];
+            if (a.state === 'fissioned') continue;
+            var dx = n.x - a.x, dy = n.y - a.y;
+            if (Math.sqrt(dx * dx + dy * dy) < AR + NR) {
+              hit = true; n.active = false;
+
+              if (Math.random() < FISSION_PROB) {
+                // ── FISSION ─────────────────────────────────────────────────
+                fission(a, n.gen + 1, spawn);
+              } else {
+                // ── CAPTURE (no fission) ─────────────────────────────────────
+                stats.captured++;
+                a.state = 'shudder'; a.shudderT = 0;
+                spawnCaptureFlash(a.x, a.y);
+              }
+              break;
+            }
+          }
+          if (hit) continue;
+
+          // Draw trail + neutron
+          for (var t = 0; t < n.trail.length; t++) {
+            p.noStroke();
+            p.fill(255, 255, 130, (t / n.trail.length) * 90);
+            p.circle(n.trail[t].x, n.trail[t].y, 3);
+          }
+          p.noStroke();
+          p.fill(255, 255, 120, 65); p.circle(n.x, n.y, NR * 4.5);
+          p.fill(255, 255, 200);     p.circle(n.x, n.y, NR * 2);
+        }
+        for (var i = 0; i < spawn.length; i++) neutrons.push(spawn[i]);
+        if (neutrons.length > 600)
+          neutrons = neutrons.filter(function (n) { return n.active; });
+      }
+
+      function fission(a, gen, spawnList) {
+        a.state   = 'fissioned';
+        a.ringR   = AR; a.ringA = 255;
+        a.gen     = gen;
+        stats.fissions++;
+        generation = Math.max(generation, gen);
+
+        // Two real-ish fission fragments: Ba-141 (larger) and Kr-92 (smaller)
+        var ang1 = Math.random() * Math.PI * 2;
+        var ang2 = ang1 + Math.PI + (Math.random() - 0.5) * 0.5;
+        a.frags = [
+          { x: a.x, y: a.y, vx: Math.cos(ang1)*1.4, vy: Math.sin(ang1)*1.4,
+            r: AR * 0.72, label: 'Ba-141', col: [200, 130, 40] },
+          { x: a.x, y: a.y, vx: Math.cos(ang2)*1.8, vy: Math.sin(ang2)*1.8,
+            r: AR * 0.54, label: 'Kr-92',  col: [70, 160, 220] }
+        ];
+
+        // Gamma ray sparks
+        for (var k = 0; k < 20; k++) {
+          var sa = Math.random() * Math.PI * 2;
+          var sv = 1.5 + Math.random() * 4.5;
+          debris.push({
+            x: a.x, y: a.y, vx: Math.cos(sa)*sv, vy: Math.sin(sa)*sv,
+            life: 1, sz: 1.5 + Math.random() * 4,
+            r: 255, g: 200 + Math.random()*55, b: 50 + Math.random()*80,
+            type: 'spark'
+          });
+        }
+        // Gamma ray lines (zigzag visual)
+        for (var k = 0; k < 3; k++) {
+          var ga = Math.random() * Math.PI * 2;
+          debris.push({
+            x: a.x, y: a.y, vx: Math.cos(ga)*5, vy: Math.sin(ga)*5,
+            life: 1, sz: 0, type: 'gamma', age: 0
+          });
+        }
+
+        // Release 2 or 3 neutrons (avg 2.4, matching U-235 actual yield)
+        var cnt  = Math.random() < 0.4 ? 3 : 2;
+        var base = Math.random() * Math.PI * 2;
+        for (var k = 0; k < cnt; k++) {
+          var ang = base + k * Math.PI * 2 / cnt + (Math.random() - 0.5) * 0.8;
+          var spd = NS * (0.85 + Math.random() * 0.35);
+          spawnList.push({
+            x: a.x + Math.cos(ang) * (AR + 2),
+            y: a.y + Math.sin(ang) * (AR + 2),
+            vx: Math.cos(ang) * spd, vy: Math.sin(ang) * spd,
+            trail: [], active: true, gen: gen
+          });
+        }
+      }
+
+      function spawnEscapeFlash(x, y) {
+        for (var k = 0; k < 5; k++) {
+          var ang = Math.random() * Math.PI * 2;
+          debris.push({
+            x: Math.min(Math.max(x, 5), W-5),
+            y: Math.min(Math.max(y, 5), H-5),
+            vx: Math.cos(ang)*1.5, vy: Math.sin(ang)*1.5,
+            life: 0.7, sz: 2.5, r:180, g:180, b:255, type:'spark'
+          });
+        }
+      }
+
+      function spawnCaptureFlash(x, y) {
+        for (var k = 0; k < 8; k++) {
+          var ang = Math.random() * Math.PI * 2;
+          debris.push({
+            x: x, y: y, vx: Math.cos(ang)*2, vy: Math.sin(ang)*2,
+            life: 0.9, sz: 3, r:120, g:200, b:120, type:'spark'
+          });
+        }
+      }
+
+      // ── debris (sparks + gamma lines) ───────────────────────────────────────
+      function tickDebris() {
+        var alive = [];
+        for (var i = 0; i < debris.length; i++) {
+          var d = debris[i];
+          if (d.type === 'spark') {
+            d.x += d.vx; d.y += d.vy;
+            d.vx *= 0.90; d.vy *= 0.90;
+            d.life -= 0.04;
+            if (d.life <= 0) continue;
+            p.noStroke(); p.fill(d.r, d.g, d.b, d.life * 220);
+            p.circle(d.x, d.y, d.sz * d.life * 2.5);
+          } else if (d.type === 'gamma') {
+            // Draw a zigzag line representing a gamma ray
+            d.age += 0.15; d.life -= 0.04;
+            if (d.life <= 0) continue;
+            var len = d.age * 14;
+            p.stroke(255, 255, 255, d.life * 160); p.strokeWeight(1);
+            for (var seg = 0; seg < 5; seg++) {
+              var t1 = seg / 5, t2 = (seg + 1) / 5;
+              var side = (seg % 2 === 0) ? 1 : -1;
+              var x1 = d.x + d.vx * len * t1 + d.vy * side * 3;
+              var y1 = d.y + d.vy * len * t1 - d.vx * side * 3;
+              var x2 = d.x + d.vx * len * t2 + d.vy * (side * -1) * 3;
+              var y2 = d.y + d.vy * len * t2 - d.vx * (side * -1) * 3;
+              p.line(x1, y1, x2, y2);
+            }
+          }
+          alive.push(d);
+        }
+        debris = alive;
+      }
+
+      // ── HUD ─────────────────────────────────────────────────────────────────
+      function drawHUD() {
+        var intact  = 0, activeN = 0;
+        for (var i = 0; i < atoms.length;   i++) if (atoms[i].state !== 'fissioned') intact++;
+        for (var i = 0; i < neutrons.length; i++) if (neutrons[i].active) activeN++;
+
+        // Panel bg
+        p.noStroke(); p.fill(8, 18, 48, 210); p.rect(8, 6, 310, 62, 6);
+
+        p.fill(100, 170, 255); p.noStroke(); p.textSize(10.5); p.textAlign(p.LEFT);
+        p.text('Fissions: '      + stats.fissions + '  |  Gen: ' + generation, 16, 23);
+        p.text('Neutrons flying: ' + activeN, 16, 38);
+        p.text('Escaped: '       + stats.escaped  + '  |  Captured (no fission): ' + stats.captured, 16, 53);
+
+        // Idle prompt
+        if (neutrons.length === 0 && stats.fissions === 0) {
+          var al = 160 + Math.sin(p.frameCount * 0.06) * 60;
+          p.fill(255, 255, 100, al); p.textSize(13); p.textAlign(p.CENTER);
+          p.text('Click "Fire Neutron" to begin', W / 2, H - 14);
+        }
+
+        // Legend (bottom-right)
+        p.textSize(8.5); p.textAlign(p.RIGHT);
+        p.fill(200, 130, 40); p.text('Ba-141  fission fragment', W - 10, H - 30);
+        p.fill( 70, 160, 220); p.text('Kr-92  fission fragment',  W - 10, H - 18);
+        p.fill(255, 255, 200); p.text('⚡ = free neutron',        W - 10, H -  6);
+
+        // Update status bar
+        var el = document.getElementById('cr-status');
+        if (el) {
+          var total = atoms.length;
+          if (intact === 0) {
+            el.textContent = 'Complete — all ' + total + ' atoms fissioned  |  ' + stats.escaped + ' neutrons escaped';
+            el.style.color = '#ffd060';
+          } else if (activeN > 0) {
+            el.textContent = stats.fissions + ' fissions · gen ' + generation + ' · ' + activeN + ' neutrons flying';
+            el.style.color = '#6af';
+          } else if (stats.fissions > 0) {
+            el.textContent = 'Chain stalled — ' + stats.fissions + '/' + total + ' fissioned  |  reset and retry';
+            el.style.color = '#f96';
+          } else {
+            el.textContent = 'Ready — fire to start';
+            el.style.color = '#6a9fd8';
+          }
+        }
+      }
+
+      // ── controls ────────────────────────────────────────────────────────────
+      p.fireNeutron = function () {
+        var targets = atoms.filter(function (a) {
+          return a.state !== 'fissioned' && a.x < W / 2;
+        });
+        if (!targets.length) return;
+        var t  = targets[Math.floor(Math.random() * targets.length)];
+        var sy = t.y + (Math.random() - 0.5) * 40;
+        var dx = t.x, dy = t.y - sy;
+        var mg = Math.sqrt(dx * dx + dy * dy);
+        neutrons.push({
+          x: 0, y: sy,
+          vx: (dx / mg) * NS, vy: (dy / mg) * NS + (Math.random() - 0.5) * 0.4,
+          trail: [], active: true, gen: 0
+        });
+      };
+
+      p.resetSim = function () { initSim(); };
+
+    }, 'cr-wrap');
+    sketch = sk;
+  });
+})();
+</script>

@@ -1,0 +1,212 @@
+<style>
+.sfd-wrap { margin: 2rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.sfd-wrap svg { display: block; width: 100%; min-width: 580px; }
+.sfd-stage { cursor: default; }
+.sfd-stage .sfd-box { transition: filter 0.2s; }
+.sfd-stage:hover .sfd-box { filter: brightness(1.35) drop-shadow(0 0 6px currentColor); }
+@keyframes sfd-flow  { to { stroke-dashoffset: -20; } }
+@keyframes sfd-pulse { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+.sfd-arrow  { animation: sfd-flow  1.4s linear infinite; }
+.sfd-arrow2 { animation: sfd-flow  2.2s linear infinite; }
+.sfd-glow   { animation: sfd-pulse 2s ease-in-out infinite; }
+</style>
+
+<div class="sfd-wrap">
+<svg viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg"
+     aria-label="India's Three-Stage Nuclear Fuel Relay diagram">
+<defs>
+  <!-- Arrowheads -->
+  <marker id="sfd-au"   markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#e8891a"/></marker>
+  <marker id="sfd-apu"  markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#9b59b6"/></marker>
+  <marker id="sfd-ath"  markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#2ecc71"/></marker>
+  <marker id="sfd-ael"  markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#ffd700"/></marker>
+  <marker id="sfd-alp"  markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#2ecc71"/></marker>
+</defs>
+
+<!-- Background -->
+<rect width="860" height="420" fill="#0b0f1a" rx="10"/>
+
+<!-- Title -->
+<text x="430" y="26" text-anchor="middle" fill="#5a8abf" font-size="11"
+      font-family="monospace" letter-spacing="2" font-weight="600">
+  INDIA'S THREE-STAGE NUCLEAR FUEL RELAY
+</text>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- EXTERNAL INPUTS (top row) -->
+<!-- ──────────────────────────────────────────────────────── -->
+
+<!-- Natural Uranium → Stage 1 -->
+<text x="97"  y="56" text-anchor="middle" fill="#e8891a" font-size="9"  font-family="monospace" font-weight="700">NATURAL URANIUM</text>
+<text x="97"  y="68" text-anchor="middle" fill="#e8891a" font-size="8"  font-family="monospace" opacity=".8">(Stage 1 only)</text>
+<line x1="97"  y1="72" x2="97"  y2="143" stroke="#e8891a" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-au)" class="sfd-arrow2"/>
+
+<!-- Thorium-232 → Stage 2B -->
+<text x="527" y="56" text-anchor="middle" fill="#2ecc71" font-size="9"  font-family="monospace" font-weight="700">THORIUM-232</text>
+<text x="527" y="68" text-anchor="middle" fill="#2ecc71" font-size="8"  font-family="monospace" opacity=".8">(new input)</text>
+<line x1="527" y1="72" x2="527" y2="143" stroke="#2ecc71" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ath)" class="sfd-arrow2"/>
+
+<!-- Thorium-232 → Stage 3 -->
+<text x="742" y="56" text-anchor="middle" fill="#2ecc71" font-size="9"  font-family="monospace" font-weight="700">THORIUM-232</text>
+<text x="742" y="68" text-anchor="middle" fill="#2ecc71" font-size="8"  font-family="monospace" opacity=".8">(self-sustaining)</text>
+<line x1="742" y1="72" x2="742" y2="143" stroke="#2ecc71" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ath)" class="sfd-arrow2"/>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- BETWEEN-STAGE ARROWS -->
+<!-- ──────────────────────────────────────────────────────── -->
+
+<!-- 1 → 2A  (Plutonium-239 + U-238) -->
+<line x1="178" y1="210" x2="233" y2="210" stroke="#9b59b6" stroke-width="3"
+      stroke-dasharray="6 4" marker-end="url(#sfd-apu)" class="sfd-arrow"/>
+<text x="205" y="204" text-anchor="middle" fill="#b07cd4" font-size="8.5" font-family="monospace" font-weight="700">Pu-239</text>
+<text x="205" y="228" text-anchor="middle" fill="#9070b0" font-size="7.5" font-family="monospace">+ U-238 waste</text>
+
+<!-- 2A → 2B  (More Plutonium) -->
+<line x1="393" y1="210" x2="448" y2="210" stroke="#9b59b6" stroke-width="3"
+      stroke-dasharray="6 4" marker-end="url(#sfd-apu)" class="sfd-arrow"/>
+<text x="420" y="204" text-anchor="middle" fill="#b07cd4" font-size="8.5" font-family="monospace" font-weight="700">More Pu-239</text>
+<text x="420" y="228" text-anchor="middle" fill="#9070b0" font-size="7.5" font-family="monospace">(multiplied)</text>
+
+<!-- 2B → 3  (Uranium-233) -->
+<line x1="608" y1="210" x2="663" y2="210" stroke="#2ecc71" stroke-width="3"
+      stroke-dasharray="6 4" marker-end="url(#sfd-ath)" class="sfd-arrow"/>
+<text x="635" y="204" text-anchor="middle" fill="#5de890" font-size="8.5" font-family="monospace" font-weight="700">U-233</text>
+<text x="635" y="228" text-anchor="middle" fill="#40b060" font-size="7.5" font-family="monospace">(superfuel)</text>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- STAGE 1 -->
+<!-- ──────────────────────────────────────────────────────── -->
+<g class="sfd-stage">
+  <!-- Box -->
+  <rect class="sfd-box" x="22" y="148" width="156" height="128" rx="8"
+        fill="#16100400" stroke="#e8891a" stroke-width="1.8"/>
+  <rect x="22" y="148" width="156" height="28" rx="8" fill="#c4720e"/>
+  <rect x="22" y="164" width="156" height="12" fill="#c4720e"/>
+  <!-- Header -->
+  <text x="100" y="166" text-anchor="middle" fill="#fff" font-size="12"
+        font-family="monospace" font-weight="700">STAGE 1</text>
+  <!-- Body -->
+  <text x="100" y="192" text-anchor="middle" fill="#e8891a" font-size="9.5"
+        font-family="monospace" font-weight="700">PHWRs</text>
+  <text x="100" y="207" text-anchor="middle" fill="#c09060" font-size="8.5" font-family="monospace">Natural U → fission</text>
+  <text x="100" y="220" text-anchor="middle" fill="#c09060" font-size="8.5" font-family="monospace">U-238 absorbs neutrons</text>
+  <text x="100" y="233" text-anchor="middle" fill="#c09060" font-size="8.5" font-family="monospace">→ breeds Pu-239 waste</text>
+  <!-- Status -->
+  <rect x="38" y="245" width="124" height="18" rx="4" fill="#1a0e03" stroke="#e8891a" stroke-width="1"/>
+  <text x="100" y="258" text-anchor="middle" fill="#e8891a" font-size="8"
+        font-family="monospace" font-weight="600">✓ LIVE — 18-20 reactors</text>
+</g>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- STAGE 2A -->
+<!-- ──────────────────────────────────────────────────────── -->
+<g class="sfd-stage">
+  <rect class="sfd-box" x="237" y="148" width="156" height="128" rx="8"
+        fill="#12091a00" stroke="#9b59b6" stroke-width="1.8"/>
+  <rect x="237" y="148" width="156" height="28" rx="8" fill="#7d3ea8"/>
+  <rect x="237" y="164" width="156" height="12" fill="#7d3ea8"/>
+  <text x="315" y="166" text-anchor="middle" fill="#fff" font-size="12"
+        font-family="monospace" font-weight="700">STAGE 2A</text>
+  <text x="315" y="192" text-anchor="middle" fill="#c080e8" font-size="9.5"
+        font-family="monospace" font-weight="700">PFBR — Multiplier</text>
+  <text x="315" y="207" text-anchor="middle" fill="#a080c0" font-size="8.5" font-family="monospace">Pu-239 core fissions</text>
+  <text x="315" y="220" text-anchor="middle" fill="#a080c0" font-size="8.5" font-family="monospace">U-238 blanket absorbs</text>
+  <text x="315" y="233" text-anchor="middle" fill="#a080c0" font-size="8.5" font-family="monospace">→ breeds MORE Pu-239</text>
+  <rect x="252" y="245" width="126" height="18" rx="4" fill="#120820" stroke="#9b59b6" stroke-width="1"/>
+  <text x="315" y="258" text-anchor="middle" fill="#c080e8" font-size="8"
+        font-family="monospace" font-weight="600">⚡ NOW — Apr 2026</text>
+</g>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- STAGE 2B -->
+<!-- ──────────────────────────────────────────────────────── -->
+<g class="sfd-stage">
+  <rect class="sfd-box" x="452" y="148" width="156" height="128" rx="8"
+        fill="#0a122000" stroke="#3498db" stroke-width="1.8"/>
+  <rect x="452" y="148" width="156" height="28" rx="8" fill="#1e6fa8"/>
+  <rect x="452" y="164" width="156" height="12" fill="#1e6fa8"/>
+  <text x="530" y="166" text-anchor="middle" fill="#fff" font-size="12"
+        font-family="monospace" font-weight="700">STAGE 2B</text>
+  <text x="530" y="192" text-anchor="middle" fill="#70c0f0" font-size="9.5"
+        font-family="monospace" font-weight="700">PFBR — Th Bridge</text>
+  <text x="530" y="207" text-anchor="middle" fill="#7090b0" font-size="8.5" font-family="monospace">Pu-239 core fissions</text>
+  <text x="530" y="220" text-anchor="middle" fill="#7090b0" font-size="8.5" font-family="monospace">Th-232 blanket absorbs</text>
+  <text x="530" y="233" text-anchor="middle" fill="#7090b0" font-size="8.5" font-family="monospace">→ breeds U-233 fuel</text>
+  <rect x="465" y="245" width="130" height="18" rx="4" fill="#0a1628" stroke="#3498db" stroke-width="1"/>
+  <text x="530" y="258" text-anchor="middle" fill="#70c0f0" font-size="8"
+        font-family="monospace" font-weight="600">⏳ NEXT — ~2030s</text>
+</g>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- STAGE 3 -->
+<!-- ──────────────────────────────────────────────────────── -->
+<g class="sfd-stage">
+  <rect class="sfd-box" x="667" y="148" width="156" height="128" rx="8"
+        fill="#0a1a0f00" stroke="#27ae60" stroke-width="1.8"/>
+  <rect x="667" y="148" width="156" height="28" rx="8" fill="#1a8a45"/>
+  <rect x="667" y="164" width="156" height="12" fill="#1a8a45"/>
+  <text x="745" y="166" text-anchor="middle" fill="#fff" font-size="12"
+        font-family="monospace" font-weight="700">STAGE 3</text>
+  <text x="745" y="192" text-anchor="middle" fill="#60e888" font-size="9.5"
+        font-family="monospace" font-weight="700">AHWRs — Thorium Era</text>
+  <text x="745" y="207" text-anchor="middle" fill="#60a878" font-size="8.5" font-family="monospace">U-233 core fissions</text>
+  <text x="745" y="220" text-anchor="middle" fill="#60a878" font-size="8.5" font-family="monospace">Th-232 blanket absorbs</text>
+  <text x="745" y="233" text-anchor="middle" fill="#60a878" font-size="8.5" font-family="monospace">→ breeds its own U-233</text>
+  <rect x="678" y="245" width="134" height="18" rx="4" fill="#0a1a0a" stroke="#27ae60" stroke-width="1"/>
+  <text x="745" y="258" text-anchor="middle" fill="#60e888" font-size="8"
+        font-family="monospace" font-weight="600">🔮 GOAL — 2040s+</text>
+</g>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- ELECTRICITY OUTPUTS (bottom) -->
+<!-- ──────────────────────────────────────────────────────── -->
+<line x1="100" y1="276" x2="100" y2="332" stroke="#ffd700" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ael)" class="sfd-arrow2"/>
+<text x="100" y="350" text-anchor="middle" fill="#ffd700" font-size="9" font-family="monospace">⚡ Electricity</text>
+
+<line x1="315" y1="276" x2="315" y2="332" stroke="#ffd700" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ael)" class="sfd-arrow2"/>
+<text x="315" y="350" text-anchor="middle" fill="#ffd700" font-size="9" font-family="monospace">⚡ Electricity</text>
+
+<line x1="530" y1="276" x2="530" y2="332" stroke="#ffd700" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ael)" class="sfd-arrow2"/>
+<text x="530" y="350" text-anchor="middle" fill="#ffd700" font-size="9" font-family="monospace">⚡ Electricity</text>
+
+<line x1="745" y1="276" x2="745" y2="332" stroke="#ffd700" stroke-width="2"
+      stroke-dasharray="5 3" marker-end="url(#sfd-ael)" class="sfd-arrow2"/>
+<text x="745" y="350" text-anchor="middle" fill="#ffd700" font-size="9" font-family="monospace">⚡ Electricity</text>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- STAGE 3 CLOSED-LOOP INDICATOR -->
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- Loop arc to the right of Stage 3 -->
+<path d="M 810 180 C 845 180 852 197 852 212 C 852 227 845 244 810 244"
+      stroke="#2ecc71" stroke-width="2" fill="none"
+      stroke-dasharray="5 3" marker-end="url(#sfd-alp)" class="sfd-arrow2"/>
+<text x="856" y="209" text-anchor="start" fill="#2ecc71" font-size="11"
+      font-family="monospace" font-weight="700" class="sfd-glow">∞</text>
+<text x="857" y="222" text-anchor="start" fill="#2ecc71" font-size="7"
+      font-family="monospace">loop</text>
+
+<!-- ──────────────────────────────────────────────────────── -->
+<!-- LEGEND -->
+<!-- ──────────────────────────────────────────────────────── -->
+<rect x="150" y="370" width="560" height="34" rx="5" fill="#111827" stroke="#1e2d45" stroke-width="1"/>
+
+<line x1="168" y1="387" x2="195" y2="387" stroke="#e8891a" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="200" y="391" fill="#e8891a" font-size="8" font-family="monospace">Uranium flow</text>
+
+<line x1="278" y1="387" x2="305" y2="387" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="310" y="391" fill="#9b59b6" font-size="8" font-family="monospace">Plutonium flow</text>
+
+<line x1="400" y1="387" x2="427" y2="387" stroke="#2ecc71" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="432" y="391" fill="#2ecc71" font-size="8" font-family="monospace">Thorium / U-233 flow</text>
+
+<line x1="556" y1="387" x2="583" y2="387" stroke="#ffd700" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="588" y="391" fill="#ffd700" font-size="8" font-family="monospace">Electricity output</text>
+
+</svg>
+</div>
