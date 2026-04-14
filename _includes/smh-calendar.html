@@ -1,0 +1,232 @@
+<style>
+#smhc-tip {
+  position: fixed;
+  background: #1a2030;
+  border: 1px solid #2a3348;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #e4e8f0;
+  pointer-events: none;
+  display: none;
+  z-index: 9999;
+  max-width: 260px;
+  line-height: 1.65;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.65);
+}
+#smhc-outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+#smhc-wrap {
+  background: #0a0e17;
+  border-radius: 10px;
+  padding: 8px 0 6px;
+  min-width: 640px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+</style>
+
+<div id="smhc-tip"></div>
+<div id="smhc-outer">
+  <div id="smhc-wrap">
+    <div id="smhc-loading" style="padding:48px;text-align:center;color:#4b5563;font-size:12px;font-family:system-ui">Loading verified data…</div>
+    <svg id="smhc-svg" viewBox="0 0 860 340" width="100%" xmlns="http://www.w3.org/2000/svg" style="display:none;"></svg>
+  </div>
+</div>
+
+<script>
+(function () {
+  var NS   = 'http://www.w3.org/2000/svg';
+  var tip  = document.getElementById('smhc-tip');
+  var svg  = document.getElementById('smhc-svg');
+  var load = document.getElementById('smhc-loading');
+
+  /* ── Layout ─────────────────────────────────────── */
+  var W=860, H=340, L=96, R=56, T=48, B=44;
+  var PW = W-L-R;   /* 708 */
+  var PH = H-T-B;   /* 248 */
+  var NR = 7;
+  var RH = PH/NR;   /* 35.4 */
+
+  /* ── Exchange presentation order & colours ──────── */
+  var ORDER = ['XETR','XNYS','XLON','JPX','XHKG','BSE','XSHG'];
+  var COL   = {
+    XETR:'#10b981', XNYS:'#8b5cf6', XLON:'#3b82f6',
+    JPX :'#f472b6', XHKG:'#06b6d4', BSE :'#f59e0b', XSHG:'#ef4444'
+  };
+  var HL = {BSE:true, XSHG:true};   /* highlighted rows */
+
+  /* ── Month grid ─────────────────────────────────── */
+  var MONTHS=[
+    {n:'Jan',d:1},{n:'Feb',d:32},{n:'Mar',d:60},{n:'Apr',d:91},
+    {n:'May',d:121},{n:'Jun',d:152},{n:'Jul',d:182},{n:'Aug',d:213},
+    {n:'Sep',d:244},{n:'Oct',d:274},{n:'Nov',d:305},{n:'Dec',d:335}
+  ];
+
+  /* ── Helpers ─────────────────────────────────────── */
+  function doy(ds) {   /* YYYY-MM-DD → day of year (2025, non-leap) */
+    var md=[0,31,28,31,30,31,30,31,31,30,31,30,31];
+    var p=ds.split('-'), m=+p[1], d=+p[2], acc=0;
+    for(var i=1;i<m;i++) acc+=md[i];
+    return acc+d;
+  }
+  function xp(day){ return L+(day/365)*PW; }
+  function yr(i)  { return T+i*RH+RH/2;   }
+  function mk(tag,a){
+    var e=document.createElementNS(NS,tag);
+    for(var k in a) e.setAttribute(k,a[k]);
+    return e;
+  }
+  function tx(x,y,s,a){
+    var e=mk('text',Object.assign({x:x,y:y},a));
+    e.textContent=s; return e;
+  }
+
+  /* ── Main render ─────────────────────────────────── */
+  function render(data) {
+    load.style.display='none';
+    svg.style.display='block';
+
+    /* background */
+    svg.appendChild(mk('rect',{width:W,height:H,fill:'#0a0e17'}));
+
+    /* title */
+    svg.appendChild(tx(W/2,14,'Every 2025 Weekday Market Holiday — Positioned by Week',{
+      fill:'#6b7280','font-size':'10','font-weight':'600',
+      'text-anchor':'middle','font-family':'system-ui,sans-serif'
+    }));
+
+    /* row backgrounds + left accent bars */
+    ORDER.forEach(function(code,i){
+      var ry=T+i*RH, hl=HL[code];
+      svg.appendChild(mk('rect',{
+        x:L,y:ry,width:PW,height:RH,
+        fill: hl ? COL[code]+'0a' : (i%2===1?'#0e1521':'transparent')
+      }));
+      if(hl) svg.appendChild(mk('rect',{x:0,y:ry+2,width:3,height:RH-4,fill:COL[code],rx:1.5}));
+    });
+
+    /* subtle week grid (every 7 days, skip if near month line) */
+    for(var wd=7;wd<=364;wd+=7){
+      var near=MONTHS.some(function(m){return Math.abs(m.d-wd)<3;});
+      if(!near) svg.appendChild(mk('line',{x1:xp(wd),y1:T,x2:xp(wd),y2:T+PH,stroke:'#141c2a','stroke-width':'0.35'}));
+    }
+
+    /* month separator lines */
+    MONTHS.forEach(function(m,mi){
+      var x=xp(m.d);
+      svg.appendChild(mk('line',{x1:x,y1:T-4,x2:x,y2:T+PH,stroke:'#1f2937','stroke-width':'0.6'}));
+      var nd=mi<11?MONTHS[mi+1].d:366;
+      svg.appendChild(tx(xp((m.d+nd)/2),T-8,m.n,{
+        fill:'#4b5563','font-size':'9','text-anchor':'middle','font-family':'system-ui,sans-serif'
+      }));
+    });
+
+    /* dots collector */
+    var dots=[];
+
+    ORDER.forEach(function(code,i){
+      var ex=data.exchanges[code]; if(!ex) return;
+      var cy=yr(i), col=COL[code], hl=HL[code], r=hl?6.5:5.5;
+
+      /* block connector rects */
+      var blocks={};
+      ex.holidays.forEach(function(h){
+        if(h.block){
+          if(!blocks[h.block]) blocks[h.block]=[];
+          blocks[h.block].push(doy(h.date));
+        }
+      });
+      Object.keys(blocks).forEach(function(bk){
+        var days=blocks[bk];
+        var x1=xp(Math.min.apply(null,days))-r-1;
+        var x2=xp(Math.max.apply(null,days))+r+1;
+        svg.appendChild(mk('rect',{
+          x:x1,y:cy-r-1,width:x2-x1,height:(r+1)*2,
+          rx:r,fill:col+'18',stroke:col+'44','stroke-width':'0.8'
+        }));
+      });
+
+      /* exchange label */
+      svg.appendChild(tx(4,cy,ex.flag,{'font-size':'12','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+      svg.appendChild(tx(22,cy-5,ex.display_name,{
+        fill:hl?col:'#9ca3af','font-size':hl?'9.5':'9','font-weight':hl?'700':'500',
+        'dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+      }));
+      svg.appendChild(tx(22,cy+5.5,ex.country,{
+        fill:'#4b5563','font-size':'7.5','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+      }));
+
+      /* holiday count right */
+      svg.appendChild(tx(L+PW+14,cy,ex.holiday_count+'d',{
+        fill:hl?col:'#374151','font-size':'8.5','font-weight':hl?'700':'400',
+        'text-anchor':'start','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+      }));
+
+      /* dots */
+      ex.holidays.forEach(function(h){
+        var dot=mk('circle',{cx:xp(doy(h.date)),cy:cy,r:r,fill:col,opacity:h.block?'0.95':'0.80',cursor:'pointer'});
+        dot._d={ex:ex,h:h,col:col};
+        dots.push(dot);
+        svg.appendChild(dot);
+      });
+    });
+
+    /* tooltip events */
+    var TYPE_LABEL={
+      civic:'Civic / National',cultural:'Cultural / Religious',
+      regional:'Regional',mourning:'National Mourning',exchange:'Exchange-Declared'
+    };
+    dots.forEach(function(dot){
+      dot.addEventListener('mouseenter',function(e){
+        var d=this._d;
+        tip.innerHTML=
+          '<b style="color:#e4e8f0">'+d.ex.flag+' '+d.ex.display_name+'</b><br>'+
+          '<span style="color:#6b7280">'+d.h.date+' ('+d.h.dow+')</span><br>'+
+          '<span style="color:#d1d5db;font-weight:600">'+d.h.name+'</span><br>'+
+          '<span style="color:'+d.col+';font-size:10px">'+(TYPE_LABEL[d.h.type]||d.h.type)+'</span>'+
+          (d.h.block?'<br><span style="color:#4b5563;font-size:10px">▪ part of multi-day block</span>':'');
+        tip.style.display='block'; moveTip(e);
+      });
+      dot.addEventListener('mousemove',moveTip);
+      dot.addEventListener('mouseleave',function(){tip.style.display='none';});
+    });
+
+    /* legend */
+    var ly=H-16, lx=L;
+    svg.appendChild(mk('circle',{cx:lx+4,cy:ly,r:4,fill:'#6b7280',opacity:'0.8'}));
+    svg.appendChild(tx(lx+11,ly,'Isolated day',{fill:'#6b7280','font-size':'8.5','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+    lx+=90;
+    svg.appendChild(mk('rect',{x:lx,y:ly-4,width:19,height:9,rx:4,fill:'#ef444418',stroke:'#ef444450','stroke-width':'0.8'}));
+    svg.appendChild(mk('circle',{cx:lx+5,cy:ly,r:3.5,fill:'#ef4444'}));
+    svg.appendChild(mk('circle',{cx:lx+14,cy:ly,r:3.5,fill:'#ef4444'}));
+    svg.appendChild(tx(lx+24,ly,'Multi-day block',{fill:'#6b7280','font-size':'8.5','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+    lx+=105;
+    svg.appendChild(mk('circle',{cx:lx+4,cy:ly,r:4,fill:'#f59e0b'}));
+    svg.appendChild(tx(lx+11,ly,'India',{fill:'#f59e0b','font-size':'8.5','font-weight':'700','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+    lx+=48;
+    svg.appendChild(mk('circle',{cx:lx+4,cy:ly,r:4,fill:'#ef4444'}));
+    svg.appendChild(tx(lx+11,ly,'China',{fill:'#ef4444','font-size':'8.5','font-weight':'700','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+
+    /* source */
+    svg.appendChild(tx(W-8,ly,'Data: exchange_calendars + official circulars',{
+      fill:'#2d3748','font-size':'7.5','text-anchor':'end','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+    }));
+  }
+
+  function moveTip(e){
+    var x=e.clientX+14, y=e.clientY-10;
+    if(x+265>window.innerWidth) x=e.clientX-275;
+    if(y+110>window.innerHeight) y=e.clientY-120;
+    tip.style.left=x+'px'; tip.style.top=y+'px';
+  }
+
+  fetch('/assets/data/exchange_holidays_2025.json')
+    .then(function(r){return r.json();})
+    .then(render)
+    .catch(function(){load.textContent='Could not load data.';});
+})();
+</script>

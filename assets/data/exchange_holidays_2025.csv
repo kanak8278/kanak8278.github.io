@@ -1,0 +1,93 @@
+exchange_code,exchange_name,country,date,day_of_week,holiday_name,holiday_type,block,trading_hours_per_day,exchange_trading_days_2025,exchange_holiday_count,exchange_annual_hours_lost
+JPX,JPX (Tokyo),Japan,2025-01-01,Wed,New Year's Day,civic,,6.5,243,18,117.0
+XETR,Xetra (Frankfurt),Germany,2025-01-01,Wed,New Year's Day,civic,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-01-01,Wed,New Year's Day,civic,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-01-01,Wed,New Year's Day,civic,,8.5,253,8,68.0
+XNYS,NYSE / NASDAQ,United States,2025-01-01,Wed,New Year's Day,civic,,6.5,250,11,71.5
+XSHG,SSE (Shanghai),China,2025-01-01,Wed,New Year's Day,civic,,4.0,243,18,72.0
+JPX,JPX (Tokyo),Japan,2025-01-02,Thu,Market Holiday (Year-End/New Year),exchange,,6.5,243,18,117.0
+JPX,JPX (Tokyo),Japan,2025-01-03,Fri,Market Holiday (Year-End/New Year),exchange,,6.5,243,18,117.0
+XNYS,NYSE / NASDAQ,United States,2025-01-09,Thu,National Day of Mourning (President Carter),mourning,,6.5,250,11,71.5
+JPX,JPX (Tokyo),Japan,2025-01-13,Mon,Coming of Age Day,civic,,6.5,243,18,117.0
+XNYS,NYSE / NASDAQ,United States,2025-01-20,Mon,Martin Luther King Jr. Day,civic,,6.5,250,11,71.5
+XSHG,SSE (Shanghai),China,2025-01-28,Tue,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+XHKG,HKEX,Hong Kong,2025-01-29,Wed,Lunar New Year (Year of the Snake),cultural,lunar,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-01-29,Wed,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+XHKG,HKEX,Hong Kong,2025-01-30,Thu,Lunar New Year (2nd Day),cultural,lunar,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-01-30,Thu,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+XHKG,HKEX,Hong Kong,2025-01-31,Fri,Lunar New Year (3rd Day),cultural,lunar,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-01-31,Fri,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-02-03,Mon,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-02-04,Tue,Spring Festival (Chinese New Year),cultural,spring,4.0,243,18,72.0
+JPX,JPX (Tokyo),Japan,2025-02-11,Tue,National Foundation Day,civic,,6.5,243,18,117.0
+XNYS,NYSE / NASDAQ,United States,2025-02-17,Mon,Presidents' Day (Washington's Birthday),civic,,6.5,250,11,71.5
+JPX,JPX (Tokyo),Japan,2025-02-24,Mon,Emperor's Birthday (observed),civic,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-02-26,Wed,Mahashivratri,cultural,,6.25,248,14,87.5
+BSE,NSE / BSE,India,2025-03-14,Fri,Holi,cultural,,6.25,248,14,87.5
+JPX,JPX (Tokyo),Japan,2025-03-20,Thu,Vernal Equinox,cultural,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-03-31,Mon,Id-ul-Fitr (Eid),cultural,,6.25,248,14,87.5
+XHKG,HKEX,Hong Kong,2025-04-04,Fri,Ching Ming Festival,cultural,,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-04-04,Fri,Qingming Festival (Tomb-Sweeping Day),cultural,,4.0,243,18,72.0
+BSE,NSE / BSE,India,2025-04-10,Thu,Mahavir Jayanti,cultural,,6.25,248,14,87.5
+BSE,NSE / BSE,India,2025-04-14,Mon,Dr. B.R. Ambedkar Jayanti,civic,,6.25,248,14,87.5
+BSE,NSE / BSE,India,2025-04-18,Fri,Good Friday,cultural,,6.25,248,14,87.5
+XETR,Xetra (Frankfurt),Germany,2025-04-18,Fri,Good Friday,cultural,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-04-18,Fri,Good Friday,cultural,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-04-18,Fri,Good Friday,cultural,,8.5,253,8,68.0
+XNYS,NYSE / NASDAQ,United States,2025-04-18,Fri,Good Friday,cultural,,6.5,250,11,71.5
+XETR,Xetra (Frankfurt),Germany,2025-04-21,Mon,Easter Monday,cultural,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-04-21,Mon,Easter Monday,cultural,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-04-21,Mon,Easter Monday,cultural,,8.5,253,8,68.0
+JPX,JPX (Tokyo),Japan,2025-04-29,Tue,Showa Day,civic,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-05-01,Thu,Maharashtra Day,regional,,6.25,248,14,87.5
+XETR,Xetra (Frankfurt),Germany,2025-05-01,Thu,Labour Day (Tag der Arbeit),civic,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-05-01,Thu,Labour Day,civic,,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-05-01,Thu,Labour Day (International Workers' Day),civic,labour,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-05-02,Fri,Labour Day Holiday,civic,labour,4.0,243,18,72.0
+JPX,JPX (Tokyo),Japan,2025-05-05,Mon,Children's Day,civic,,6.5,243,18,117.0
+XHKG,HKEX,Hong Kong,2025-05-05,Mon,Buddha's Birthday,cultural,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-05-05,Mon,Early May Bank Holiday,civic,,8.5,253,8,68.0
+XSHG,SSE (Shanghai),China,2025-05-05,Mon,Labour Day Holiday,civic,labour,4.0,243,18,72.0
+JPX,JPX (Tokyo),Japan,2025-05-06,Tue,Greenery Day (observed),civic,,6.5,243,18,117.0
+XLON,LSE,United Kingdom,2025-05-26,Mon,Spring Bank Holiday,civic,,8.5,253,8,68.0
+XNYS,NYSE / NASDAQ,United States,2025-05-26,Mon,Memorial Day,civic,,6.5,250,11,71.5
+XSHG,SSE (Shanghai),China,2025-06-02,Mon,Dragon Boat Festival (Duanwu),cultural,,4.0,243,18,72.0
+XNYS,NYSE / NASDAQ,United States,2025-06-19,Thu,Juneteenth National Independence Day,civic,,6.5,250,11,71.5
+XHKG,HKEX,Hong Kong,2025-07-01,Tue,HKSAR Establishment Day,civic,,5.5,246,15,82.5
+XNYS,NYSE / NASDAQ,United States,2025-07-04,Fri,Independence Day,civic,,6.5,250,11,71.5
+JPX,JPX (Tokyo),Japan,2025-07-21,Mon,Marine Day,civic,,6.5,243,18,117.0
+JPX,JPX (Tokyo),Japan,2025-08-11,Mon,Mountain Day,civic,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-08-15,Fri,Independence Day,civic,,6.25,248,14,87.5
+XLON,LSE,United Kingdom,2025-08-25,Mon,Summer Bank Holiday,civic,,8.5,253,8,68.0
+BSE,NSE / BSE,India,2025-08-27,Wed,Ganesh Chaturthi,cultural,,6.25,248,14,87.5
+XNYS,NYSE / NASDAQ,United States,2025-09-01,Mon,Labor Day,civic,,6.5,250,11,71.5
+JPX,JPX (Tokyo),Japan,2025-09-15,Mon,Respect for the Aged Day,civic,,6.5,243,18,117.0
+JPX,JPX (Tokyo),Japan,2025-09-23,Tue,Autumnal Equinox,cultural,,6.5,243,18,117.0
+XHKG,HKEX,Hong Kong,2025-10-01,Wed,National Day,civic,,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-10-01,Wed,National Day / Mid-Autumn Festival,civic,national,4.0,243,18,72.0
+BSE,NSE / BSE,India,2025-10-02,Thu,Gandhi Jayanti / Dussehra,civic,,6.25,248,14,87.5
+XSHG,SSE (Shanghai),China,2025-10-02,Thu,National Day (Golden Week),civic,national,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-10-03,Fri,National Day (Golden Week),civic,national,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-10-06,Mon,National Day (Golden Week),civic,national,4.0,243,18,72.0
+XHKG,HKEX,Hong Kong,2025-10-07,Tue,Mid-Autumn Festival (following day),cultural,,5.5,246,15,82.5
+XSHG,SSE (Shanghai),China,2025-10-07,Tue,National Day (Golden Week),civic,national,4.0,243,18,72.0
+XSHG,SSE (Shanghai),China,2025-10-08,Wed,National Day (Golden Week),civic,national,4.0,243,18,72.0
+JPX,JPX (Tokyo),Japan,2025-10-13,Mon,Health and Sports Day,civic,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-10-21,Tue,Diwali — Laxmi Pujan,cultural,,6.25,248,14,87.5
+BSE,NSE / BSE,India,2025-10-22,Wed,Balipratipada,cultural,,6.25,248,14,87.5
+XHKG,HKEX,Hong Kong,2025-10-29,Wed,Chung Yeung Festival,cultural,,5.5,246,15,82.5
+JPX,JPX (Tokyo),Japan,2025-11-03,Mon,Culture Day,civic,,6.5,243,18,117.0
+BSE,NSE / BSE,India,2025-11-05,Wed,Guru Nanak Jayanti,cultural,,6.25,248,14,87.5
+JPX,JPX (Tokyo),Japan,2025-11-24,Mon,Labor Thanksgiving Day (observed),civic,,6.5,243,18,117.0
+XNYS,NYSE / NASDAQ,United States,2025-11-27,Thu,Thanksgiving Day,civic,,6.5,250,11,71.5
+XETR,Xetra (Frankfurt),Germany,2025-12-24,Wed,Christmas Eve (Heiligabend),cultural,,8.5,253,8,68.0
+BSE,NSE / BSE,India,2025-12-25,Thu,Christmas,cultural,,6.25,248,14,87.5
+XETR,Xetra (Frankfurt),Germany,2025-12-25,Thu,Christmas Day (1. Weihnachtstag),cultural,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-12-25,Thu,Christmas Day,cultural,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-12-25,Thu,Christmas Day,cultural,,8.5,253,8,68.0
+XNYS,NYSE / NASDAQ,United States,2025-12-25,Thu,Christmas Day,cultural,,6.5,250,11,71.5
+XETR,Xetra (Frankfurt),Germany,2025-12-26,Fri,Boxing Day (2. Weihnachtstag),cultural,,8.5,253,8,68.0
+XHKG,HKEX,Hong Kong,2025-12-26,Fri,Boxing Day,cultural,,5.5,246,15,82.5
+XLON,LSE,United Kingdom,2025-12-26,Fri,Boxing Day,cultural,,8.5,253,8,68.0
+JPX,JPX (Tokyo),Japan,2025-12-31,Wed,Market Holiday (Year-End),exchange,,6.5,243,18,117.0
+XETR,Xetra (Frankfurt),Germany,2025-12-31,Wed,New Year's Eve (Silvester),civic,,8.5,253,8,68.0

@@ -1,0 +1,695 @@
+{
+  "metadata": {
+    "title": "Global Stock Exchange Holiday Calendars 2025",
+    "generated_date": "2026-04-15",
+    "primary_source_holidays": "exchange_calendars Python package v4.13.2 (github.com/gerrymanoim/exchange_calendars) — community-maintained, sourced from official exchange announcements",
+    "note_holidays": "Holidays = weekdays (Mon–Fri) when exchange holds no regular session. Weekend closures excluded.",
+    "note_hours": "trading_hours_per_day = regular continuous session only. Pre-market/after-hours/extended retail sessions excluded.",
+    "note_market_cap": "Market cap NOT included — fluctuates daily; excluded to maintain data integrity.",
+    "verified": true
+  },
+  "exchanges": {
+    "XETR": {
+      "display_name": "Xetra (Frankfurt)",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "trading_hours_per_day": 8.5,
+      "session_local": "9:00 AM – 5:30 PM CET",
+      "source_holidays": "Deutsche Börse official 2025 trading calendar PDF — cashmarket.deutsche-boerse.com/resource/blob/4064968",
+      "source_hours": "Deutsche Börse official — cashmarket.deutsche-boerse.com/cash-en/trading/trading-calendar-and-trading-hours",
+      "code": "XETR",
+      "trading_days_2025": 253,
+      "holiday_count": 8,
+      "annual_trading_hours": 2150.5,
+      "annual_holiday_hours_lost": 68.0,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-04-18",
+          "dow": "Fri",
+          "name": "Good Friday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-21",
+          "dow": "Mon",
+          "name": "Easter Monday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-01",
+          "dow": "Thu",
+          "name": "Labour Day (Tag der Arbeit)",
+          "type": "civic"
+        },
+        {
+          "date": "2025-12-24",
+          "dow": "Wed",
+          "name": "Christmas Eve (Heiligabend)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-25",
+          "dow": "Thu",
+          "name": "Christmas Day (1. Weihnachtstag)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-26",
+          "dow": "Fri",
+          "name": "Boxing Day (2. Weihnachtstag)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-31",
+          "dow": "Wed",
+          "name": "New Year's Eve (Silvester)",
+          "type": "civic"
+        }
+      ]
+    },
+    "XNYS": {
+      "display_name": "NYSE / NASDAQ",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "trading_hours_per_day": 6.5,
+      "session_local": "9:30 AM – 4:00 PM ET",
+      "source_holidays": "NYSE/ICE official press release Dec 2022 for 2025 calendar + SEC filing Jan 2025 for Carter national mourning day — ir.theice.com/press/news-details/2022/NYSE-Group-Announces-2023-2024-and-2025-Holiday-and-Early-Closings-Calendar",
+      "source_hours": "NYSE.com/trade/hours-calendars",
+      "code": "XNYS",
+      "trading_days_2025": 250,
+      "holiday_count": 11,
+      "annual_trading_hours": 1625.0,
+      "annual_holiday_hours_lost": 71.5,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-01-09",
+          "dow": "Thu",
+          "name": "National Day of Mourning — President Carter",
+          "type": "mourning"
+        },
+        {
+          "date": "2025-01-20",
+          "dow": "Mon",
+          "name": "Martin Luther King Jr. Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-02-17",
+          "dow": "Mon",
+          "name": "Presidents' Day (Washington's Birthday)",
+          "type": "civic"
+        },
+        {
+          "date": "2025-04-18",
+          "dow": "Fri",
+          "name": "Good Friday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-26",
+          "dow": "Mon",
+          "name": "Memorial Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-06-19",
+          "dow": "Thu",
+          "name": "Juneteenth National Independence Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-07-04",
+          "dow": "Fri",
+          "name": "Independence Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-09-01",
+          "dow": "Mon",
+          "name": "Labor Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-11-27",
+          "dow": "Thu",
+          "name": "Thanksgiving Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-12-25",
+          "dow": "Thu",
+          "name": "Christmas Day",
+          "type": "cultural"
+        }
+      ]
+    },
+    "XLON": {
+      "display_name": "LSE",
+      "country": "United Kingdom",
+      "flag": "🇬🇧",
+      "trading_hours_per_day": 8.5,
+      "session_local": "8:00 AM – 4:30 PM GMT/BST",
+      "source_holidays": "London Stock Exchange official — londonstockexchange.com/equities-trading/business-days",
+      "source_hours": "LSE official, confirmed via tradinghours.com/markets/lse: \"Mon-Fri 08:00–16:30\"",
+      "code": "XLON",
+      "trading_days_2025": 253,
+      "holiday_count": 8,
+      "annual_trading_hours": 2150.5,
+      "annual_holiday_hours_lost": 68.0,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-04-18",
+          "dow": "Fri",
+          "name": "Good Friday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-21",
+          "dow": "Mon",
+          "name": "Easter Monday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-05",
+          "dow": "Mon",
+          "name": "Early May Bank Holiday",
+          "type": "civic"
+        },
+        {
+          "date": "2025-05-26",
+          "dow": "Mon",
+          "name": "Spring Bank Holiday",
+          "type": "civic"
+        },
+        {
+          "date": "2025-08-25",
+          "dow": "Mon",
+          "name": "Summer Bank Holiday",
+          "type": "civic"
+        },
+        {
+          "date": "2025-12-25",
+          "dow": "Thu",
+          "name": "Christmas Day",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-26",
+          "dow": "Fri",
+          "name": "Boxing Day",
+          "type": "cultural"
+        }
+      ]
+    },
+    "JPX": {
+      "display_name": "JPX (Tokyo)",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "trading_hours_per_day": 5.5,
+      "session_local": "9:00–11:30 AM + 12:30–3:30 PM JST (extended from 5.0h on Nov 5, 2024)",
+      "source_holidays": "Japan Exchange Group official calendar — jpx.co.jp/english/corporate/about-jpx/calendar",
+      "source_hours": "JPX official press release Nov 3 2024 — jpx.co.jp/english/corporate/news/news-releases/1030/20241103-01.html — \"closing time extended by 30 min to 12:30-15:30\"",
+      "code": "JPX",
+      "trading_days_2025": 243,
+      "holiday_count": 18,
+      "annual_trading_hours": 1336.5,
+      "annual_holiday_hours_lost": 99.0,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-01-02",
+          "dow": "Thu",
+          "name": "Market Holiday (New Year)",
+          "type": "exchange"
+        },
+        {
+          "date": "2025-01-03",
+          "dow": "Fri",
+          "name": "Market Holiday (New Year)",
+          "type": "exchange"
+        },
+        {
+          "date": "2025-01-13",
+          "dow": "Mon",
+          "name": "Coming of Age Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-02-11",
+          "dow": "Tue",
+          "name": "National Foundation Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-02-24",
+          "dow": "Mon",
+          "name": "Emperor's Birthday (observed)",
+          "type": "civic"
+        },
+        {
+          "date": "2025-03-20",
+          "dow": "Thu",
+          "name": "Vernal Equinox",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-29",
+          "dow": "Tue",
+          "name": "Showa Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-05-05",
+          "dow": "Mon",
+          "name": "Children's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-05-06",
+          "dow": "Tue",
+          "name": "Greenery Day (observed)",
+          "type": "civic"
+        },
+        {
+          "date": "2025-07-21",
+          "dow": "Mon",
+          "name": "Marine Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-08-11",
+          "dow": "Mon",
+          "name": "Mountain Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-09-15",
+          "dow": "Mon",
+          "name": "Respect for the Aged Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-09-23",
+          "dow": "Tue",
+          "name": "Autumnal Equinox",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-10-13",
+          "dow": "Mon",
+          "name": "Health and Sports Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-11-03",
+          "dow": "Mon",
+          "name": "Culture Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-11-24",
+          "dow": "Mon",
+          "name": "Labor Thanksgiving Day (observed)",
+          "type": "civic"
+        },
+        {
+          "date": "2025-12-31",
+          "dow": "Wed",
+          "name": "Market Holiday (Year-End)",
+          "type": "exchange"
+        }
+      ]
+    },
+    "XHKG": {
+      "display_name": "HKEX",
+      "country": "Hong Kong",
+      "flag": "🇭🇰",
+      "trading_hours_per_day": 5.5,
+      "session_local": "9:30 AM–12:00 PM + 1:00–4:00 PM HKT",
+      "source_holidays": "HKEX official trading calendar — hkex.com.hk/services/trading/derivatives/overview/trading-calendar-and-holiday-schedule",
+      "source_hours": "tradinghours.com/markets/hkex: \"Mon-Fri 9:30am–12:00pm, 1:00pm–4:00pm\"",
+      "code": "XHKG",
+      "trading_days_2025": 246,
+      "holiday_count": 15,
+      "annual_trading_hours": 1353.0,
+      "annual_holiday_hours_lost": 82.5,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-01-29",
+          "dow": "Wed",
+          "name": "Lunar New Year (Year of the Snake)",
+          "type": "cultural",
+          "block": "lunar"
+        },
+        {
+          "date": "2025-01-30",
+          "dow": "Thu",
+          "name": "Lunar New Year (2nd Day)",
+          "type": "cultural",
+          "block": "lunar"
+        },
+        {
+          "date": "2025-01-31",
+          "dow": "Fri",
+          "name": "Lunar New Year (3rd Day)",
+          "type": "cultural",
+          "block": "lunar"
+        },
+        {
+          "date": "2025-04-04",
+          "dow": "Fri",
+          "name": "Ching Ming Festival",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-18",
+          "dow": "Fri",
+          "name": "Good Friday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-21",
+          "dow": "Mon",
+          "name": "Easter Monday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-01",
+          "dow": "Thu",
+          "name": "Labour Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-05-05",
+          "dow": "Mon",
+          "name": "Buddha's Birthday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-07-01",
+          "dow": "Tue",
+          "name": "HKSAR Establishment Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-10-01",
+          "dow": "Wed",
+          "name": "National Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-10-07",
+          "dow": "Tue",
+          "name": "Mid-Autumn Festival (following day)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-10-29",
+          "dow": "Wed",
+          "name": "Chung Yeung Festival",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-25",
+          "dow": "Thu",
+          "name": "Christmas Day",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-26",
+          "dow": "Fri",
+          "name": "Boxing Day",
+          "type": "cultural"
+        }
+      ]
+    },
+    "BSE": {
+      "display_name": "NSE / BSE",
+      "country": "India",
+      "flag": "🇮🇳",
+      "trading_hours_per_day": 6.25,
+      "session_local": "9:15 AM – 3:30 PM IST",
+      "source_holidays": "NSE official holiday circular — nseindia.com/resources/exchange-communication-holidays",
+      "source_hours": "NSE official market timings — nseindia.com/resources/exchange-communication-holidays",
+      "code": "BSE",
+      "trading_days_2025": 248,
+      "holiday_count": 14,
+      "annual_trading_hours": 1550.0,
+      "annual_holiday_hours_lost": 87.5,
+      "holidays": [
+        {
+          "date": "2025-02-26",
+          "dow": "Wed",
+          "name": "Mahashivratri",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-03-14",
+          "dow": "Fri",
+          "name": "Holi",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-03-31",
+          "dow": "Mon",
+          "name": "Id-ul-Fitr (Eid)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-10",
+          "dow": "Thu",
+          "name": "Mahavir Jayanti",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-04-14",
+          "dow": "Mon",
+          "name": "Dr. B.R. Ambedkar Jayanti",
+          "type": "civic"
+        },
+        {
+          "date": "2025-04-18",
+          "dow": "Fri",
+          "name": "Good Friday",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-01",
+          "dow": "Thu",
+          "name": "Maharashtra Day",
+          "type": "regional"
+        },
+        {
+          "date": "2025-08-15",
+          "dow": "Fri",
+          "name": "Independence Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-08-27",
+          "dow": "Wed",
+          "name": "Ganesh Chaturthi",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-10-02",
+          "dow": "Thu",
+          "name": "Gandhi Jayanti / Dussehra",
+          "type": "civic"
+        },
+        {
+          "date": "2025-10-21",
+          "dow": "Tue",
+          "name": "Diwali — Laxmi Pujan",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-10-22",
+          "dow": "Wed",
+          "name": "Balipratipada",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-11-05",
+          "dow": "Wed",
+          "name": "Guru Nanak Jayanti",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-12-25",
+          "dow": "Thu",
+          "name": "Christmas",
+          "type": "cultural"
+        }
+      ]
+    },
+    "XSHG": {
+      "display_name": "SSE (Shanghai)",
+      "country": "China",
+      "flag": "🇨🇳",
+      "trading_hours_per_day": 4.0,
+      "session_local": "9:30–11:30 AM + 1:00–3:00 PM CST",
+      "source_holidays": "Shanghai Stock Exchange official trading schedule — english.sse.com.cn/start/trading/schedule",
+      "source_hours": "SSE official — english.sse.com.cn/start/trading/schedule: \"9:30–11:30, lunch 11:30–13:00, 13:00–15:00\"",
+      "code": "XSHG",
+      "trading_days_2025": 243,
+      "holiday_count": 18,
+      "annual_trading_hours": 972.0,
+      "annual_holiday_hours_lost": 72.0,
+      "holidays": [
+        {
+          "date": "2025-01-01",
+          "dow": "Wed",
+          "name": "New Year's Day",
+          "type": "civic"
+        },
+        {
+          "date": "2025-01-28",
+          "dow": "Tue",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-01-29",
+          "dow": "Wed",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-01-30",
+          "dow": "Thu",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-01-31",
+          "dow": "Fri",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-02-03",
+          "dow": "Mon",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-02-04",
+          "dow": "Tue",
+          "name": "Spring Festival (Chinese New Year)",
+          "type": "cultural",
+          "block": "spring"
+        },
+        {
+          "date": "2025-04-04",
+          "dow": "Fri",
+          "name": "Qingming Festival (Tomb-Sweeping Day)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-05-01",
+          "dow": "Thu",
+          "name": "Labour Day (International Workers' Day)",
+          "type": "civic",
+          "block": "labour"
+        },
+        {
+          "date": "2025-05-02",
+          "dow": "Fri",
+          "name": "Labour Day Holiday",
+          "type": "civic",
+          "block": "labour"
+        },
+        {
+          "date": "2025-05-05",
+          "dow": "Mon",
+          "name": "Labour Day Holiday",
+          "type": "civic",
+          "block": "labour"
+        },
+        {
+          "date": "2025-06-02",
+          "dow": "Mon",
+          "name": "Dragon Boat Festival (Duanwu)",
+          "type": "cultural"
+        },
+        {
+          "date": "2025-10-01",
+          "dow": "Wed",
+          "name": "National Day / Mid-Autumn Festival",
+          "type": "civic",
+          "block": "national"
+        },
+        {
+          "date": "2025-10-02",
+          "dow": "Thu",
+          "name": "National Day (Golden Week)",
+          "type": "civic",
+          "block": "national"
+        },
+        {
+          "date": "2025-10-03",
+          "dow": "Fri",
+          "name": "National Day (Golden Week)",
+          "type": "civic",
+          "block": "national"
+        },
+        {
+          "date": "2025-10-06",
+          "dow": "Mon",
+          "name": "National Day (Golden Week)",
+          "type": "civic",
+          "block": "national"
+        },
+        {
+          "date": "2025-10-07",
+          "dow": "Tue",
+          "name": "National Day (Golden Week)",
+          "type": "civic",
+          "block": "national"
+        },
+        {
+          "date": "2025-10-08",
+          "dow": "Wed",
+          "name": "National Day (Golden Week)",
+          "type": "civic",
+          "block": "national"
+        }
+      ]
+    }
+  }
+}

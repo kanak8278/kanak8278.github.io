@@ -5,3 +5,7 @@ _site/
 .sass-cache/
 .sass-cache
 node_modules/
+
+# Override global gitignore — public dataset files
+!assets/data/
+!assets/data/*
