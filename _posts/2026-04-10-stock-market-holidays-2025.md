@@ -1,6 +1,6 @@
 ---
 title: "The Fragmented Calendar: A Data Atlas of Global Stock Exchange Holidays 2025"
-date: 2026-04-15
+date: 2026-04-10
 categories:
   - blog
 tags:
