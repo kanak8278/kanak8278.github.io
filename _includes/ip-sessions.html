@@ -1,0 +1,171 @@
+<style>
+#ipses-outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+#ipses-wrap {
+  background: #0a0e17;
+  border-radius: 10px;
+  padding: 8px 0 8px;
+  min-width: 560px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+</style>
+
+<div id="ipses-outer">
+  <div id="ipses-wrap">
+    <svg id="ipses-svg" viewBox="0 0 860 310" width="100%" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+</div>
+
+<script>
+(function(){
+  var NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('ipses-svg');
+
+  /* Verified data — both figures from PRS and PIB where they differ.
+     Sources:
+       PRS Budget Session 2025: https://prsindia.org/parliamenttrack/vital-stats/parliament-functioning-in-budget-session-2025
+       PRS Monsoon Session 2025: https://prsindia.org/parliamenttrack/vital-stats/parliament-functioning-in-monsoon-session-2025
+       PIB Budget Session 2025:  https://www.pib.gov.in/PressReleasePage.aspx?PRID=2118954
+       PIB Monsoon Session 2025: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2159426  */
+  var SESSIONS = [
+    {
+      label: 'Budget Session 2025',
+      dates: 'Jan 31 – Apr 4, 2025',
+      days: 26,
+      color: '#10b981',
+      lsProd: 111, lsProdSrc: 'PRS',
+      lsProdAlt: 118, lsProdAltSrc: 'PIB',
+      rsProd: 119, rsProdSrc: 'PIB',
+      qhLS: 78, qhRS: 83,
+      starredLS: 28, starredRS: 28,
+      billsPassed: 10,
+      hoursUsed: null,
+      hoursAvail: null,
+      note: 'Both houses exceeded\nscheduled time',
+    },
+    {
+      label: 'Monsoon Session 2025',
+      dates: 'Jul 21 – Aug 21, 2025',
+      days: 21,
+      color: '#ef4444',
+      lsProd: 29, lsProdSrc: 'PRS',
+      lsProdAlt: 31, lsProdAltSrc: 'PIB',
+      rsProd: 34, rsProdSrc: 'PRS',
+      qhLS: 23, qhRS: 6,
+      starredLS: 8, starredRS: 5,
+      billsPassed: 14,
+      hoursUsed: 37,
+      hoursAvail: 120,
+      note: 'Two-thirds of planned\ntime lost to disruptions',
+    },
+  ];
+
+  var W=860, H=310;
+  var PW = W/2 - 20;  /* 410 per panel */
+  var PH = H - 28;    /* 282 */
+  var PAD = 20;       /* inner padding */
+
+  function mk(tag,a){ var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); return e; }
+  function tx(x,y,s,a){ var e=mk('text',Object.assign({x:x,y:y},a)); e.textContent=s; return e; }
+
+  /* global bg */
+  svg.appendChild(mk('rect',{width:W,height:H,fill:'#0a0e17'}));
+
+  /* divider */
+  svg.appendChild(mk('line',{x1:W/2,y1:16,x2:W/2,y2:H-16,stroke:'#1f2937','stroke-width':'1.5'}));
+
+  SESSIONS.forEach(function(ses, si){
+    var ox = si * (W/2);  /* x origin for this panel */
+    var col = ses.color;
+
+    /* panel bg tint */
+    svg.appendChild(mk('rect',{x:ox+4,y:8,width:W/2-8,height:H-16,fill:col+'06',rx:6}));
+
+    /* session label + dates */
+    svg.appendChild(tx(ox+PAD, 26, ses.label,{
+      fill:col,'font-size':'11.5','font-weight':'700','font-family':'system-ui,sans-serif'
+    }));
+    svg.appendChild(tx(ox+PAD, 40, ses.dates + '  ·  ' + ses.days + ' sitting days',{
+      fill:'#6b7280','font-size':'8.5','font-family':'system-ui,sans-serif'
+    }));
+
+    /* big LS productivity number (baseline at y=96, top of caps at ~57 — clear of dates at y=40) */
+    var bigY = 96;
+    svg.appendChild(tx(ox+PAD, bigY, ses.lsProd+'%',{
+      fill:col,'font-size':'52','font-weight':'800','font-family':'system-ui,sans-serif'
+    }));
+    /* labels stack below number, no horizontal overlap */
+    svg.appendChild(tx(ox+PAD, bigY+14, 'Lok Sabha · PRS ' + ses.lsProd+'%  /  PIB ~'+ses.lsProdAlt+'%',{
+      fill:'#6b7280','font-size':'8','font-family':'system-ui,sans-serif'
+    }));
+
+    /* RS productivity */
+    svg.appendChild(tx(ox+PAD, bigY+30, ses.rsProd+'%  Rajya Sabha ('+ses.rsProdSrc+')',{
+      fill:'#3b82f6','font-size':'10.5','font-weight':'700','font-family':'system-ui,sans-serif'
+    }));
+
+    /* metric bars */
+    var metrics = [
+      { label:'Question Hour — LS', val:ses.qhLS, max:100 },
+      { label:'Question Hour — RS', val:ses.qhRS, max:100 },
+      { label:'Starred Qs answered orally (LS)', val:ses.starredLS, max:100 },
+    ];
+    var barY = 150;
+    var barW = W/2 - PAD*2 - 54;  /* leave room for % label */
+    metrics.forEach(function(m, mi){
+      var y = barY + mi*30;
+      svg.appendChild(tx(ox+PAD, y+5, m.label,{
+        fill:'#6b7280','font-size':'8','font-family':'system-ui,sans-serif','dominant-baseline':'middle'
+      }));
+      /* track */
+      svg.appendChild(mk('rect',{x:ox+PAD,y:y+10,width:barW,height:9,fill:'#111827',rx:4}));
+      /* fill */
+      var fw = (m.val/m.max)*barW;
+      svg.appendChild(mk('rect',{x:ox+PAD,y:y+10,width:fw,height:9,fill:col,rx:4,opacity:'0.85'}));
+      /* label */
+      svg.appendChild(tx(ox+PAD+barW+6, y+15, m.val+'%',{
+        fill:col,'font-size':'9','font-weight':'700','dominant-baseline':'middle',
+        'font-family':'system-ui,sans-serif'
+      }));
+    });
+
+    /* bottom stats row */
+    var bY = 248;
+    /* bills passed */
+    svg.appendChild(tx(ox+PAD, bY, ses.billsPassed+'',{
+      fill:'#e5e7eb','font-size':'22','font-weight':'800','font-family':'system-ui,sans-serif'
+    }));
+    svg.appendChild(tx(ox+PAD, bY+14, 'bills passed',{
+      fill:'#6b7280','font-size':'8','font-family':'system-ui,sans-serif'
+    }));
+
+    /* hours used (Monsoon only) */
+    if(ses.hoursUsed !== null){
+      svg.appendChild(tx(ox+PAD+68, bY, ses.hoursUsed+'',{
+        fill:'#ef4444','font-size':'22','font-weight':'800','font-family':'system-ui,sans-serif'
+      }));
+      svg.appendChild(tx(ox+PAD+68, bY+14, 'of '+ses.hoursAvail+'h used (PIB)',{
+        fill:'#6b7280','font-size':'8','font-family':'system-ui,sans-serif'
+      }));
+    }
+
+    /* note */
+    var noteLines = ses.note.split('\n');
+    noteLines.forEach(function(ln, li){
+      svg.appendChild(tx(ox+W/2-PAD-4, bY+(li-1)*11, ln,{
+        fill:col+'88','font-size':'8','text-anchor':'end','font-family':'system-ui,sans-serif',
+        'font-style':'italic'
+      }));
+    });
+  });
+
+  /* source */
+  svg.appendChild(tx(4, H-4, 'Sources: PRS Legislative Research (prsindia.org) and Press Information Bureau (pib.gov.in) · PRS and PIB use different productivity calculation methods',{
+    fill:'#1f2937','font-size':'6.5','font-family':'system-ui,sans-serif'
+  }));
+
+})();
+</script>

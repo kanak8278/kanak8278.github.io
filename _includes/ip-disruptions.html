@@ -1,0 +1,210 @@
+<style>
+#ipdr-outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+#ipdr-wrap {
+  background: #0a0e17;
+  border-radius: 10px;
+  padding: 8px 0 8px;
+  min-width: 540px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+</style>
+
+<div id="ipdr-outer">
+  <div id="ipdr-wrap">
+    <svg id="ipdr-svg" viewBox="0 0 860 300" width="100%" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+</div>
+
+<script>
+(function(){
+  var NS  = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('ipdr-svg');
+
+  /* Source: Ministry of Parliamentary Affairs Statistical Handbook 2023 (updated Jan 2026)
+     "Historical Data of Parliament: Year-wise Discussion Time Allocated and Lost due to
+      Interruptions in Lok Sabha and Rajya Sabha" — dataset ID 18999 via dataful.in/datasets/18999/
+     Underlying source: data.gov.in (Open Government Data License India)
+     NOTE: This measures time lost specifically to FORCED ADJOURNMENTS due to disruptions/uproar.
+           It is NOT the same as overall "unproductive time" (which also includes Zero Hour,
+           procedures, etc.). A session can be productive overall yet have some forced-adjournment time.
+     For Monsoon 2025: exact disruption hours not in available preview — omitted. */
+  var SESSIONS = [
+    {
+      label: 'Monsoon\n2023',
+      short: 'M\'23',
+      ls: null,          /* LS data not in preview */
+      rs: { lost:45*60, avail:91*60+9, pct:49.4 },
+    },
+    {
+      label: 'Inaugural+\nBudget 2024',
+      short: 'I\'24',
+      ls: { lost:5*60+37, avail:32*60+21, pct:17.4 },
+      rs: { lost:43,      avail:21*60+33, pct:3.3  },
+    },
+    {
+      label: 'Monsoon\n2024',
+      short: 'M\'24',
+      ls: { lost:1*60+53, avail:85*60+28, pct:2.2 },
+      rs: { lost:2*60+59, avail:79*60,    pct:3.8 },
+    },
+    {
+      label: 'Winter\n2024',
+      short: 'W\'24',
+      ls: { lost:5*60+15, avail:114*60+3, pct:4.6  },
+      rs: { lost:71*60+43,avail:109*60+8, pct:65.7 },
+      note: 'RS: VP removal + judge\nimpeachment notices'
+    },
+    {
+      label: 'Budget\n2025',
+      short: 'B\'25',
+      ls: { lost:21*60+51, avail:136*60+16, pct:16.0 },
+      rs: { lost:15*60+14, avail:134*60+6,  pct:11.4 },
+    },
+  ];
+
+  var W=860, H=300;
+  var L=40, R=12, T=48, B=52;
+  var BAR_TOP = T;
+  var BAR_BOT = H - B;      /* 248 */
+  var BAR_H   = BAR_BOT - BAR_TOP;  /* 200 */
+  var NS_CNT  = SESSIONS.length;
+  var PW      = W - L - R;  /* 808 */
+  var SLOT    = PW / NS_CNT;/* ~161.6 */
+  var BAR_W   = 28;
+  var BAR_GAP = 8;          /* gap between LS and RS bars */
+  var MAX_PCT = 75;
+
+  function mk(tag,a){ var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); return e; }
+  function tx(x,y,s,a){ var e=mk('text',Object.assign({x:x,y:y},a)); e.textContent=s; return e; }
+  function yFor(pct){ return BAR_BOT - (pct / MAX_PCT) * BAR_H; }
+  function fmtH(mins){
+    var h=Math.floor(mins/60), m=mins%60;
+    return m ? h+'h\u202f'+m+'m' : h+'h';
+  }
+
+  /* bg */
+  svg.appendChild(mk('rect',{width:W,height:H,fill:'#0a0e17'}));
+
+  /* title */
+  svg.appendChild(tx(W/2, 12, 'Hours Lost to Forced Adjournments — 18th Lok Sabha Sessions',{
+    fill:'#6b7280','font-size':'10','font-weight':'600',
+    'text-anchor':'middle','font-family':'system-ui,sans-serif'
+  }));
+  svg.appendChild(tx(W/2, 24, 'Measures time lost specifically to disruption-forced adjournments (not all unproductive time)',{
+    fill:'#374151','font-size':'8',
+    'text-anchor':'middle','font-family':'system-ui,sans-serif'
+  }));
+
+  /* y-axis grid */
+  [0,25,50,75].forEach(function(pct){
+    var y = yFor(pct);
+    svg.appendChild(mk('line',{x1:L,y1:y,x2:W-R,y2:y,
+      stroke:'#111827','stroke-width': pct===0 ? '1' : '0.5','stroke-dasharray': pct===0?'':'3,4'
+    }));
+    svg.appendChild(tx(L-3, y, pct+'%',{
+      fill:'#374151','font-size':'7.5','text-anchor':'end','dominant-baseline':'middle',
+      'font-family':'system-ui,sans-serif'
+    }));
+  });
+
+  /* legend */
+  var ly = T - 18;
+  svg.appendChild(mk('rect',{x:L,y:ly-4,width:12,height:10,fill:'#f59e0b',rx:2}));
+  svg.appendChild(tx(L+15,ly+1,'Lok Sabha',{fill:'#9ca3af','font-size':'8.5','font-family':'system-ui,sans-serif','dominant-baseline':'middle'}));
+  svg.appendChild(mk('rect',{x:L+80,y:ly-4,width:12,height:10,fill:'#3b82f6',rx:2}));
+  svg.appendChild(tx(L+95,ly+1,'Rajya Sabha',{fill:'#9ca3af','font-size':'8.5','font-family':'system-ui,sans-serif','dominant-baseline':'middle'}));
+  svg.appendChild(tx(L+175,ly+1,'n/a = data not in available preview',{fill:'#374151','font-size':'7.5','font-family':'system-ui,sans-serif','dominant-baseline':'middle'}));
+
+  SESSIONS.forEach(function(s, i){
+    var cx = L + i * SLOT + SLOT/2;
+    /* LS bar centred left-of-centre, RS bar right-of-centre */
+    var lsX = cx - BAR_GAP/2 - BAR_W;
+    var rsX = cx + BAR_GAP/2;
+
+    /* session label (two lines) */
+    var lines = s.short ? [s.short] : s.label.split('\n');
+    var labelY = BAR_BOT + 14;
+    svg.appendChild(tx(cx, labelY, s.label.split('\n')[0],{
+      fill:'#6b7280','font-size':'8.5','text-anchor':'middle','font-family':'system-ui,sans-serif'
+    }));
+    if(s.label.indexOf('\n') > -1){
+      svg.appendChild(tx(cx, labelY+11, s.label.split('\n')[1],{
+        fill:'#6b7280','font-size':'8.5','text-anchor':'middle','font-family':'system-ui,sans-serif'
+      }));
+    }
+
+    /* LS bar */
+    if(s.ls){
+      var lsY = yFor(s.ls.pct);
+      var lsBH = BAR_BOT - lsY;
+      svg.appendChild(mk('rect',{x:lsX,y:lsY,width:BAR_W,height:lsBH,
+        fill:'#f59e0b',rx:2,opacity:'0.9'}));
+      /* pct label */
+      var lsLabelInside = lsBH > 22;
+      svg.appendChild(tx(lsX+BAR_W/2, lsLabelInside ? lsY+lsBH/2 : lsY-5,
+        s.ls.pct+'%',{
+        fill: lsLabelInside ? '#0a0e17' : '#f59e0b',
+        'font-size':'8','font-weight':'700',
+        'text-anchor':'middle','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+      }));
+      /* hours lost label below bar */
+      svg.appendChild(tx(lsX+BAR_W/2, BAR_BOT+3, fmtH(s.ls.lost),{
+        fill:'#f59e0b88','font-size':'7',
+        'text-anchor':'middle','font-family':'system-ui,sans-serif'
+      }));
+    } else {
+      /* n/a placeholder */
+      svg.appendChild(mk('rect',{x:lsX,y:BAR_BOT-18,width:BAR_W,height:18,
+        fill:'#111827',rx:2,opacity:'0.5'}));
+      svg.appendChild(tx(lsX+BAR_W/2, BAR_BOT-9, 'n/a',{
+        fill:'#374151','font-size':'7','text-anchor':'middle','dominant-baseline':'middle',
+        'font-family':'system-ui,sans-serif'
+      }));
+    }
+
+    /* RS bar */
+    if(s.rs && s.rs.lost !== undefined){
+      var rsY = yFor(s.rs.pct);
+      var rsBH = BAR_BOT - rsY;
+      svg.appendChild(mk('rect',{x:rsX,y:rsY,width:BAR_W,height:rsBH,
+        fill:'#3b82f6',rx:2,opacity:'0.85'}));
+      var rsLabelInside = rsBH > 22;
+      svg.appendChild(tx(rsX+BAR_W/2, rsLabelInside ? rsY+rsBH/2 : rsY-5,
+        s.rs.pct+'%',{
+        fill: rsLabelInside ? '#0a0e17' : '#3b82f6',
+        'font-size':'8','font-weight':'700',
+        'text-anchor':'middle','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+      }));
+      svg.appendChild(tx(rsX+BAR_W/2, BAR_BOT+3, fmtH(s.rs.lost),{
+        fill:'#3b82f688','font-size':'7',
+        'text-anchor':'middle','font-family':'system-ui,sans-serif'
+      }));
+    }
+
+    /* note annotation for notable sessions */
+    if(s.note){
+      var nLines = s.note.split('\n');
+      var noteY = yFor(Math.max(s.ls?s.ls.pct:0, s.rs?s.rs.pct:0)) - 8;
+      nLines.forEach(function(ln, li){
+        svg.appendChild(tx(cx, noteY-(nLines.length-1-li)*9, ln,{
+          fill:'#ef444488','font-size':'7','text-anchor':'middle',
+          'font-style':'italic','font-family':'system-ui,sans-serif'
+        }));
+      });
+    }
+  });
+
+  /* source */
+  svg.appendChild(tx(4, H-4, 'Source: MPA Statistical Handbook 2023 (updated Jan 2026) via dataful.in/datasets/18999 · data.gov.in · Open Government Data License India',{
+    fill:'#1f2937','font-size':'6.5','font-family':'system-ui,sans-serif'
+  }));
+  svg.appendChild(tx(W-R, H-4, 'Monsoon 2025 disruption hours not available in preview data',{
+    fill:'#1f2937','font-size':'6.5','text-anchor':'end','font-family':'system-ui,sans-serif'
+  }));
+
+})();
+</script>

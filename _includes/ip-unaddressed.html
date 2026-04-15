@@ -1,0 +1,169 @@
+<style>
+#ipua-outer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+#ipua-wrap {
+  background: #0a0e17;
+  border-radius: 10px;
+  padding: 8px 0 8px;
+  min-width: 520px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+</style>
+
+<div id="ipua-outer">
+  <div id="ipua-wrap">
+    <svg id="ipua-svg" viewBox="0 0 860 290" width="100%" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+</div>
+
+<script>
+(function(){
+  var NS  = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('ipua-svg');
+
+  /* Sources:
+     LS Rule 377: Ministry of Parliamentary Affairs — "Year-, Session- and Ministry-wise Number of
+       Pending Matters Raised under Rule 377 in Lok Sabha" (dataful.in dataset #38)
+       Coverage: 2019–2025 (2023 absent from dataset as published)
+     RS Rule 180: Ministry of Parliamentary Affairs — "Year-, Session- and Ministry-wise Number of
+       Pending Special Mentions under Rule 180 A–E in Rajya Sabha" (dataful.in dataset #57)
+       Coverage: 2012–2025
+     Both: Open Government Data License India  */
+
+  /* LS data: total pending matters NOT addressed per year (Rule 377)
+     RS data: total pending special mentions NOT taken up per year (Rule 180 A-E)
+     2025 = Budget Session only (partial year)  */
+  /* CORRECTED: original analysis double-counted by summing both the "Total" row
+     and individual ministry rows. Correct values use only the "Total" row per session.
+     LS 2025 = Budget Session only (partial year). LS 2023 absent from published dataset. */
+  var DATA = [
+    { yr:2012, ls:null, rs:2   },
+    { yr:2013, ls:null, rs:1   },
+    { yr:2014, ls:null, rs:2   },
+    { yr:2015, ls:null, rs:2   },
+    { yr:2016, ls:null, rs:2   },
+    { yr:2017, ls:null, rs:10  },
+    { yr:2018, ls:null, rs:6   },
+    { yr:2019, ls:1,    rs:3   },
+    { yr:2020, ls:1,    rs:8   },
+    { yr:2021, ls:4,    rs:5   },
+    { yr:2022, ls:306,  rs:206 },
+    { yr:2023, ls:null, rs:12  },
+    { yr:2024, ls:192,  rs:55  },
+    { yr:2025, ls:473,  rs:33, partial:true },
+  ];
+
+  var W=860, H=290;
+  var L=44, R=12, T=46, B=44;
+  var BAR_TOP = T, BAR_BOT = H-B;
+  var BAR_H   = BAR_BOT - BAR_TOP;  /* 200 */
+  var ND      = DATA.length;
+  var PW      = W - L - R;
+  var SLOT    = PW / ND;
+  var BAR_W   = 18, GAP = 6;
+  var MAX_VAL = 520;
+
+  function mk(tag,a){ var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); return e; }
+  function tx(x,y,s,a){ var e=mk('text',Object.assign({x:x,y:y},a)); e.textContent=s; return e; }
+  function yFor(v){ return BAR_BOT - (v / MAX_VAL) * BAR_H; }
+
+  /* bg */
+  svg.appendChild(mk('rect',{width:W,height:H,fill:'#0a0e17'}));
+
+  /* title */
+  svg.appendChild(tx(W/2, 12, 'MP-Raised Matters That Parliament Never Got Time to Address',{
+    fill:'#6b7280','font-size':'10','font-weight':'600',
+    'text-anchor':'middle','font-family':'system-ui,sans-serif'
+  }));
+  svg.appendChild(tx(W/2, 24, 'LS Rule 377 (matters raised, not addressed) · RS Rule 180 A–E (special mentions not taken up)',{
+    fill:'#374151','font-size':'8',
+    'text-anchor':'middle','font-family':'system-ui,sans-serif'
+  }));
+
+  /* y-axis grid */
+  [100,200,300,400,500,600].forEach(function(v){
+    var y = yFor(v);
+    svg.appendChild(mk('line',{x1:L,y1:y,x2:W-R,y2:y,stroke:'#111827','stroke-width':'0.5','stroke-dasharray':'3,4'}));
+    svg.appendChild(tx(L-3, y, v+'',{fill:'#1f2937','font-size':'7','text-anchor':'end','dominant-baseline':'middle','font-family':'system-ui,sans-serif'}));
+  });
+  /* baseline */
+  svg.appendChild(mk('line',{x1:L,y1:BAR_BOT,x2:W-R,y2:BAR_BOT,stroke:'#1f2937','stroke-width':'1'}));
+
+  /* legend */
+  var ly = T - 18;
+  svg.appendChild(mk('rect',{x:L,y:ly-4,width:12,height:10,fill:'#f59e0b',rx:2}));
+  svg.appendChild(tx(L+15,ly+1,'LS Rule 377 (data from 2019)',{fill:'#9ca3af','font-size':'8','font-family':'system-ui,sans-serif','dominant-baseline':'middle'}));
+  svg.appendChild(mk('rect',{x:L+165,y:ly-4,width:12,height:10,fill:'#3b82f6',rx:2}));
+  svg.appendChild(tx(L+180,ly+1,'RS Rule 180 (data from 2012)',{fill:'#9ca3af','font-size':'8','font-family':'system-ui,sans-serif','dominant-baseline':'middle'}));
+
+  DATA.forEach(function(d, i){
+    var cx  = L + i * SLOT + SLOT/2;
+    var lsX = cx - GAP/2 - BAR_W;
+    var rsX = cx + GAP/2;
+
+    /* year label */
+    svg.appendChild(tx(cx, BAR_BOT + 9, d.yr+'', {
+      fill: d.yr === 2022 ? '#ef4444' : '#374151',
+      'font-size':'8','font-weight': d.yr === 2022 ? '700' : '400',
+      'text-anchor':'middle','font-family':'system-ui,sans-serif'
+    }));
+    if(d.partial){
+      svg.appendChild(tx(cx, BAR_BOT + 20, 'partial',{fill:'#374151','font-size':'6.5','text-anchor':'middle','font-family':'system-ui,sans-serif'}));
+    }
+
+    /* LS bar */
+    if(d.ls !== null){
+      var lsY = yFor(d.ls), lsBH = BAR_BOT - lsY;
+      svg.appendChild(mk('rect',{x:lsX,y:lsY,width:BAR_W,height:lsBH,fill:'#f59e0b',rx:2,opacity:'0.9'}));
+      if(lsBH > 16){
+        svg.appendChild(tx(lsX+BAR_W/2, lsY+lsBH/2, d.ls+'',{
+          fill:'#0a0e17','font-size':'7.5','font-weight':'700',
+          'text-anchor':'middle','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+        }));
+      } else if(d.ls > 0){
+        svg.appendChild(tx(lsX+BAR_W/2, lsY-4, d.ls+'',{
+          fill:'#f59e0b','font-size':'7.5','font-weight':'700',
+          'text-anchor':'middle','font-family':'system-ui,sans-serif'
+        }));
+      }
+    }
+
+    /* RS bar */
+    if(d.rs !== null && d.rs > 0){
+      var rsY = yFor(d.rs), rsBH = BAR_BOT - rsY;
+      svg.appendChild(mk('rect',{x:rsX,y:rsY,width:BAR_W,height:rsBH,fill:'#3b82f6',rx:2,opacity:'0.85'}));
+      if(rsBH > 16){
+        svg.appendChild(tx(rsX+BAR_W/2, rsY+rsBH/2, d.rs+'',{
+          fill:'#0a0e17','font-size':'7.5','font-weight':'700',
+          'text-anchor':'middle','dominant-baseline':'middle','font-family':'system-ui,sans-serif'
+        }));
+      } else {
+        svg.appendChild(tx(rsX+BAR_W/2, rsY-4, d.rs+'',{
+          fill:'#3b82f6','font-size':'7.5','font-weight':'700',
+          'text-anchor':'middle','font-family':'system-ui,sans-serif'
+        }));
+      }
+    }
+  });
+
+  /* 2022 annotation */
+  var a22x = L + 9 * SLOT + SLOT/2; /* index of 2022 = 10 */
+  /* recalculate properly */
+  var idx2022 = DATA.findIndex(function(d){ return d.yr === 2022; });
+  a22x = L + idx2022 * SLOT + SLOT/2;
+  svg.appendChild(mk('line',{x1:a22x,y1:yFor(640),x2:a22x,y2:yFor(660),stroke:'#ef444488','stroke-width':'1'}));
+  svg.appendChild(tx(a22x + 4, yFor(340), '← 306 LS (incl. 260 in Winter alone)  ·  412 RS',{
+    fill:'#ef444488','font-size':'7','text-anchor':'start','font-style':'italic',
+    'font-family':'system-ui,sans-serif'
+  }));
+
+  /* source */
+  svg.appendChild(tx(4, H-4, 'Sources: MPA Statistical Handbook via dataful.in datasets #38 (Rule 377 LS) and #57 (Rule 180 RS) · Open Government Data License India · 2023 LS data absent from published dataset',{
+    fill:'#1f2937','font-size':'6.5','font-family':'system-ui,sans-serif'
+  }));
+
+})();
+</script>
