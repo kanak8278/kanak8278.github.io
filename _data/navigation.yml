@@ -6,12 +6,8 @@ main:
     url: /publications/
   - title: "Projects"
     url: /projects/
-  # - title: "Awards"
-  #   url: /awards/
   - title: "Blog"
     url: /blog/
-  - title: "Updates"
-    url: /updates/
   
   # - title: "Team"
   #   url: /mentorship/

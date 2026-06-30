@@ -1,0 +1,51 @@
+preprints:
+  - title: "Transformers Remember First, Forget Last: Dual-Process Interference in LLMs"
+    authors: "**Kanak Raj** et al."
+    year: 2025
+    venue: arXiv
+    url: https://arxiv.org/abs/2603.00270
+    links:
+      - label: arXiv
+        url: https://arxiv.org/abs/2603.00270
+
+thesis:
+  - title: Knowledge Enabled Multimodal Ingredient Substitution
+    authors: "**Kanak Raj**"
+    year: 2024
+    venue: "Master's Thesis"
+    url: https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view
+    links:
+      - label: PDF
+        url: https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view
+      - label: Code
+        url: https://github.com/kanak8278/MISKG/
+      - label: Dataset
+        url: https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/
+
+conferences:
+  - title: "K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries"
+    authors: "**Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami, Manas Gaur"
+    year: 2024
+    venue: AAAI Spring Symposium
+    url: https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203
+    links:
+      - label: Paper
+        url: https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203
+
+  - title: "Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes"
+    authors: "Revathy Venkataramanan, Kaushik Roy, **Kanak Raj**, Renjith Prasad, Yuxin Zi, Vignesh Narayanan, Amit Sheth"
+    year: 2023
+    venue: IEEE SMC
+    url: https://arxiv.org/abs/2306.01805
+    links:
+      - label: arXiv
+        url: https://arxiv.org/abs/2306.01805
+
+  - title: "Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation"
+    authors: "Ananya Mantravadi, **Kanak Raj**, Rohit Pawar, Sai Chandra Teja R, Nagesh Kumar S"
+    year: 2023
+    venue: IEEE APSCON
+    url: https://ieeexplore.ieee.org/abstract/document/10101175
+    links:
+      - label: Paper
+        url: https://ieeexplore.ieee.org/abstract/document/10101175

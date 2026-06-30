@@ -1,0 +1,85 @@
+- year: "Jun – Jul 2026"
+  org: LossFunk
+  org_url: https://lossfunk.com
+  role: Research Residency
+  color: "#7c3aed"
+  logo: /images/logos/lossfunk.png
+  summary: >-
+    Completed a 6-week research residency at LossFunk. [Add a sentence or two about what you worked on here — edit this in _data/timeline.yml.]
+
+- year: "Aug 2024 – Present"
+  org: Thomson Reuters Lab
+  org_url: https://www.thomsonreuters.com/en/careers/our-jobs/join-thomson-reuters-labs
+  role: Applied Research Scientist · India
+  color: "#e85d04"
+  logo: /images/logos/thomson-reuters.png
+  summary: >-
+    Building legal AI reasoning systems at Thomson Reuters Labs. Work spans synthetic data generation for Process Reward Models, IRAC knowledge graph construction from the Westlaw corpus, and end-to-end LLM workflows for legal document processing. Also built several internal tools including a real-time Truth Social monitoring system for Reuters journalists.
+
+- year: "Jan – Jul 2024"
+  org: Microsoft Research India
+  org_url: https://www.microsoft.com/en-us/research/lab/microsoft-research-india/
+  role: Research Intern
+  color: "#0078d4"
+  logo: /images/logos/microsoft.png
+  summary: >-
+    Worked with the AI4Code group on Programming with Representations (PwR) — building an intermediate representation layer between natural language and LLMs. Developed the NL2DSL translation pipeline using GPT-4, achieving an 85% reduction in hallucinations. Also contributed to Jugalbandi, an open-source chatbot platform featured in Satya Nadella's keynote and later adopted by Bhashini across government initiatives.
+
+- year: "Dec 2022 – Apr 2024"
+  org: AI Institute, USC
+  org_url: https://aiisc.ai/
+  role: Research Intern · Master's Thesis
+  color: "#990000"
+  logo: /images/logos/aiisc.png
+  summary: >-
+    Conducted research on multimodal knowledge graphs and recipe understanding with Dr. Amit Sheth and Revathy Venkataramanan. Defended my [Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on Knowledge Enabled Multimodal Ingredient Substitution — a knowledge graph with 27K ingredients and 40K substitution pairs, used in the UC Irvine + Stanford Health Hackathon 2024. Work also led to Cook-Gen (IEEE SMC 2023) and a submission to AAAI-25.
+
+- year: "May – Aug 2023"
+  org: Saarland University (SIC)
+  org_url: https://saarland-informatics-campus.de/
+  role: Visiting Researcher
+  color: "#15803d"
+  logo: /images/logos/saarland.png
+  summary: >-
+    Visiting researcher in the Societal Computing group, working on satellite image super-resolution using temporal and multispectral data. Applied GAN and diffusion-based approaches for wildlife tracking and disaster analysis with mentors Ingmar Weber and Ferda Ofli.
+
+- year: "Oct 2022 – Apr 2023"
+  org: University of Maryland
+  role: Research Intern
+  color: "#e21833"
+  logo: /images/logos/umaryland.png
+  summary: >-
+    Developed personalized response generation models under Prof. Manas Gaur as part of the HealthCareNLP grant. Used reward scaling over BART and T5 for knowledge and persona-aware generation. Work accepted as [K-PERM](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203) at AAAI Spring Symposium 2024.
+
+- year: "Jun – Aug 2022"
+  org: EdgeNeural.ai
+  org_url: https://edgeneural.ai/
+  role: AI Intern · Pune, India
+  color: "#0891b2"
+  logo: /images/logos/edgeneural.png
+  summary: >-
+    Built model optimization pipelines for accelerated inference using TensorRT and OpenVINO, enabling deployment of computer vision models on edge devices.
+
+- year: "May – Aug 2022"
+  org: IISc Bangalore
+  role: Research Intern · Video Analytics Lab
+  color: "#1e3a5f"
+  logo: /images/logos/iisc.png
+  summary: >-
+    Implemented StyleGAN-based architectures for disentangled video interpretation across domains at the Video Analytics Lab under Rishubh Parihar.
+
+- year: "Aug 2022"
+  org: Smart India Hackathon
+  role: National Finalist · ISRO
+  color: "#ea580c"
+  logo: /images/logos/smart-india-hackathon.png
+  summary: >-
+    Reached the national finals of Smart India Hackathon under ISRO guidance, building a real-time Cyclone Intensity Estimator using deep learning on INSAT-3DR satellite data.
+
+- year: "Nov 2021 – Apr 2022"
+  org: IIT Hyderabad
+  role: Research Intern · VLIL
+  color: "#7b1c1c"
+  logo: /images/logos/iith.png
+  summary: >-
+    Researched medical image processing at the Visual Learning and Intelligence Lab. Developed a novel architecture for dental X-ray segmentation, published as SFFNet at IEEE APSCON 2023.

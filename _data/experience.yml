@@ -1,0 +1,234 @@
+- role: Applied Research Scientist
+  org: Thomson Reuters Lab
+  org_url: https://www.thomsonreuters.com/en/careers/our-jobs/join-thomson-reuters-labs
+  location: India
+  period: Aug 2024 – Present
+  projects:
+    - name: Legal AI Reasoning and Model Enhancement
+      bullets:
+        - Pioneered a legal synthetic data generation pipeline for Process Reward Models (PRMs), creating domain-specific training datasets that improved legal reasoning capabilities on LegalBench benchmark tasks.
+        - Evaluated different Test-Time Scaling paradigms for legal reasoning and inference-time compute optimization.
+        - Architected an IRAC (Issue-Rule-Application-Conclusion) Knowledge Graph framework using Thomson Reuters' Westlaw corpus and court case data, generating high-quality preference datasets that improved legal reasoning alignment in fine-tuned LLMs.
+    - name: AI-Powered Legal Document Update System
+      bullets:
+        - Built a comprehensive end-to-end LLM workflow pipeline to update Word documents with XML parsing and intelligent contextual mapping, achieving 70%+ success rate while preserving complete document formatting integrity.
+        - Engineered a human-in-the-loop validation interface with reasoning chains and alert-point mapping, resulting in a 60% reduction in manual processing time while maintaining legal accuracy.
+    - name: DocEvolver
+      bullets:
+        - |-
+          Created an MVP for a "Cursor for Word" style extension for updating and understanding MS Word files for lawyer-editors.
+    - name: Search-and-Replace Agentic System
+      bullets:
+        - Architected a multi-agent AI system for automated Word editing with a comprehensive validation pipeline (schema enforcement, content integrity, audit logging), achieving 98% accuracy and 65% reduction in manual content revision.
+        - Constructed error-resolving agents with function calling and multi-turn reasoning to fix XML issues, implementing few-shot learning and self-healing mechanisms — adopted across teams, processing hundreds of documents monthly with sub-8 second processing time per section.
+    - name: Additional Tools
+      bullets:
+        - "**Truth Social Monitor:** Created a monitoring system for Trump's Truth Social posts with sub-3 second latency, generating automated alerts for Reuters journalists."
+        - "**Page Flipper:** Revived the Page Monitor extension for website tracking, eliminating Visual Ping subscriptions for the team."
+  tech:
+    - Legal AI
+    - LLMs
+    - Knowledge Graphs
+    - Process Reward Models
+    - Test-Time Scaling
+    - Agentic Systems
+
+- role: Research Intern
+  org: Microsoft Research India
+  period: Jan 2024 – Jul 2024
+  projects:
+    - name: Programming with Representations (PwR)
+      bullets:
+        - Led backend development for PwR Studio, focusing on Natural Language to Domain Specific Language (NL2DSL) translation using GPT-3.5 and GPT-4.
+        - Developed a symbolic translation pipeline that generates finite state machines structured as custom DSL, achieving an 85% reduction in hallucinations.
+        - Formulated rubrics and evaluation loops with error correction over DSL, increasing valid DSL generation from 65% to 95%.
+    - name: Jugalbandi Studio Engine
+      bullets:
+        - Architected a Python-based platform that converts DSL into scalable finite-state-machine-based chatbot applications, reducing development time by 80%.
+        - Platform was featured in Satya Nadella's keynote talks; enabled 15+ non-technical organizations to build AI-powered conversational bots.
+    - name: Jugalbandi (JB) Manager
+      bullets:
+        - Established a chatbot management platform supporting WhatsApp, Telegram, and Web channels with multilingual text and voice capabilities.
+        - Integrated Bhashini Speech models with Azure service failover mechanisms, enabling 70% faster deployment of new chatbots.
+  open_source:
+    - label: PwR-NL2DSL
+      url: https://github.com/microsoft/PwR-NL2DSL
+    - label: PwR-Studio
+      url: https://github.com/microsoft/PwR-Studio/
+    - label: Jugalbandi Studio
+      url: https://github.com/OpenNyAI/Jugalbandi-Studio-Engine
+    - label: Jugalbandi Manager
+      url: https://github.com/OpenNyAI/Jugalbandi-Manager
+  tech:
+    - LLMs
+    - NLP
+    - Finite State Machines
+    - Conversational AI
+    - Python
+  mentors:
+    - name: Sriram Rajamani
+      url: https://www.microsoft.com/en-us/research/people/sriram/
+    - name: B. Ashok
+      url: https://www.microsoft.com/en-us/research/people/bash/
+    - name: Akash Lal
+      url: https://www.microsoft.com/en-us/research/people/akashl/
+    - name: Sameer Segal
+      url: https://www.microsoft.com/en-us/research/people/sameersegal/
+
+- role: Research Intern
+  org: AI Institute, University of South Carolina
+  org_url: https://aiisc.ai/
+  period: Dec 2022 – Apr 2024
+  projects:
+    - name: Knowledge Enabled Multimodal Ingredient Substitution
+      bullets:
+        - "[Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on multimodal ingredient substitution. Built a knowledge graph incorporating 27K ingredients and 40K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search."
+        - Developed an LLM-based query module for the ingredient substitution knowledge graph and submitted this work to AAAI-25.
+        - "Formulated cross-modal recipe retrieval and cooking action recognition for recipe analysis, achieving 95% recall and leading to [Cook-Gen](https://ieeexplore.ieee.org/abstract/document/10394432/) at IEEE SMC 2023."
+  open_source:
+    - label: GitHub Repository
+      url: https://github.com/kanak8278/MISKG/
+    - label: Dataset on Kaggle
+      url: https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/
+    - label: UC Irvine + Stanford Health Hackathon 2024
+      url: https://www.healthunity.org/2024hackathon
+  tech:
+    - Knowledge Graphs
+    - Multimodal Learning
+    - LLMs
+    - Recipe Understanding
+    - NLP
+  mentors:
+    - name: Revathy Venkataramanan
+      url: https://scholar.google.com/citations?user=nwri7HkAAAAJ&hl=en
+    - name: Dr. Amit Sheth
+      url: https://amit.aiisc.ai/
+
+- role: Visiting Researcher
+  org: Societal Computing, Saarland University (SIC)
+  org_url: https://saarland-informatics-campus.de/
+  period: May 2023 – Aug 2023
+  projects:
+    - name: Satellite Image Super-Resolution
+      bullets:
+        - Worked on satellite image super-resolution using temporal and multispectral information.
+        - Leveraged high temporal frequency low-resolution data for wildlife tracking and improved disaster analysis through GAN and diffusion approaches.
+  tech:
+    - GANs
+    - Diffusion Models
+    - Computer Vision
+    - Remote Sensing
+    - PyTorch
+  mentors:
+    - name: Ingmar Weber
+      url: https://ingmarweber.de/
+    - name: Ferda Ofli
+      url: https://www.ferdaofli.com/
+
+- role: Research Intern
+  org: University of Maryland, Baltimore
+  period: Oct 2022 – Apr 2023
+  projects:
+    - name: Personalized AI Assistant (HealthCareNLP Grant)
+      bullets:
+        - Developed personalized response generation models using reward scaling over BART and T5.
+        - "Work accepted as [K-PERM](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203) at AAAI Symposium 2024; improved NUBIA score by 10%."
+        - Focused on knowledge and persona-aware loss scaling for better response generation.
+  tech:
+    - NLP
+    - Information Retrieval
+    - LLMs
+    - Generative AI
+  mentors:
+    - name: Manas Gaur
+      url: https://manasgaur.github.io/
+
+- role: AI Intern
+  org: EdgeNeural.ai
+  org_url: https://edgeneural.ai/
+  location: Pune, India
+  period: Jun 2022 – Aug 2022
+  projects:
+    - name: Accelerated Inference & Model Optimization
+      bullets:
+        - Developed training and optimization pipelines for automatic model training and hosting.
+        - Accelerated inference through quantization and CPU/GPU customization using TensorRT and OpenVINO.
+  tech:
+    - OCR
+    - Object Detection (YOLO, SSD)
+    - TensorRT
+    - GPU Optimization
+    - OpenVINO
+    - Docker
+    - AWS
+
+- role: Research Intern
+  org: Video Analytics Lab, IISc Bangalore
+  period: May 2022 – Aug 2022
+  projects:
+    - name: StyleGAN-based Video Analysis
+      bullets:
+        - Implemented StyleGAN-based architectures for disentangled video interpretation across domains.
+        - Improved image/video generation and analysis workflows using GAN-based modeling.
+  tech:
+    - GANs
+    - Recurrent Neural Networks
+    - PyTorch
+    - TensorFlow
+  mentors:
+    - name: Rishubh Parihar
+      url: https://www.linkedin.com/in/rishubh-parihar/
+
+- role: Research Intern
+  org: Visual Learning and Intelligence Lab, IIT Hyderabad
+  period: Nov 2021 – Apr 2022
+  projects:
+    - name: Medical Image Processing
+      bullets:
+        - Researched medical image processing with Prof. Dr. C. Krishna Mohan.
+        - Developed a novel architecture for improved classification of low-quality images and unbalanced datasets.
+        - Published SFFNet for panoramic dental X-ray segmentation at IEEE APSCON 2023.
+  tech:
+    - Medical Imaging
+    - Deep Learning
+    - TensorFlow
+    - PyTorch
+  mentors:
+    - name: R Sai Chandra Teja
+      url: https://scholar.google.com/citations?user=gVSXe1IAAAAJ&hl=en
+
+- role: Computer Vision Engineer
+  org: AI Mage (WETHEKOO)
+  period: Mar 2021 – Apr 2021
+  projects:
+    - name: Fashion Tagging Engine
+      bullets:
+        - Developed a fashion tagging engine using deep learning for product categorization.
+        - Optimized and deployed computer vision models on edge devices.
+  tech:
+    - Computer Vision
+    - Siamese Neural Networks
+    - TensorFlow
+    - Segmentation
+
+- role: Software Engineer
+  org: Rhizicube Technologies
+  period: Jun 2021 – Sep 2021
+  projects:
+    - name: Consumer Data Platform
+      bullets:
+        - Oversaw server and REST API development and database design using Golang (Gin).
+        - Built a real-time streaming data pipeline using Apache Kafka.
+        - Built a LinkedIn scraper and generalized organization website crawler using Selenium and Beautiful Soup.
+  tech:
+    - Go
+    - Kafka
+    - MySQL
+    - Docker
+    - Selenium
+    - Python
+  mentors:
+    - name: Udit Sarin
+      url: https://www.linkedin.com/in/uditsarin/
+    - name: Yash Goyal
+      url: https://www.linkedin.com/in/yashgoyal07/

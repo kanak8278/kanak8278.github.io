@@ -1,20 +1,71 @@
 ---
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
+layout: single
+classes:
+  - content-page
 ---
 
-## Thesis & Papers
----
-* **Kanak Raj**. "[Knowledge Enabled Multimodal Ingredient Substitution](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view)" - Master's Thesis, 2024.
-  * Code: [GitHub Repository](https://github.com/kanak8278/MISKG/)
-  * Dataset: [Multimodal Ingredient Substitution Knowledge Graph](https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/)
-  * Used in [UC Irvine + Stanford Health Hackathon 2024](https://www.healthunity.org/2024hackathon)
+{% if site.data.publications.preprints %}
+<h2 class="pub-section-heading">Preprints</h2>
+{% for pub in site.data.publications.preprints %}
+<div class="pub-entry">
+  <span class="pub-entry__year">{{ pub.year }}</span>
+  <div class="pub-entry__content">
+    <div class="pub-entry__title">
+      {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      <span class="pub-entry__venue">{{ pub.venue }}</span>
+    </div>
+    <div class="pub-entry__authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+    {% if pub.links %}
+    <div class="pub-entry__links">
+      {% for link in pub.links %}<a href="{{ link.url }}" class="res-link" target="_blank" rel="noopener">↗ {{ link.label }}</a>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
 
-## Conferences
----
-* Revathy Venkataramanan, Kaushik Roy, **Kanak Raj**, Renjith Prasad, Yuxin Zi, Vignesh Narayanan, Amit Sheth. "[Cook-Gen: Robust Generative Modeling of Cooking Actions from Recipes](https://arxiv.org/abs/2306.01805)" in IEEE SMC 2023.
+{% if site.data.publications.thesis %}
+<h2 class="pub-section-heading">Thesis</h2>
+{% for pub in site.data.publications.thesis %}
+<div class="pub-entry">
+  <span class="pub-entry__year">{{ pub.year }}</span>
+  <div class="pub-entry__content">
+    <div class="pub-entry__title">
+      {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      <span class="pub-entry__venue">{{ pub.venue }}</span>
+    </div>
+    <div class="pub-entry__authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+    {% if pub.links %}
+    <div class="pub-entry__links">
+      {% for link in pub.links %}<a href="{{ link.url }}" class="res-link" target="_blank" rel="noopener">↗ {{ link.label }}</a>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
 
-* Ananya Mantravadi, **Kanak Raj**, Rohit Pawar, Sai Chandra Teja R, Nagesh Kumar S. "[Spatial Field Fusion Network (SFFNet) for Panoramic Dental X-ray Segmentation](https://ieeexplore.ieee.org/abstract/document/10101175)" in IEEE APSCON 2023.
-
-* **Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami, Manas Gaur. "[K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries](https://ojs.aaai.org/index.php/AAAI-SS/article/view/31203)" in AAAI Spring Symposium 2024.
+{% if site.data.publications.conferences %}
+<h2 class="pub-section-heading">Conferences</h2>
+{% for pub in site.data.publications.conferences %}
+<div class="pub-entry">
+  <span class="pub-entry__year">{{ pub.year }}</span>
+  <div class="pub-entry__content">
+    <div class="pub-entry__title">
+      {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      <span class="pub-entry__venue">{{ pub.venue }}</span>
+    </div>
+    <div class="pub-entry__authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+    {% if pub.links %}
+    <div class="pub-entry__links">
+      {% for link in pub.links %}<a href="{{ link.url }}" class="res-link" target="_blank" rel="noopener">↗ {{ link.label }}</a>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}

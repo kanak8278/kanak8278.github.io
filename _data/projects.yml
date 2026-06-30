@@ -1,0 +1,52 @@
+- title: Programming with Representations (PwR)
+  url: https://www.microsoft.com/en-us/research/project/pwr/overview/
+  context: Microsoft Research India
+  period: Jan 2024 – Jul 2024
+  description: Created an intermediate representation layer to bridge users and Large Language Models, addressing hallucination and enabling non-technical users to build AI-powered applications.
+  links:
+    - label: PwR-NL2DSL
+      url: https://github.com/microsoft/PwR-NL2DSL
+    - label: PwR-Studio
+      url: https://github.com/microsoft/PwR-Studio/
+    - label: Jugalbandi Studio
+      url: https://github.com/OpenNyAI/Jugalbandi-Studio-Engine
+    - label: Jugalbandi Manager
+      url: https://github.com/OpenNyAI/Jugalbandi-Manager
+  tech:
+    - Large Language Models
+    - NLP
+    - Conversational AI
+    - Python
+
+- title: Multimodal Ingredient Substitution Knowledge Graph
+  url: https://github.com/kanak8278/MISKG/
+  context: Master's Thesis · AI Institute, USC
+  period: Dec 2022 – Apr 2024
+  description: Built a knowledge graph incorporating 27K ingredients and 40K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search. Developed an LLM-based query module and contributed to AAAI-25 submission.
+  links:
+    - label: GitHub
+      url: https://github.com/kanak8278/MISKG/
+    - label: Dataset (Kaggle)
+      url: https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/
+    - label: Thesis (PDF)
+      url: https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view
+    - label: UC Irvine + Stanford Hackathon 2024
+      url: https://www.healthunity.org/2024hackathon
+  tech:
+    - Knowledge Graphs
+    - Multimodal Learning
+    - LLMs
+    - NLP
+
+- title: Cook-Gen
+  url: https://arxiv.org/abs/2306.01805
+  context: IEEE SMC 2023
+  period: 2022 – 2023
+  description: Formulated cross-modal recipe retrieval and developed cooking action recognition for recipe analysis, achieving 95% recall. Published at IEEE SMC 2023.
+  links:
+    - label: Paper (arXiv)
+      url: https://arxiv.org/abs/2306.01805
+  tech:
+    - Computer Vision
+    - NLP
+    - Deep Learning

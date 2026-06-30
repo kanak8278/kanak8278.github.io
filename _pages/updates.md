@@ -1,7 +1,7 @@
 ---
 title: "Updates"
 permalink: /updates/
-author_profile: true
+author_profile: false
 ---
 <code>Aug 2024</code>
 Joined Thomson Reuters Lab as an Applied Research Scientist. Working on document processing and automation pipelines for legal documents. &#128640;
