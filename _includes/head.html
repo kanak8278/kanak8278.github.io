@@ -1,7 +1,11 @@
 <meta charset="utf-8">
 
-<link rel="icon" href="/assets/images/icons/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/images/icons/favicon.svg">
+<link rel="icon" href="{{ '/assets/images/icons/favicon.ico' | relative_url }}" sizes="any">
+<link rel="icon" href="{{ '/assets/images/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/images/icons/favicon-32x32.png' | relative_url }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ '/assets/images/icons/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<meta name="theme-color" content="#f8fafc">
 
 {% include seo.html %}
 
@@ -15,7 +19,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 <!--[if IE]>
   <style>

@@ -1,0 +1,13 @@
+{
+  "name": "Kanak Raj",
+  "short_name": "Kanak Raj",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#f8fafc",
+  "background_color": "#f8fafc",
+  "icons": [
+    { "src": "/assets/images/icons/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/images/icons/favicon-180x180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -12,8 +12,6 @@ main:
     url: /blog/
   - title: "Updates"
     url: /updates/
-  - title: "Personal"
-    url: /personal/
   
   # - title: "Team"
   #   url: /mentorship/

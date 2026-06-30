@@ -1,10 +1,14 @@
 .idea
-# jekyll 
+# jekyll
 _site/
 .sass-cache
 .sass-cache/
 .sass-cache
 node_modules/
+
+# Ruby/Bundler local install
+vendor/
+.bundle/
 
 # Override global gitignore — public dataset files
 !assets/data/
