@@ -14,10 +14,8 @@ read_time: true
 excerpt: "Every PFBR headline just repeated 'Three-Stage Nuclear Power Programme' without explaining what the stages mean or what flows between them. This post is what I found after going looking — with interactive simulations."
 ---
 
-<div style="border-left:3px solid #4a8fc0; padding:12px 18px; background:rgba(25,55,95,0.18); border-radius:0 6px 6px 0; margin-bottom:2rem;">
-<p style="margin:0; color:#90b8d8; font-size:0.96em; line-height:1.75;">
-Every PFBR headline just repeated "Three-Stage Nuclear Power Programme" without explaining what the stages actually mean, what fuel flows between them, or why India — specifically India — had no other choice. I went looking for the complete picture. This post covers India's uranium scarcity problem, Homi Bhabha's 1954 roadmap, and what first criticality at Kalpakkam actually unlocks — with interactive simulations of the <a href="#interactive-nuclear-chain-reaction" style="color:#6ab0d8;">chain reaction</a>, the <a href="#the-three-stage-fuel-relay-at-a-glance" style="color:#6ab0d8;">full fuel relay</a>, and the <a href="#the-three-loop-safety-system" style="color:#6ab0d8;">PFBR's three-loop sodium coolant system</a>.
-</p>
+<div class="post-intro">
+<p>Every PFBR headline just repeated "Three-Stage Nuclear Power Programme" without explaining what the stages actually mean, what fuel flows between them, or why India — specifically India — had no other choice. I went looking for the complete picture. This post covers India's uranium scarcity problem, Homi Bhabha's 1954 roadmap, and what first criticality at Kalpakkam actually unlocks — with interactive simulations of the <a href="#interactive-nuclear-chain-reaction">chain reaction</a>, the <a href="#the-three-stage-fuel-relay-at-a-glance">full fuel relay</a>, and the <a href="#the-three-loop-safety-system">PFBR's three-loop sodium coolant system</a>.</p>
 </div>
 
 ## I. Introduction: The Moment of "First Light"

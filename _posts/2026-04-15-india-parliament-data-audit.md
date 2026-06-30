@@ -16,10 +16,8 @@ read_time: true
 excerpt: "India's parliament sat for 55 days a year in the 17th Lok Sabha — the lowest of any full-term parliament. 35% of bills passed with under an hour of Lok Sabha debate. In Monsoon 2025, 14 bills became law; the longest LS debate was 34 minutes. Every number here is from a primary source. None are approximate."
 ---
 
-<div style="border-left:3px solid #f59e0b; padding:12px 18px; background:rgba(245,158,11,0.06); border-radius:0 6px 6px 0; margin-bottom:2rem;">
-<p style="margin:0; color:#d1b07a; font-size:0.96em; line-height:1.75;">
-The 17th Lok Sabha (2019–2024) averaged <strong style="color:#f59e0b">55 sitting days a year</strong> — the lowest of any full-term parliament. The National Commission to Review the Constitution recommended a minimum of 120 days. India's Constitution recommends no minimum at all. Every number in this post is sourced directly from PRS Legislative Research, PIB press releases, or official parliamentary records. Where sources disagree, both figures are shown.
-</p>
+<div class="post-intro">
+<p>The 17th Lok Sabha (2019–2024) averaged <strong>55 sitting days a year</strong> — the lowest of any full-term parliament. The National Commission to Review the Constitution recommended a minimum of 120 days. India's Constitution recommends no minimum at all. Every number in this post is sourced directly from PRS Legislative Research, PIB press releases, or official parliamentary records. Where sources disagree, both figures are shown.</p>
 </div>
 
 ## The Same Parliament, Two Sessions Apart

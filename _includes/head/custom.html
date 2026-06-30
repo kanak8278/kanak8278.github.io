@@ -1,5 +1,10 @@
 <!-- start custom head snippets -->
 
+{% if page.link %}
+<meta http-equiv="refresh" content="0; url={{ page.link }}">
+<script>window.location.replace("{{ page.link }}");</script>
+{% endif %}
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- Custom CSS for Dark Mode -->

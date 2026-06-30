@@ -15,10 +15,8 @@ read_time: true
 excerpt: "Japan loses more trading hours to holidays than any other major exchange. India doesn't have the most holidays — but it has the most fragmented ones. The pattern matters as much as the count."
 ---
 
-<div style="border-left:3px solid #f59e0b; padding:12px 18px; background:rgba(245,158,11,0.06); border-radius:0 6px 6px 0; margin-bottom:2rem;">
-<p style="margin:0; color:#d1b07a; font-size:0.96em; line-height:1.75;">
-Japan loses <strong style="color:#f472b6">99 hours</strong> of trading time to holidays each year — more than any other major exchange. India loses <strong style="color:#f59e0b">87.5 hours</strong> across 14 closures. China loses only <strong style="color:#ef4444">72 hours</strong> despite having 18 holidays. Same counts, wildly different costs — because the pattern matters as much as the total. Every number below is verified from official exchange sources.
-</p>
+<div class="post-intro">
+<p>Japan loses <strong style="color:#f472b6">99 hours</strong> of trading time to holidays each year — more than any other major exchange. India loses <strong style="color:#f59e0b">87.5 hours</strong> across 14 closures. China loses only <strong style="color:#ef4444">72 hours</strong> despite having 18 holidays. Same counts, wildly different costs — because the pattern matters as much as the total. Every number below is verified from official exchange sources.</p>
 </div>
 
 ## Where Every Holiday Falls
