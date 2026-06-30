@@ -1329,6 +1329,26 @@ html.dark-theme .pub-entry__authors {
   padding: 0 !important;
 }
 
+/* Blog posts: centered, ~50% of viewport, all floats cleared */
+.layout--blog-post #main {
+  display: block !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1.5rem 0 !important;
+  float: none !important;
+}
+
+.layout--blog-post .page,
+.layout--blog-post .page__inner-wrap,
+.layout--blog-post .page__content {
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Hide read-time on non-blog content pages only */
 .content-page .page__meta {
   display: none;
 }

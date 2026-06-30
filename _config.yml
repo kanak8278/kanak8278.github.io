@@ -289,6 +289,10 @@ defaults:
       comments: # true
       share: false
       related: true
+      classes:
+        - content-page
+        - blog-post-page
+      toc_sticky: false
 
   # _pages
   - scope:
