@@ -7,7 +7,8 @@ classes:
   - content-page
 ---
 
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign blog_posts = site.posts | where_exp: "post", "post.categories.first != 'mechinterp-log'" %}
+{% assign posts_by_year = blog_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year_group in posts_by_year %}
 <h2 class="pub-section-heading">{{ year_group.name }}</h2>
