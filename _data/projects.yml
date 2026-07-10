@@ -1,3 +1,18 @@
+- title: "Tracked but Suppressed: How LLMs Fail Current-Value Retrieval"
+  url: /projects/tracked-but-suppressed/
+  context: Interactive research showcase
+  period: 2025
+  description: An interactive look at proactive interference in LLMs, extending our arXiv preprint with mechanistic analysis and a fix — feel the failure firsthand, see it hold across 19+ models, look inside the model at the mechanism, and see the small fine-tune that closes the gap. A dedicated paper on the extended results is in preparation.
+  links:
+    - label: Paper (arXiv)
+      url: https://arxiv.org/abs/2603.00270
+    - label: Code & data
+      url: https://github.com/kanak8278/transformer-memory-interference
+  tech:
+    - Mechanistic Interpretability
+    - LLMs
+    - PyTorch
+
 - title: Programming with Representations (PwR)
   url: https://www.microsoft.com/en-us/research/project/pwr/overview/
   context: Microsoft Research India

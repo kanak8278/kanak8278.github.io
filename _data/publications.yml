@@ -7,6 +7,8 @@ preprints:
     links:
       - label: arXiv
         url: https://arxiv.org/abs/2603.00270
+      - label: Interactive
+        url: /projects/tracked-but-suppressed/
 
 thesis:
   - title: Knowledge Enabled Multimodal Ingredient Substitution

@@ -23,6 +23,12 @@
 <link rel="stylesheet" href="{{ '/assets/css/blog-post-custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {% endif %}
 
+<!-- Showcase design system - only for interactive showcase pages -->
+{% if page.layout == 'showcase' %}
+<link rel="stylesheet" href="{{ '/assets/css/showcase.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script src="{{ '/assets/js/viz-lib.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% endif %}
+
 <!-- Dark Mode Toggle Script -->
 <script>
   // Function to toggle dark mode
