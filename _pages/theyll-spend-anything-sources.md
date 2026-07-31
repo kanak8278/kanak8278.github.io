@@ -326,6 +326,8 @@ The nominal figure still carries information, because the internationally-priced
 | Tokyo Declaration, 8 Feb 1983; Lee Byung-chul aged 73, terminally ill; ~$400M of group reserves into semiconductors; opposed by his senior team; Intel called it delusional; Mitsubishi published five reasons Samsung would fail | [Korea JoongAng Daily](https://www.koreajoongangdaily.com/opinion/lee-byungchulls-final-gamble-at-73/12780062); [Lee Byung-chul, Wikipedia](https://en.wikipedia.org/wiki/Lee_Byung-chul) |
 | First 1Mb DRAM 1986; 4Mb 1988; 16Mb 1990; 64Mb 1992 (~6 months ahead of Toshiba/NEC/Hitachi); passed Toshiba as largest DRAM maker 1992 | [Samsung Electronics, Wikipedia](https://en.wikipedia.org/wiki/Samsung_Electronics) |
 | Lee died Nov 1987, 4 years 10 months after the declaration | Wikipedia |
+| **Samsung began in sugar** | Cheil Jedang ("First Sugar"), founded Aug 1953 in Busan — Korea's first private sugar refinery and Samsung's first manufacturing business. Grew to supply **over 30%** of domestic sugar consumption; the profits funded the move into textiles (Cheil Mojik, 1954) and eventually electronics | [CJ CheilJedang history](https://en.wikipedia.org/wiki/Samsung); Quartr; Facts and Details |
+| John Sculley timing | President of Pepsi-Cola; recruited by Jobs with the "sugar water" line and became Apple CEO in **April 1983** — two months after the Tokyo Declaration (8 Feb 1983) | Widely documented |
 | Korea's 1953 per-capita income below Somalia's and Haiti's; Samsung + SK Hynix now make ~2/3 of world memory | SpaceDaily |
 
 ---

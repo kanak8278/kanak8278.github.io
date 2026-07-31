@@ -356,11 +356,13 @@ Yes, we did things. UPI is genuinely world-class. The 5G rollout changed how a b
 
 Steve Jobs to John Sculley: *do you want to sell sugar water for the rest of your life, or come with me and change the world?*
 
-Sculley was running Pepsi. That is what the sugar water meant. He left it for Apple in 1983 — the same year, in Tokyo, that a dying Lee Byung-chul put Samsung's reserves into semiconductors.
+Sculley was running Pepsi. That is literally what the sugar water meant. He left it for Apple in April 1983.
 
-Two men, one year, the same question, the same answer.
+Here's something I only found while checking the Samsung story. Lee Byung-chul's first factory, built in 1953, was a sugar refinery — Cheil Jedang, which translates as "First Sugar." Within a few years it was supplying about a third of all the sugar in Korea. Thirty years later he took the money that sugar had made and put it into semiconductors, against the unanimous objection of his own executives.
 
-Forty-three years later, the richest family in India is building a cola company. And it is going very well.
+Samsung was a sugar company that decided to stop being one. It made that decision in February 1983, two months before Sculley walked out of Pepsi.
+
+Forty-three years on, the richest family in India is building a cola company. And it is going very well.
 
 So let me put Jobs's question to them, in the only language that gets an honest answer out of anybody: where the money went.
 
