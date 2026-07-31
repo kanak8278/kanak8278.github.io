@@ -30,6 +30,10 @@ header:
 
 I'm angry and I'm partial. Every number here is sourced, so you can check whether the anger is earned — working notes, arithmetic and exchange rates are on [the sources and calculations page](/blog/theyll-spend-anything-sources/).
 
+**One thing before the numbers, because it matters.** I have nothing against the Ambanis, and this is not a piece about one family. Reliance has built things this country genuinely needed. Jio changed how a billion people use the internet. The green-energy build at Jamnagar — solar, storage, electrolysers — is serious, capital-heavy industrial work that most conglomerates in the world wouldn't attempt, and I'd rather they were doing it than not.
+
+I lean on them because they are the largest and the best-documented, so the figures are in public filings rather than in my imagination. But the question underneath all of this is colder than any one family: **what does it actually cost to build state-of-the-art technology, and do we have the capability to do it?** The Ambani numbers are how I make that cost legible. They are the measuring stick, not the target.
+
 If you think I'm being unfair, skip to [Where I might be wrong](#where-i-might-be-wrong) at the bottom. I got there first.
 
 </div>
