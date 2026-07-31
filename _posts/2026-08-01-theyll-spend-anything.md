@@ -291,7 +291,7 @@ The Trump administration froze about **$2.6 billion** at Harvard in one politica
 
 India's FY26 budget: all 23 IITs, **₹11,349 crore (~$1.29 billion)**. IISc, our single best research university, **₹845 crore (~$96 million)** — a cut from last year.
 
-One American university's funding tantrum was bigger than India's entire elite science and engineering system for a year.
+One American university's funding tantrum was, in dollar terms, bigger than India's entire elite science and engineering system for a year.[^scale]
 
 ![Harvard's funding fight vs India's elite science budget](/assets/images/posts/theyll-spend-anything/10-harvard-vs-iits.png)
 
@@ -397,3 +397,5 @@ Everything here is checkable. Go and check it. The numbered marks through the pi
 [^wedding]: **The fortnight is rhetorical rounding; the ratio is the real claim.** At the widely quoted \$600m upper estimate the wedding is 68.9% of the \$871m Indian private spacetech has raised — a gap of \$271m. The events ran across roughly four months in 2024, so "another fortnight" is a figure of speech for what that remaining \$271m would represent, not a costed figure. Estimates run \$150m–\$600m; at the low end the comparison is 17% and I wouldn't make the point at all.
 
 [^mi]: **Enterprise value, not brand value — two different numbers.** The Houlihan Lokey IPL Valuation Study 2025 puts Mumbai Indians' *institutional enterprise value* at \$2.2bn and its *standalone brand value* at \$242m. The larger figure is the business; the smaller is the brand alone. Both are in the same study.
+
+[^scale]: **Straight exchange-rate conversion, no PPP adjustment — and PPP would flip this one.** Rupee figures converted at ₹88/\$. At World Bank purchasing-power rates (roughly ₹23 to the dollar) the IIT + IISc + IISER allocation is worth about **\$6 billion** of local buying power, which is more than double the Harvard figure, not smaller than it. So this is a nominal-dollar comparison and I'm not going to pretend otherwise. What doesn't get a PPP discount is the part of frontier science that's bought on world markets: instruments, GPUs, cleanroom tooling, journal access, and above all researchers, who are recruited against Zurich and Seattle salaries rather than local ones. That's why the nominal number still tells you something. But if you want to argue India's elite institutions are better funded in real terms than this section implies, you're right, and the honest version of my complaint is the private-sector one that the rest of the piece is about.

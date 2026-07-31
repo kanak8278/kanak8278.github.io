@@ -296,6 +296,10 @@ Chart 07 totals: hosting = 110,000 + 100,000 + 17,500 + 15,000 = **$242,500M**. 
 
 Total: 1,290 + 175 + 96 = **$1.56bn**, stated as "about $1.6 billion."
 
+**PPP flips this comparison, and the piece now says so.** Converted at market rates (₹88/$) the Indian total is $1.56bn against Harvard's $2.6bn. Converted at World Bank purchasing-power rates (roughly ₹23/$), the same ₹13,734 crore is worth about **$5.97bn** of local buying power — more than double the Harvard figure. So the "bigger than India's entire elite science system" line is true in **nominal dollars only**, and the post carries a footnote saying exactly that.
+
+The nominal figure still carries information, because the internationally-priced share of a research budget gets no PPP discount: instruments, GPUs, cleanroom tooling, journal subscriptions, and researcher salaries, which compete against Zurich and Seattle rather than local rates. But anyone arguing India's elite institutions are better resourced in real terms than this section suggests is correct, and I'd rather concede it than defend it.
+
 ---
 
 ## 9. Korea, 1983
