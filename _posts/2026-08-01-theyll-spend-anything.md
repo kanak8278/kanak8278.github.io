@@ -356,11 +356,19 @@ Yes, we did things. UPI is genuinely world-class. The 5G rollout changed how a b
 
 Steve Jobs to John Sculley: *do you want to sell sugar water for the rest of your life, or come with me and change the world?*
 
-I used to think our answer was "they won't spend the money." That's wrong now. They'll spend $110 billion on data centres, ₹30,000 crore on biscuit factories, $2.9 billion on cricket streaming, $1.78 billion on a cricket team, $600 million on a wedding.
+Sculley was running Pepsi. That is what the sugar water meant. He left it for Apple in 1983 — the same year, in Tokyo, that a dying Lee Byung-chul put Samsung's reserves into semiconductors.
+
+Two men, one year, the same question, the same answer.
+
+Forty-three years later, the richest family in India is building a cola company. And it is going very well.
+
+So let me put Jobs's question to them, in the only language that gets an honest answer out of anybody: where the money went.
+
+I used to think the answer was "they won't spend it." That's wrong now. They'll spend $110 billion on data centres, ₹30,000 crore on biscuit factories, $2.9 billion on cricket streaming, $1.78 billion on a cricket team, $600 million on a wedding.
 
 They'll spend anything. They just won't spend it on something that might not work.
 
-Sculley's answer, when Jobs asked him, was to leave the sugar water. Ours have looked at the same question and decided sugar water is a very good business — and they're right, it is. Campa is India's fourth-largest soft drink in four years. That's real commercial skill. It's just that the entire ambition of the richest people in a country of 1.4 billion turns out to be selling more units of a thing that already exists, to people who already exist, at a margin somebody already proved.
+Which means the honest answer, from the richest people in a country of 1.4 billion, is that sugar water is a very good business — and they are right, it is. Campa is India's fourth-largest soft drink in four years. That is real commercial skill. It is just that the whole ambition turns out to be selling more units of a thing that already exists, to people who already exist, at a margin somebody already proved.
 
 Not greed. Not stupidity. Certainly not a shortage of engineers. Just an unbroken preference for the sure thing, held by everyone with enough money to do otherwise. I'm risk-averse too, so I understand it. The difference is that I don't have $111 billion, and nothing is lost when I flinch.
 
