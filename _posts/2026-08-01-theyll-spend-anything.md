@@ -101,13 +101,11 @@ That's Nandan Nilekani, on stage at Meta's summit in 2024, sitting next to Yann 
 
 He doubled down in December: *"Foundation models are not the best use of your money."*
 
-I want to be fair to him. He built Aadhaar. He's not stupid and he has an actual argument about compute bottlenecks. Google Research India's Manish Gupta and Perplexity's Aravind Srinivas both told him publicly he was wrong, so I'm not out here alone.
-
 Two problems with it, though.
 
 **The first is that it eats itself.** Who uses a model that isn't good? Nobody. And if nobody uses it, where does the usage data come from — the data you were going to train your small models on, the data that was supposed to be India's whole advantage? The plan needs a flywheel. A flywheel needs something worth using at the centre of it. You cannot collect exhaust from a car that never starts.
 
-There's a nastier version of this. Manish Gupta made it politely; I'll make it rudely. Nilekani built Aadhaar by building the layer underneath. He didn't wait for someone in California to ship an identity stack and then do use cases on top of it. He's prescribing for the country a strategy he personally refused to follow.
+There's a nastier version of this. Google Research India's Manish Gupta made it politely; I'll make it rudely. Nilekani built Aadhaar by building the layer underneath. He didn't wait for someone in California to ship an identity stack and then do use cases on top of it. He's prescribing for the country a strategy he personally refused to follow.
 
 And what does the strategy actually get us, if it works perfectly? We become very good at wrapping other people's models. We catch up with the West, and now with China, permanently one release behind, forever. That's not a strategy. That's a description of the last thirty years with the nouns updated.
 
