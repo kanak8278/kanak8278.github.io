@@ -225,3 +225,79 @@ html.dark-theme .layout--blog-post .page__content blockquote {
     padding-right: 240px;
   }
 }
+/* ------------------------------------------------------------------
+   wide-figures — opt-in per post via front-matter `classes`.
+   Keeps the 860px prose measure for reading, but lets data-viz images
+   break out to near their native width so chart labels stay legible.
+   ------------------------------------------------------------------ */
+.wide-figures .page__content p > img {
+  display: block;
+  width: min(940px, calc(100vw - 6rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin-top: 1.7rem;
+  margin-bottom: 1.9rem;
+}
+
+/* Don't let a breakout figure slide under the floated TOC */
+@media (min-width: 1024px) and (max-width: 1560px) {
+  .wide-figures .page__content p > img {
+    width: min(940px, calc(100vw - 24rem));
+  }
+}
+
+@media (max-width: 1023px) {
+  .wide-figures .page__content p > img {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+/* Footnotes: readable, clearly separated from the body */
+.layout--blog-post .footnotes {
+  margin-top: 2.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.layout--blog-post .footnotes ol {
+  padding-left: 1.2rem;
+}
+
+.layout--blog-post .footnotes li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.layout--blog-post .footnotes li:target {
+  background: var(--table-hover-background);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  margin-left: -0.7rem;
+}
+
+.layout--blog-post a.footnote-ref,
+.layout--blog-post sup[id^="fnref"] a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+/* Tables: fill the content column instead of shrink-wrapping inside the card */
+.layout--blog-post .page__content table,
+.layout--single .page__content table {
+  width: 100%;
+  display: table;
+  table-layout: auto;
+}
+
+.layout--blog-post .page__content table td:not(:first-child),
+.layout--blog-post .page__content table th:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
