@@ -149,8 +149,6 @@ A company that sells cigarettes and biscuits spends, on advertising, in one year
 
 ![Everything DeepSeek spent, priced in Indian advertising](/assets/images/posts/theyll-spend-anything/04c-ad-vs-deepseek.png)
 
-India's entire advertising market in 2025 was ₹1.55 lakh crore. **$17.6 billion.** Three thousand one hundred and fifty-nine DeepSeek V3 training runs. Every single year, to sell us things we already buy.
-
 I'm not claiming ₹8,000 crore of cola money converts one-to-one into a frontier lab. It doesn't — you need people, data, and years, and both bets can be rational at once. I'm claiming the sentence "foundation models are too expensive for India" stopped being true somewhere around 2024, and our national AI doctrine is still built on it.
 
 ## What China's private money did while we were arguing

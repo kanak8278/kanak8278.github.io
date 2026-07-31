@@ -151,7 +151,7 @@ $1bn into Sarvam = **0.55%** of Ambani + Adani's combined $183bn, and **3.3×** 
 
 | Item | Value | Source |
 |---|---|---|
-| India total ad market, 2025 | **₹1,55,105 cr** (~$17.6bn); digital ₹93,156 cr (60%) | [Pitch Madison Advertising Report 2026](https://www.medianews4u.com/indias-ad-market-crosses-%E2%82%B91-55-lakh-crore-in-2025-digital-now-60-of-adex-madison-report-2026/) |
+| India total ad market, 2025 | **₹1,55,105 cr** (~$17.6bn); digital ₹93,156 cr (60%). *Cut from the piece — see note below.* | [Pitch Madison Advertising Report 2026](https://www.medianews4u.com/indias-ad-market-crosses-%E2%82%B91-55-lakh-crore-in-2025-digital-now-60-of-adex-madison-report-2026/) |
 | Hindustan Unilever, FY25 A&P | **₹6,028 cr** (~$685M), down from ₹6,380 cr | Storyboard18 |
 | Maruti Suzuki, FY25 ad + sales promotion | **₹1,742.6 cr** (~$198M), +11.42% | Storyboard18 |
 | ITC, FY25 ad + promotion | **₹1,331.69 cr** (~$151M), −3.89% YoY | Storyboard18 |
@@ -163,7 +163,9 @@ $1bn into Sarvam = **0.55%** of Ambani + Adani's combined $183bn, and **3.3×** 
 
 **"Everything DeepSeek spent" = $152.9M:** $147M (10,000 A100s, 2021) + $5.58M (V3 pre-training) + $0.294M (R1 RL). Against ITC's $151.3M — within 1%.
 
-**"Runs" as a unit.** Throughout the advertising chart I express budgets as multiples of DeepSeek's $5.58M V3 pre-training run. **This is a unit of measurement, not an economic claim.** Ad budgets do not convert into research labs; an FMCG company's advertising is how it generates the revenue that pays for everything else, and cutting it to zero would not produce a frontier model. The comparison is there to make the *scale* legible, because "$5.58 million" is a number most readers cannot place. India's total adex ÷ V3 run = 17,626 / 5.58 = **3,159**.
+**"Runs" as a unit.** Throughout the advertising chart I express budgets as multiples of DeepSeek's $5.58M V3 pre-training run. **This is a unit of measurement, not an economic claim.** Ad budgets do not convert into research labs; an FMCG company's advertising is how it generates the revenue that pays for everything else, and cutting it to zero would not produce a frontier model. The comparison is there to make the *scale* legible, because "$5.58 million" is a number most readers cannot place.
+
+**A comparison I cut.** An earlier draft ran India's *entire* national advertising market (₹1,55,105 cr / $17.6bn) against the training run: 3,159 runs a year. It's arithmetically correct and rhetorically useless — a whole-economy figure spanning every company and sector isn't comparable to one firm's project budget, and stretching it that far invites the reader to distrust the company-level comparisons that actually do hold. Company against company is the honest version, so that's what the piece keeps.
 
 **Reliance's own advertising line is not in this table** because RIL does not disclose it separately — it sits inside "other expenses" in the consolidated accounts. I looked.
 
