@@ -70,20 +70,11 @@ That gap is not a wealth gap. India has the wealth. It's an appetite gap — and
 
 India spends **0.64% of GDP on R&D.**[^rdgdp] Korea spends 4.91%. The US 3.48%. China 2.43%.
 
-Everyone quotes that and blames Delhi. Look at the second column instead:
-
-| | R&D as % of GDP | Share paid by business |
-|---|---|---|
-| South Korea | 4.91% | 79% |
-| United States | 3.48% | 75% |
-| China | 2.43% | 77% |
-| **India** | **0.64%** | **41%** |
-
-*Economic Survey 2025-26.*
-
-In every serious country, private money does three-quarters of the research. Here it does 41%. The government is not the bottleneck. The government is the only one showing up.
+Everyone quotes that number and blames Delhi. Look at the second one instead — who actually pays for the research.
 
 ![R&D: how much, and who pays](/assets/images/posts/theyll-spend-anything/02-rd-who-pays.png)
+
+In every serious country, private money does three-quarters of it. Here it does 41%. The government is not the bottleneck. The government is the only one showing up.
 
 And before someone says "but our companies are smaller" — it's a ratio, not a size. Reliance's own audited filing puts FY25 R&D at **₹4,185 crore**, which is **0.75% of turnover.**[^rilrd] Huawei spends **20.8%.**[^huawei] Samsung spends 11.3%.
 
@@ -157,22 +148,15 @@ Alibaba put **380 billion yuan (~$53 billion)** into AI and cloud over three yea
 
 They also open-sourced 400+ Qwen models. Over a billion downloads on Hugging Face. Qwen has overtaken Llama as the world's default open model.
 
-Now line up the open-weight models:
-
-| Model | Params | Origin |
-|---|---|---|
-| Kimi K3 (Moonshot) | 2,800B | China |
-| GLM-5.2 (Zhipu) | 753B | China |
-| Sarvam-105B | 105B | India |
-| BharatGen Param2 | 17B | India |
-
-*July 2026. Kimi K3 is 27× Sarvam-105B — and Sarvam is the biggest thing we've got.*[^params]
+Now line up the open-weight models.[^params]
 
 ![Open-weight model scale](/assets/images/posts/theyll-spend-anything/05-open-model-scale.png)
 
-China's chip fund alone — Big Fund III — is **$47.5 billion**, roughly the size of the entire US CHIPS Act.
+Someone will say China's edge is just state money. It isn't only that, and the numbers say so. Beijing's flagship chip vehicle, Big Fund III, is **$47.5 billion** — about the size of the entire US CHIPS Act. Alibaba's commitment, from one company, is **larger than that.**[^bigfund]
 
-And India's share of global AI funding, all of it, everyone: **0.6%.**
+That's the part worth sitting with. In China both kinds of capital show up, and the private cheque is the bigger one. Here only the state shows up, and it's the side with the smaller balance sheet.
+
+Set all of that against India's share of global AI funding — every company, every round, all of it: **0.6%.**
 
 ![India's share of global AI funding](/assets/images/posts/theyll-spend-anything/06-global-ai-share.png)
 
@@ -180,7 +164,7 @@ And India's share of global AI funding, all of it, everyone: **0.6%.**
 
 Sarvam raised $234 million in June 2026 at a $1.5 billion valuation, HCLTech leading with $150 million. That's real and I'm glad it happened. Roshni Nadar Malhotra wrote that cheque and she is, as far as I can tell, the only heir in this country doing anything at the frontier.
 
-Then read the fine print. Sarvam-105B was trained on **1,000+ H100s from the government's Yotta cluster**, under IndiaAI's 4,000-GPU allocation. Our flagship private AI company trains on state compute.
+Sarvam-105B was trained on **1,000+ H100s from the government's Yotta cluster**, under IndiaAI's 4,000-GPU allocation. Our flagship private AI company trains on state compute.
 
 And here is the easy version of everything I am asking for.
 
@@ -419,3 +403,5 @@ Everything here is checkable. Go and check it. The numbered marks through the pi
 [^scale]: **Straight exchange-rate conversion, no PPP adjustment — and PPP would flip this one.** Rupee figures converted at ₹88/\$. At World Bank purchasing-power rates (roughly ₹23 to the dollar) the IIT + IISc + IISER allocation is worth about **\$6 billion** of local buying power, which is more than double the Harvard figure, not smaller than it. So this is a nominal-dollar comparison and I'm not going to pretend otherwise. What doesn't get a PPP discount is the part of frontier science that's bought on world markets: instruments, GPUs, cleanroom tooling, journal access, and above all researchers, who are recruited against Zurich and Seattle salaries rather than local ones. That's why the nominal number still tells you something. But if you want to argue India's elite institutions are better funded in real terms than this section implies, you're right, and the honest version of my complaint is the private-sector one that the rest of the piece is about.
 
 [^musk]: Musk's net worth moves violently and these figures are a snapshot: Bloomberg Billionaires Index had him at roughly \$833bn in mid-July 2026, up around \$214bn year to date, after peaking above \$1 trillion on the SpaceX IPO of 12 June 2026 (\$1.77 trillion, the largest listing in history) and falling back as the stock corrected. The PayPal allocation — \$100m SpaceX, \$70m Tesla, \$10m SolarCity out of \$180m — is Musk's own account, repeated consistently over the years. The 2008 near-death detail (Tesla down to \$9m, three consecutive Falcon 1 failures, the \$1.6bn NASA CRS contract) is documented across CBS News and Musk's own interviews. I'm using him as an illustration of risk appetite, not endorsing his politics or his management.
+
+[^bigfund]: **Not strictly like-for-like, and worth saying.** Alibaba's ¥380bn (~\$53bn) is a three-year capital-expenditure commitment on AI and cloud infrastructure. Big Fund III's \$47.5bn is the registered capital of a state investment vehicle that takes equity stakes across the chip supply chain — a different instrument on a different clock, and chips are not the same industry as cloud. I'm comparing the scale of what each side was willing to commit, not identical accounting. The narrower claim that survives either way: Chinese private capital writes cheques at the same order of magnitude as the Chinese state, and Indian private capital does not.
