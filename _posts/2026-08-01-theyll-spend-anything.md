@@ -46,7 +46,9 @@ Tata told its own shareholders the Dholera fab would start at 28nm. It's startin
 
 ![The node gap](/assets/images/posts/theyll-spend-anything/01-node-gap.png)
 
-That's the piece in one chart. Before the statistics, though, let me show you what the alternative looks like.
+And that is the fab that is actually getting built. The other one — Adani's $10 billion venture with Israel's Tower Semiconductor — has been in "strategic pause" since January 2026 over subsidy terms. The headline number from last year is currently zero.
+
+That's the state of Indian silicon. Before the statistics, let me show you what the alternative looks like.
 
 ## The richest man in the world
 
@@ -197,8 +199,6 @@ It's the GCC playbook with racks instead of ticket queues. It comes here because
 We're going to be the world's best-equipped hosts. Hosting is a good business. It is not the same business.
 
 ![$242 billion to host other people's AI, $639 million to build our own](/assets/images/posts/theyll-spend-anything/07-landlord-vs-builder.png)
-
-Meanwhile Adani's $10 billion chip venture with Tower Semiconductor has been in "strategic pause" since January 2026 over subsidy terms. So the number in every headline last year is currently zero.
 
 ## The excuse I keep hearing, and Korea's answer to it
 
