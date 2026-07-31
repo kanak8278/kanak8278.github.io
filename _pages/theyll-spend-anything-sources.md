@@ -132,6 +132,21 @@ $1bn into Sarvam = **0.55%** of Ambani + Adani's combined $183bn, and **3.3×** 
 
 ---
 
+## 2b. Elon Musk, as the risk-appetite comparison
+
+| Claim | Value | Source |
+|---|---|---|
+| PayPal proceeds, 2002 | **$180m** from eBay's $1.5bn acquisition | Musk's own account, repeated consistently |
+| How he allocated it | **$100m SpaceX · $70m Tesla · $10m SolarCity** | Same |
+| Late 2008 | Tesla down to **$9m** in the bank, days from insolvency; SpaceX had failed **three** consecutive Falcon 1 launches; Musk borrowing from friends for personal rent | [CBS News](https://www.cbsnews.com/news/billionaire-elon-musk-on-2008-the-worst-year-of-my-life/); Fox Business; Startup Archive |
+| What saved it | Fourth Falcon 1 reached orbit; NASA awarded a **$1.6bn** Commercial Resupply Services contract | Same |
+| Net worth, mid-July 2026 | **~$833bn** (Bloomberg Billionaires Index), +$214bn YTD; more than $500bn clear of second place | [Bloomberg Billionaires](https://www.bloomberg.com/billionaires/profiles/elon-r-musk/) |
+| Trillionaire milestone | Briefly passed **$1 trillion** on the SpaceX IPO, 12 June 2026, which valued SpaceX at **$1.77 trillion** — the largest listing in history; fell back as the stock corrected | Bloomberg; IPO reporting |
+
+**Why he's in the piece.** As an illustration of risk appetite, not an endorsement. His net worth is volatile and any figure here is a snapshot. The structural point is the ordering: the fortune followed the bet rather than funding it — the same ordering as Liang Wenfeng, and the opposite of the Indian pattern the piece describes.
+
+---
+
 ## 3b. Indian advertising spend
 
 | Item | Value | Source |

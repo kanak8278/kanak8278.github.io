@@ -46,7 +46,25 @@ Tata told its own shareholders the Dholera fab would start at 28nm. It's startin
 
 ![The node gap](/assets/images/posts/theyll-spend-anything/01-node-gap.png)
 
-That's the piece in one chart. Now let me tell you why I don't blame the government for it.
+That's the piece in one chart. Before the statistics, though, let me show you what the alternative looks like.
+
+## The richest man in the world
+
+I don't hold Elon Musk up as an idol. I disliked most of what he did at DOGE and I have no interest in defending him as a person.
+
+Watch what he did with money, though, because it's the cleanest version of the argument I'm about to make.
+
+He walked away from PayPal in 2002 with **$180 million.** He put **$100 million into SpaceX, $70 million into Tesla, $10 million into SolarCity** — all of it, into rockets and electric cars, at a time when both were considered a rich man's way of becoming a poor one.
+
+By late 2008 it had nearly worked exactly that way. Tesla had **$9 million** in the bank and was days from running out. SpaceX had failed three launches in a row. Musk was borrowing money from friends to cover his own rent. Then the fourth Falcon 1 reached orbit, NASA signed a **$1.6 billion** resupply contract, and both companies survived by a margin measured in weeks.
+
+He is now worth roughly **$833 billion**, and briefly became the first person in history past a trillion when SpaceX listed in June 2026 at a $1.77 trillion valuation.[^musk]
+
+Notice the order, because it's the same order as everything else in this piece. He was not rich and therefore able to take the risk. **He took the risk and that is where the money came from.**
+
+Now ask what our richest man's group is putting its next big cheque into. A ₹30,000 crore chain of factories making biscuits and fizzy drinks. I'll come back to that number, because it turns out to be almost exactly what a frontier AI lab would cost.
+
+That gap is not a wealth gap. India has the wealth. It's an appetite gap — and it shows up in the national numbers.
 
 ## The number
 
@@ -403,3 +421,5 @@ Everything here is checkable. Go and check it. The numbered marks through the pi
 [^mi]: **Enterprise value, not brand value — two different numbers.** The Houlihan Lokey IPL Valuation Study 2025 puts Mumbai Indians' *institutional enterprise value* at \$2.2bn and its *standalone brand value* at \$242m. The larger figure is the business; the smaller is the brand alone. Both are in the same study.
 
 [^scale]: **Straight exchange-rate conversion, no PPP adjustment — and PPP would flip this one.** Rupee figures converted at ₹88/\$. At World Bank purchasing-power rates (roughly ₹23 to the dollar) the IIT + IISc + IISER allocation is worth about **\$6 billion** of local buying power, which is more than double the Harvard figure, not smaller than it. So this is a nominal-dollar comparison and I'm not going to pretend otherwise. What doesn't get a PPP discount is the part of frontier science that's bought on world markets: instruments, GPUs, cleanroom tooling, journal access, and above all researchers, who are recruited against Zurich and Seattle salaries rather than local ones. That's why the nominal number still tells you something. But if you want to argue India's elite institutions are better funded in real terms than this section implies, you're right, and the honest version of my complaint is the private-sector one that the rest of the piece is about.
+
+[^musk]: Musk's net worth moves violently and these figures are a snapshot: Bloomberg Billionaires Index had him at roughly \$833bn in mid-July 2026, up around \$214bn year to date, after peaking above \$1 trillion on the SpaceX IPO of 12 June 2026 (\$1.77 trillion, the largest listing in history) and falling back as the stock corrected. The PayPal allocation — \$100m SpaceX, \$70m Tesla, \$10m SolarCity out of \$180m — is Musk's own account, repeated consistently over the years. The 2008 near-death detail (Tesla down to \$9m, three consecutive Falcon 1 failures, the \$1.6bn NASA CRS contract) is documented across CBS News and Musk's own interviews. I'm using him as an illustration of risk appetite, not endorsing his politics or his management.
