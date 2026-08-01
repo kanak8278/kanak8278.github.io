@@ -164,27 +164,27 @@ Set all of that against India's share of global AI funding — every company, ev
 
 ## Our one champion runs on government GPUs
 
-Sarvam raised $234 million in June 2026 at a $1.5 billion valuation, HCLTech leading with $150 million. That's real and I'm glad it happened. Roshni Nadar Malhotra wrote that cheque and she is, as far as I can tell, the only heir in this country doing anything at the frontier.
+In June 2026 Sarvam closed the first $234 million of a $300 million Series B, at a $1.5 billion valuation, with HCLTech leading at $150 million. That's real and I'm glad it happened. Roshni Nadar Malhotra wrote that cheque and she is, as far as I can tell, the only heir in this country doing anything at the frontier.
 
 Sarvam-105B was trained on **1,000+ H100s from the government's Yotta cluster**, under IndiaAI's 4,000-GPU allocation. Our flagship private AI company trains on state compute.
 
-And here is the easy version of everything I am asking for.
+Before the obvious objection: somebody did try, with his own money, and it didn't work.
+
+Bhavish Aggarwal put ₹2,000 crore into Krutrim in February 2025 and promised ₹10,000 crore more. He was designing chips and training models at the same time. By May 2026 Krutrim had paused both and pivoted to selling cloud.
+
+He tried, and he ate the loss in public, which is more than anyone else on that rich list has risked. But look at the number he tried with. ₹2,000 crore is $227 million — less than Sarvam's single funding round, for a programme attempting chips *and* foundation models. He didn't discover that this is impossible. He discovered that $227 million doesn't buy you a seat at that table.
+
+Everyone else read it as *see, frontier tech doesn't work here.* What it actually showed is that he was underfunded by an order of magnitude, in a country where one man could have closed that gap and not noticed.
+
+And that is the easy version of everything I am asking for.
 
 They don't have to build anything. Nobody has to hire a research org from scratch, or buy a fab, or learn what a transformer is. Sarvam already exists. It has the people, it has models shipping, it just doesn't have money at the scale the work needs — which is why it's training on the government's GPUs.
 
-Sarvam's entire Series B is **$300 million** — and that's the full round; the June first close was $234 million. Mukesh Ambani could put in triple the whole round and not feel it leave. A **$1 billion** cheque into Sarvam is **0.9% of his net worth**, and it would make Sarvam one of the best-funded labs outside America and China overnight.
+The whole round is **$300 million.** Mukesh Ambani could put in triple that and not feel it leave. A **$1 billion** cheque into Sarvam is **0.9% of his net worth**, and it would make Sarvam one of the best-funded labs outside America and China overnight.
 
 That's the whole ask. Fund the thing that already works. Let them buy their own GPUs.
 
 And it wouldn't stop there, which is the actual point. Roshni Nadar wrote one $150 million cheque and made Sarvam a unicorn in an afternoon. One more of those from a bigger balance sheet and funding frontier research becomes a normal thing that Indian business houses do — and the next twenty-six-year-old with a good idea doesn't have to fly to Khosla Ventures to get started.
-
-## The guy who actually tried, and quit
-
-Bhavish Aggarwal announced ₹2,000 crore into Krutrim in February 2025, promised ₹10,000 crore more, and started designing chips.
-
-By May 2026, Krutrim had **paused chip design and foundation-model work** and pivoted to selling cloud.
-
-I want to say this clearly: he tried. He tried harder than anyone else on that rich list, and he ate the loss publicly. The lesson everyone else took from it is the wrong one.
 
 ## The landlord bet
 
@@ -232,7 +232,7 @@ And the fixable part is the one nobody tried.
 
 That offer has never been made. Not once, by anyone on the rich list. So our people stay where the work is, and we tell ourselves it's a brain drain problem, as if brains drain by themselves.
 
-### Two weeks ago we were all very proud
+## Two weeks ago we were all very proud
 
 On 18 July 2026, Skyroot's Vikram-1 reached orbit from Sriharikota — the first privately built Indian rocket to do it, making India the third country in the world with private orbital launch capability, after the United States and China. Everyone posted about it. I posted about it.
 
@@ -244,18 +244,18 @@ Not one Indian conglomerate. Not one. Singapore's state investors[^singapore] pu
 
 ## Cricket
 
-I support Mumbai Indians. Please read the next four numbers in that spirit.
+I support Mumbai Indians. Read the next four numbers in that spirit.
 
 - Reliance's Viacom18 paid **₹23,758 crore (~$2.9 billion)** for IPL digital rights, 2023–27.
-- MI's enterprise value: **$2.2 billion.**[^mi]
-- Running MI for one year, FY24: revenue ₹737 crore, profit ₹109 crore, so about **₹628 crore (~$71 million)** in costs.
-- Everything Indian spacetech has ever raised: **$871 million.**
+- An Aditya Birla-led consortium bought Royal Challengers Bengaluru outright in March 2026 for **$1.78 billion**, the most expensive team sale in the league's history.
+- Mumbai Indians' enterprise value: **$2.2 billion.**[^mi]
+- Everything India's private space industry has raised since it was legally allowed to exist: **$871 million.**
 
-Reliance paid three times our entire private space industry's lifetime funding for the right to *stream a cricket tournament.*
+Reliance paid three times the entire space industry for the right to *stream* a cricket tournament. The Birlas paid twice it for one team.
 
 ![Cricket money vs deep-tech money](/assets/images/posts/theyll-spend-anything/08-cricket-vs-deeptech.png)
 
-And Anant Ambani's wedding: estimates run **$150 million to $600 million** across four months of events. At the figure everyone quotes, that is about **70% of every rupee India's private rocket industry has raised in its entire existence.** Another fortnight of party and you'd have bought the whole sector outright.[^wedding]
+And Anant Ambani's wedding: estimates run **$150 million to $600 million** across four months of events. At the figure everyone quotes, that is about **70% of every rupee India's private rocket industry has raised in its entire existence.**[^wedding]
 
 It's his money and his son and I genuinely don't care how anybody celebrates a wedding. What I'm pointing at is the divide. In the same country, in the same decade, one family can spend more on a party than an entire industry of engineers can raise to build rockets — and the engineers have to go to Singapore to get funded. That gap isn't a coincidence or bad luck. It is the same decision, made over and over, about what deserves money here.
 
@@ -280,8 +280,6 @@ Look at what those businesses have in common and you find the whole thesis of th
 Every single one is a business where somebody else has already demonstrated that the money is there. You are buying a known payoff at a negotiated price. There is no version of a cement plant where you spend four years and find out the thing doesn't work.
 
 That's the actual pattern. Not stinginess — they spend colossally. Our richest families are commodity traders and shopkeepers at scale, extremely good at both, and they will deploy tens of billions the moment the return is arithmetic rather than a bet. Ask them to put a tenth of that into something where the honest answer is *we don't know if this will work*, and the money evaporates.
-
-And that RCB transaction deserves its own sentence, because it happened five months ago and nobody framed it this way: **one Indian business family spent $1.78 billion on a cricket team — more than twice everything India's private space industry has raised since it was legally allowed to exist.**
 
 I'll take the wildlife sanctuary over most things billionaires' children do, and running Jio is genuinely hard work. My problem isn't that any single item on that list is bad. It's the shape of the whole list.
 
@@ -404,7 +402,7 @@ Everything here is checkable. Go and check it. The numbered marks through the pi
 
 [^liang]: **Different index, different date — treat the placement as indicative.** The Indian figures are the Hurun Rich List 2026 (March 2026, converted at ₹88/\$); Liang's \$36.0bn is the Bloomberg Billionaires Index (July 2026), after DeepSeek's \$7.4bn round at a \$50bn valuation and assuming his ~78% holding. At \$36.0bn against Roshni Nadar Malhotra's \$36.4bn he is level with her, not clearly ahead — "third" here means the same bracket, not a verified league position.
 
-[^wedding]: **The fortnight is rhetorical rounding; the ratio is the real claim.** At the widely quoted \$600m upper estimate the wedding is 68.9% of the \$871m Indian private spacetech has raised — a gap of \$271m. The events ran across roughly four months in 2024, so "another fortnight" is a figure of speech for what that remaining \$271m would represent, not a costed figure. Estimates run \$150m–\$600m; at the low end the comparison is 17% and I wouldn't make the point at all.
+[^wedding]: Estimates for the wedding run **\$150m–\$600m** across roughly four months of events in 2024 (pre-wedding in March, the cruise in May, the wedding itself in July); some outlets go as high as \$1bn. The 70% figure uses the \$600m upper estimate against \$871m of Indian private spacetech funding — 68.9%. At the \$150m low end it is 17%, and I wouldn't make the comparison at all.
 
 [^mi]: **Enterprise value, not brand value — two different numbers.** The Houlihan Lokey IPL Valuation Study 2025 puts Mumbai Indians' *institutional enterprise value* at \$2.2bn and its *standalone brand value* at \$242m. The larger figure is the business; the smaller is the brand alone. Both are in the same study.
 
