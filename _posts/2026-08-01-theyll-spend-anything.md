@@ -80,9 +80,11 @@ In every serious country, private money does three-quarters of it. Here it does 
 
 And before someone says "but our companies are smaller" — it's a ratio, not a size. Reliance's own audited filing puts FY25 R&D at **₹4,185 crore**, which is **0.75% of turnover.**[^rilrd] Huawei spends **20.8%.**[^huawei] Samsung spends 11.3%.
 
-Twenty-eight times the intensity. Not twenty-eight percent more. Twenty-eight times.
+Twenty-eight times the intensity. Not twenty-eight percent more — twenty-eight times.
 
-Two things make it worse. Of that ₹4,185 crore, ₹2,652 crore is capital — buildings and kit. The recurring research line, the one that actually maps to what Huawei reports, is ₹1,533 crore. That's 0.27%. And Reliance's group revenue, roughly $122 billion, is *larger* than Huawei's $119 billion. So the small-company defence isn't available either.
+And 0.75% is the generous reading. Two-thirds of that ₹4,185 crore is capital: buildings and kit. The recurring research line — the one that actually maps to what Huawei and Samsung report — is ₹1,533 crore, or **0.27% of turnover**. Compared like for like, it isn't twenty-eight times. It's seventy-six.
+
+Reliance's group revenue, roughly $122 billion, is also *larger* than Huawei's $119 billion. So the small-company defence isn't available either.
 
 ![R&D as a share of revenue](/assets/images/posts/theyll-spend-anything/03-rd-intensity.png)
 
@@ -112,17 +114,15 @@ Yes, that's the compute bill, not the company. The GPUs came earlier: High-Flyer
 
 A hedge fund. Not a conglomerate. Not a state. A guy who made money trading stocks decided to spend $147 million on GPUs and then handed the results to the world for free.
 
-Here's the part that should sting.
-
 When Liang bought those GPUs in 2021 he was a quant fund manager nobody outside Chinese trading circles had heard of. Not on any rich list. As recently as early 2026, Hurun still had him at $4.6 billion — respectable, and a small fraction of Mukesh Ambani's.
 
 Today he is worth **$36 billion.** Richest AI-model founder on earth, eighth-richest man in China.
 
-Drop him onto India's rich list and he lands **third**[^liang] — level with Roshni Nadar Malhotra, behind only Ambani and Adani. Above every other name in this piece.
+Drop him onto India's rich list and only two people are clearly ahead of him[^liang] — Ambani and Adani. He is level with Roshni Nadar Malhotra, and above every other name in this piece.
 
 ![Where Liang Wenfeng would rank in India](/assets/images/posts/theyll-spend-anything/04b-liang-ranking.png)
 
-Read the order carefully, because it's the whole argument. He did not get rich and then take the shot. He took the shot with a fraction of their money, and the shot is what made him rich.
+Same order as Musk. He took the shot first, with a fraction of their money, and the shot is what made him rich.
 
 Reliance's beverage capex is ₹8,000 crore.[^campa] About **$910 million.** That is 163 DeepSeek-V3 training runs. Or six High-Flyer GPU clusters. Spent on fizzy drinks.
 
@@ -134,7 +134,7 @@ Hindustan Unilever spent **₹6,028 crore** on advertising in FY25. $685 million
 
 Indian brands spent **₹4,000 crore** in a single year on ads placed *inside* Blinkit, Zepto and Instamart — not building the apps, buying banner space in them. Eighty-one training runs.
 
-Then there's the one that actually made me put my laptop down. Add up everything DeepSeek spent to build V3 and R1 — all 10,000 GPUs, both training runs, the entire thing — and you get about **$153 million.**
+Then this one. Add up everything DeepSeek spent to build V3 and R1 — all 10,000 GPUs, both training runs, the entire thing — and you get about **$153 million.**
 
 ITC's advertising and promotion budget for FY25 was **$151 million.**
 
@@ -156,7 +156,7 @@ Now line up the open-weight models.[^params]
 
 Someone will say China's edge is just state money. It isn't only that, and the numbers say so. Beijing's flagship chip vehicle, Big Fund III, is **$47.5 billion** — about the size of the entire US CHIPS Act. Alibaba's commitment, from one company, is **larger than that.**[^bigfund]
 
-That's the part worth sitting with. In China both kinds of capital show up, and the private cheque is the bigger one. Here only the state shows up, and it's the side with the smaller balance sheet.
+In China both kinds of capital show up, and the private cheque is the bigger one. Here only the state shows up, and it's the side with the smaller balance sheet.
 
 Set all of that against India's share of global AI funding — every company, every round, all of it: **0.6%.**
 
@@ -226,7 +226,7 @@ But I want to go past the easy joke about that memo, because the deeper problem 
 
 So a serious AI researcher at DeepMind or Meta does the maths and it isn't close. Even if Delhi tripled every salary tomorrow, they still wouldn't come, because what they'd be buying is a decade of paperwork.
 
-Now here is the part that makes me genuinely angry, because it's the one thing that was fixable.
+And the fixable part is the one nobody tried.
 
 **A privately funded lab has none of those problems.** No tendering. No file approvals. No secretary in Delhi signing off on a compute purchase. If one Indian business house had stood up a properly funded research institute — real money, real autonomy, insulated from the ministry — that is precisely the pitch that pulls people home. Not patriotism. Not a salary bump. *"Come and work on the hard thing, and nobody will make you fill in a form to do it."*
 
@@ -240,7 +240,7 @@ Now look at who paid for it. Skyroot has raised **$150 million** across its enti
 
 Two Singaporean state investment funds and an American asset manager put an Indian rocket into orbit.
 
-Not one Indian conglomerate. Not one. A pension fund in Singapore has more conviction in Indian rocketry than the people whose own engineers built it.
+Not one Indian conglomerate. Not one. Singapore's state investors[^singapore] put money into Indian rocketry before anybody in India with a balance sheet did.
 
 ## Cricket
 
@@ -315,7 +315,7 @@ For the rest of the scale: $3 billion is **2.7% of the $110 billion data-centre 
 
 And over those same three years, Zepto will burn about **$1.5 billion** getting groceries to people ten minutes faster. The lab costs twice that. The difference is that at the end of three years you'd own a frontier model instead of a fleet of scooters.
 
-**A sub-5nm fab — genuinely expensive.** Samsung's Taylor fab went $17B → $25B. TSMC Arizona went $12B → $165B → $265B. A first-of-its-kind leading-edge fab in India would realistically be **$25–40 billion**, and India gets no discount on the part that matters: 70–80% of a fab is ASML and Applied Materials tooling, priced in dollars, the same in Dholera as in Phoenix. Plus EUV is export-controlled, so it may not be buyable at any price.
+**A sub-5nm fab — genuinely expensive.** Samsung's Taylor plant went from a $17 billion plan to roughly $25 billion — and that is one fab. TSMC pitched its first Arizona fab at $12 billion; its US programme is now $265 billion across six fabs, two packaging plants and an R&D centre. A first-of-its-kind leading-edge fab in India would realistically be **$25–40 billion**, and India gets no discount on the part that matters: 70–80% of a fab is ASML and Applied Materials tooling, priced in dollars, the same in Dholera as in Phoenix. Plus EUV is export-controlled, so it may not be buyable at any price.
 
 So I'll concede the fab. That one is hard, slow, and possibly blocked.
 
@@ -376,8 +376,6 @@ Not greed. Not stupidity. Certainly not a shortage of engineers. Just an unbroke
 
 Fifty years from now nobody is going to remember who owned Campa Cola.
 
-Yeah, it's a rant. I don't think many people will read it.
-
 ---
 
 ## Where I might be wrong
@@ -415,3 +413,5 @@ Everything here is checkable. Go and check it. The numbered marks through the pi
 [^musk]: Musk's net worth moves violently and these figures are a snapshot: Bloomberg Billionaires Index had him at roughly \$833bn in mid-July 2026, up around \$214bn year to date, after peaking above \$1 trillion on the SpaceX IPO of 12 June 2026 (\$1.77 trillion, the largest listing in history) and falling back as the stock corrected. The PayPal allocation — \$100m SpaceX, \$70m Tesla, \$10m SolarCity out of \$180m — is Musk's own account, repeated consistently over the years. The 2008 near-death detail (Tesla down to \$9m, three consecutive Falcon 1 failures, the \$1.6bn NASA CRS contract) is documented across CBS News and Musk's own interviews. I'm using him as an illustration of risk appetite, not endorsing his politics or his management.
 
 [^bigfund]: **Not strictly like-for-like, and worth saying.** Alibaba's ¥380bn (~\$53bn) is a three-year capital-expenditure commitment on AI and cloud infrastructure. Big Fund III's \$47.5bn is the registered capital of a state investment vehicle that takes equity stakes across the chip supply chain — a different instrument on a different clock, and chips are not the same industry as cloud. I'm comparing the scale of what each side was willing to commit, not identical accounting. The narrower claim that survives either way: Chinese private capital writes cheques at the same order of magnitude as the Chinese state, and Indian private capital does not.
+
+[^singapore]: [GIC](https://www.gic.com.sg/) manages Singapore's foreign reserves; [Temasek](https://www.temasek.com.sg/) is a state-owned investment company wholly held by the Singapore government. Both are state investors rather than pension funds, and both are on Skyroot's cap table alongside Sherpalo Ventures and BlackRock.
