@@ -168,15 +168,11 @@ In June 2026 Sarvam closed the first $234 million of a $300 million Series B, at
 
 Sarvam-105B was trained on **1,000+ H100s from the government's Yotta cluster**, under IndiaAI's 4,000-GPU allocation. Our flagship private AI company trains on state compute.
 
-Before the obvious objection: somebody did try, with his own money, and it didn't work.
+Before the obvious objection: somebody did try with his own money.
 
-Bhavish Aggarwal put ₹2,000 crore into Krutrim in February 2025 and promised ₹10,000 crore more. He was designing chips and training models at the same time. By May 2026 Krutrim had paused both and pivoted to selling cloud.
+Bhavish Aggarwal put ₹2,000 crore into Krutrim in February 2025 and promised ₹10,000 crore more. Krutrim was designing chips and training foundation models. By May 2026 it had paused both and pivoted to selling cloud. ₹2,000 crore is $227 million — less than Sarvam's Series B, for a programme attempting chips and models at the same time.
 
-He tried, and he ate the loss in public, which is more than anyone else on that rich list has risked. But look at the number he tried with. ₹2,000 crore is $227 million — less than Sarvam's single funding round, for a programme attempting chips *and* foundation models. He didn't discover that this is impossible. He discovered that $227 million doesn't buy you a seat at that table.
-
-Everyone else read it as *see, frontier tech doesn't work here.* What it actually showed is that he was underfunded by an order of magnitude, in a country where one man could have closed that gap and not noticed.
-
-And that is the easy version of everything I am asking for.
+Which brings me to the easy version of everything I am asking for.
 
 They don't have to build anything. Nobody has to hire a research org from scratch, or buy a fab, or learn what a transformer is. Sarvam already exists. It has the people, it has models shipping, it just doesn't have money at the scale the work needs — which is why it's training on the government's GPUs.
 
