@@ -3,6 +3,9 @@ title: "Updates"
 permalink: /updates/
 author_profile: false
 ---
+<code>Jul 2026</code>
+Joined NielsenIQ as a Research Scientist.
+
 <code>Aug 2024</code>
 Joined Thomson Reuters Lab as an Applied Research Scientist. Working on document processing and automation pipelines for legal documents. &#128640;
 

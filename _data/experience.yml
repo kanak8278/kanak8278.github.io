@@ -1,8 +1,17 @@
+- role: Research Scientist
+  org: NielsenIQ
+  location: India
+  period: Jul 2026 – Present
+  projects:
+    - name: Core Models
+      bullets:
+        - "Part of the Core Models team, under [David Jimenez](https://nielseniq.com/global/en/about-us/david-jimenez/)."
+
 - role: Applied Research Scientist
   org: Thomson Reuters Lab
   org_url: https://www.thomsonreuters.com/en/careers/our-jobs/join-thomson-reuters-labs
   location: India
-  period: Aug 2024 – Present
+  period: Aug 2024 – Jun 2026
   projects:
     - name: Legal AI Reasoning and Model Enhancement
       bullets:
