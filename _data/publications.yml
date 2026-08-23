@@ -1,4 +1,13 @@
 preprints:
+  - title: "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck"
+    authors: "Davide Romano, **Kanak Raj**, Jerrod Parker, Daniele Giofrè"
+    year: 2026
+    venue: "Under review at NeurIPS 2026"
+    url: https://arxiv.org/abs/2608.18931
+    links:
+      - label: arXiv
+        url: https://arxiv.org/abs/2608.18931
+
   - title: "Transformers Remember First, Forget Last: Dual-Process Interference in LLMs"
     authors: "**Kanak Raj** et al."
     year: 2025
