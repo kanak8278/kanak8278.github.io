@@ -3,6 +3,9 @@ title: "Updates"
 permalink: /updates/
 author_profile: false
 ---
+<code>Sep 2026</code>
+Our work <a href="https://arxiv.org/abs/2608.18931">Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck</a> got accepted at NeurIPS 2026 (main track). &#127881;
+
 <code>Jul 2026</code>
 Joined NielsenIQ as a Research Scientist.
 
@@ -13,7 +16,7 @@ Joined Thomson Reuters Lab as an Applied Research Scientist. Working on document
 Completed my research internship at Microsoft Research India working with the AI4Code group.
 
 <code>May 2024</code> 
-Defended my Master thesis, titled <a href = "https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view"> Knowledge Enabled Multimodal Ingredient Substitution </a>. Joint work at AI Institute, University of South Carolina and Birla Institute of Technology, Mesra. The thesis work includes a <a href="https://github.com/kanak8278/MISKG/">knowledge graph</a> with 27K ingredients and 40K substitution pairs and a <a href="https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/">dataset</a> that was used in the <a href="https://www.healthunity.org/2024hackathon">UC Irvine + Stanford Health Hackathon 2024</a>.
+Defended my Master thesis, titled <a href = "https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view"> Knowledge Enabled Multimodal Ingredient Substitution </a>. Joint work at AI Institute, University of South Carolina and Birla Institute of Technology, Mesra. The thesis work includes a <a href="https://github.com/kanak8278/MISKG/">knowledge graph</a> with 27K ingredients and 80K substitution pairs and a <a href="https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/">dataset</a> that was used in the <a href="https://www.healthunity.org/2024hackathon">UC Irvine + Stanford Health Hackathon 2024</a>.
 
 <code>Jan 2024</code>
 Joined Microsoft Research as Research Intern, working with the AI4Code group on Programming with Representations (PwR).

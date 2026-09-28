@@ -22,7 +22,7 @@
   color: "#e85d04"
   logo: /images/logos/thomson-reuters.png
   summary: >-
-    Built legal AI reasoning systems at Thomson Reuters Labs. Work spans synthetic data generation for Process Reward Models, IRAC knowledge graph construction from the Westlaw corpus, and end-to-end LLM workflows for legal document processing. Also built several internal tools including a real-time Truth Social monitoring system for Reuters journalists.
+    Built legal AI reasoning systems at Thomson Reuters Labs. Joint first author of a [NeurIPS 2026 paper](https://arxiv.org/abs/2608.18931) showing that test-time-scaling gains on open-ended tasks are capped by verifier quality. Work spans synthetic data generation for Process Reward Models, IRAC knowledge graph construction from the Westlaw corpus, and end-to-end LLM workflows for legal document processing. Also built several internal tools including a real-time Truth Social monitoring system for Reuters journalists.
 
 - year: "Jan – Jul 2024"
   org: Microsoft Research India
@@ -40,7 +40,7 @@
   color: "#990000"
   logo: /images/logos/aiisc.png
   summary: >-
-    Conducted research on multimodal knowledge graphs and recipe understanding with Dr. Amit Sheth and Revathy Venkataramanan. Defended my [Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on Knowledge Enabled Multimodal Ingredient Substitution — a knowledge graph with 27K ingredients and 40K substitution pairs, used in the UC Irvine + Stanford Health Hackathon 2024. Work also led to Cook-Gen (IEEE SMC 2023) and a submission to AAAI-25.
+    Conducted research on multimodal knowledge graphs and recipe understanding with Dr. Amit Sheth and Revathy Venkataramanan. Defended my [Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on Knowledge Enabled Multimodal Ingredient Substitution — a knowledge graph with 27K ingredients and 80K substitution pairs, used in the UC Irvine + Stanford Health Hackathon 2024. Work also led to Cook-Gen (IEEE SMC 2023).
 
 - year: "May – Aug 2023"
   org: Saarland University (SIC)

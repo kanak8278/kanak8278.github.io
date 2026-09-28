@@ -16,7 +16,7 @@
     - name: Legal AI Reasoning and Model Enhancement
       bullets:
         - Pioneered a legal synthetic data generation pipeline for Process Reward Models (PRMs), creating domain-specific training datasets that improved legal reasoning capabilities on LegalBench benchmark tasks.
-        - Evaluated different Test-Time Scaling paradigms for legal reasoning and inference-time compute optimization.
+        - "Joint first author of [Test-Time Scaling in the Wild](https://arxiv.org/abs/2608.18931) (NeurIPS 2026), the first compute-normalised comparison of test-time scaling on open-ended tasks. We compared five TTS families across five benchmarks (medicine, law, finance, general chat, creative writing). We showed that exploitation, not exploration, is the bottleneck. Reward models correlate at only ρ_v ≈ 0.12 with true quality, so selecting the best candidate is close to random at any budget."
         - Architected an IRAC (Issue-Rule-Application-Conclusion) Knowledge Graph framework using Thomson Reuters' Westlaw corpus and court case data, generating high-quality preference datasets that improved legal reasoning alignment in fine-tuned LLMs.
     - name: AI-Powered Legal Document Update System
       bullets:
@@ -91,8 +91,8 @@
   projects:
     - name: Knowledge Enabled Multimodal Ingredient Substitution
       bullets:
-        - "[Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on multimodal ingredient substitution. Built a knowledge graph incorporating 27K ingredients and 40K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search."
-        - Developed an LLM-based query module for the ingredient substitution knowledge graph and submitted this work to AAAI-25.
+        - "[Master's thesis](https://drive.google.com/file/d/1uj8zn-3BVYmetg1mKluTsJGl_0-n3UfV/view) on multimodal ingredient substitution. Built a knowledge graph incorporating 27K ingredients and 80K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search."
+        - Developed an LLM-based query module for the ingredient substitution knowledge graph.
         - "Formulated cross-modal recipe retrieval and cooking action recognition for recipe analysis, achieving 95% recall and leading to [Cook-Gen](https://ieeexplore.ieee.org/abstract/document/10394432/) at IEEE SMC 2023."
   open_source:
     - label: GitHub Repository

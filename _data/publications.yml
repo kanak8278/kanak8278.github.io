@@ -1,17 +1,8 @@
 preprints:
-  - title: "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck"
-    authors: "Davide Romano, **Kanak Raj**, Jerrod Parker, Daniele Giofrè"
-    year: 2026
-    venue: "Under review at NeurIPS 2026"
-    url: https://arxiv.org/abs/2608.18931
-    links:
-      - label: arXiv
-        url: https://arxiv.org/abs/2608.18931
-
   - title: "Transformers Remember First, Forget Last: Dual-Process Interference in LLMs"
     authors: "**Kanak Raj** et al."
     year: 2025
-    venue: arXiv
+    venue: "arXiv; extended version under review at AAAI 2027"
     url: https://arxiv.org/abs/2603.00270
     links:
       - label: arXiv
@@ -34,6 +25,15 @@ thesis:
         url: https://www.kaggle.com/datasets/kanakraj/multimodal-ingredient-substitution/
 
 conferences:
+  - title: "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck"
+    authors: "Davide Romano<sup>&#42;</sup>, **Kanak Raj**<sup>&#42;</sup>, Jerrod Parker, Daniele Giofrè <small>(&#42; equal contribution)</small>"
+    year: 2026
+    venue: NeurIPS 2026
+    url: https://arxiv.org/abs/2608.18931
+    links:
+      - label: arXiv
+        url: https://arxiv.org/abs/2608.18931
+
   - title: "K-PERM: Personalized Response Generation Using Dynamic Knowledge Retrieval and Persona-Adaptive Queries"
     authors: "**Kanak Raj**, Kaushik Roy, Vamshi Bonagiri, Priyanshul Govil, Krishnaprasad Thirunarayan, Raxit Goswami, Manas Gaur"
     year: 2024

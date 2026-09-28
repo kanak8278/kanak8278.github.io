@@ -37,7 +37,7 @@
   url: https://github.com/kanak8278/MISKG/
   context: Master's Thesis · AI Institute, USC
   period: Dec 2022 – Apr 2024
-  description: Built a knowledge graph incorporating 27K ingredients and 40K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search. Developed an LLM-based query module and contributed to AAAI-25 submission.
+  description: Built a knowledge graph incorporating 27K ingredients and 80K substitution pairs, enabling precise ingredient recommendations using multimodal and constraint-based search. Developed an LLM-based query module.
   links:
     - label: GitHub
       url: https://github.com/kanak8278/MISKG/
